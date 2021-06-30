@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		43E1CCE4268C0490007E0EDB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43E1CCE3268C0490007E0EDB /* AppDelegate.swift */; };
 		43E1CCE6268C0490007E0EDB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43E1CCE5268C0490007E0EDB /* SceneDelegate.swift */; };
-		43E1CCE8268C0490007E0EDB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43E1CCE7268C0490007E0EDB /* ViewController.swift */; };
-		43E1CCEB268C0490007E0EDB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43E1CCE9268C0490007E0EDB /* Main.storyboard */; };
 		43E1CCED268C0494007E0EDB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43E1CCEC268C0494007E0EDB /* Assets.xcassets */; };
 		43E1CCF0268C0494007E0EDB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43E1CCEE268C0494007E0EDB /* LaunchScreen.storyboard */; };
 		43E1CCF5268C0494007E0EDB /* BonusBox WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 43E1CCF4268C0494007E0EDB /* BonusBox WatchKit App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -22,6 +20,9 @@
 		43E1CD0D268C0497007E0EDB /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43E1CD0C268C0497007E0EDB /* NotificationController.swift */; };
 		43E1CD0F268C0497007E0EDB /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43E1CD0E268C0497007E0EDB /* ComplicationController.swift */; };
 		43E1CD11268C049A007E0EDB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43E1CD10268C049A007E0EDB /* Assets.xcassets */; };
+		43E1CD34268C2813007E0EDB /* HomeTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43E1CD33268C2813007E0EDB /* HomeTabViewController.swift */; };
+		43E1CD3C268C28A2007E0EDB /* BoxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43E1CD3B268C28A2007E0EDB /* BoxViewController.swift */; };
+		43E1CD41268C28D3007E0EDB /* ContentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43E1CD40268C28D3007E0EDB /* ContentsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,8 +71,6 @@
 		43E1CCE0268C0490007E0EDB /* BonusBox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BonusBox.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		43E1CCE3268C0490007E0EDB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		43E1CCE5268C0490007E0EDB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		43E1CCE7268C0490007E0EDB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		43E1CCEA268C0490007E0EDB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		43E1CCEC268C0494007E0EDB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		43E1CCEF268C0494007E0EDB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		43E1CCF1268C0494007E0EDB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -87,6 +86,9 @@
 		43E1CD10268C049A007E0EDB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		43E1CD12268C049A007E0EDB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		43E1CD13268C049A007E0EDB /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		43E1CD33268C2813007E0EDB /* HomeTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabViewController.swift; sourceTree = "<group>"; };
+		43E1CD3B268C28A2007E0EDB /* BoxViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoxViewController.swift; sourceTree = "<group>"; };
+		43E1CD40268C28D3007E0EDB /* ContentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,8 +134,9 @@
 			children = (
 				43E1CCE3268C0490007E0EDB /* AppDelegate.swift */,
 				43E1CCE5268C0490007E0EDB /* SceneDelegate.swift */,
-				43E1CCE7268C0490007E0EDB /* ViewController.swift */,
-				43E1CCE9268C0490007E0EDB /* Main.storyboard */,
+				43E1CD33268C2813007E0EDB /* HomeTabViewController.swift */,
+				43E1CD3B268C28A2007E0EDB /* BoxViewController.swift */,
+				43E1CD40268C28D3007E0EDB /* ContentsViewController.swift */,
 				43E1CCEC268C0494007E0EDB /* Assets.xcassets */,
 				43E1CCEE268C0494007E0EDB /* LaunchScreen.storyboard */,
 				43E1CCF1268C0494007E0EDB /* Info.plist */,
@@ -268,7 +271,6 @@
 			files = (
 				43E1CCF0268C0494007E0EDB /* LaunchScreen.storyboard in Resources */,
 				43E1CCED268C0494007E0EDB /* Assets.xcassets in Resources */,
-				43E1CCEB268C0490007E0EDB /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -296,9 +298,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				43E1CCE8268C0490007E0EDB /* ViewController.swift in Sources */,
 				43E1CCE4268C0490007E0EDB /* AppDelegate.swift in Sources */,
 				43E1CCE6268C0490007E0EDB /* SceneDelegate.swift in Sources */,
+				43E1CD3C268C28A2007E0EDB /* BoxViewController.swift in Sources */,
+				43E1CD34268C2813007E0EDB /* HomeTabViewController.swift in Sources */,
+				43E1CD41268C28D3007E0EDB /* ContentsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -329,14 +333,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		43E1CCE9268C0490007E0EDB /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				43E1CCEA268C0490007E0EDB /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		43E1CCEE268C0494007E0EDB /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -407,6 +403,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -460,6 +457,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
@@ -570,7 +568,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -591,7 +589,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
