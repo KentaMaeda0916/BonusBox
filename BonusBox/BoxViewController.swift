@@ -6,9 +6,18 @@
 //
 
 import UIKit
+import BubbleTransition
 
-class BoxViewController: UIViewController {
+class BoxViewController: UIViewController, UIViewControllerTransitioningDelegate {
+    let transition = BubbleTransition()
+    let interactiveTransition = BubbleInteractiveTransition()
     
+    let lotteryButtonConstant: CGFloat = 80
+    
+    var bubbleColor: UIColor = .white
+    var startingPoint = CGPoint.zero
+    var duration = 0.5
+
     let operationGuidanceLable: UILabel = {
         let label = UILabel()
         label.text = "箱を選択してください"
@@ -53,16 +62,33 @@ class BoxViewController: UIViewController {
         return button
     }()
     
-    let actionButton: UIButton = {
+    let LotteryButton: UIButton = {
         let button = UIButton()
         button.setTitle("くじを引く", for: .normal)
         button.backgroundColor = .orange
+        button.addTarget(self, action: #selector(tappedActionButton(_:)), for: .touchUpInside)
         return button
     }()
+    
+    @objc func tappedActionButton(_ sender: UIButton) {
+        let modalViewController = LotteryViewController()
+        modalViewController.transitioningDelegate = self
+        modalViewController.modalPresentationStyle = .custom
+        modalViewController.modalPresentationCapturesStatusBarAppearance = true
+        modalViewController.interactiveTransition = interactiveTransition
+        modalViewController.lotteryButtonConstant = lotteryButtonConstant
+        
+        present(modalViewController, animated: true, completion: nil)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setUpLayout()
+        
+    }
+    
+    func setUpLayout() {
         view.backgroundColor = .white
         
         let bonusBoxStackView = UIStackView(arrangedSubviews: [bonusBoxLable,bonusBoxButton,bonusBoxSelectingButton])
@@ -79,8 +105,8 @@ class BoxViewController: UIViewController {
         
         view.addSubview(operationGuidanceLable)
         view.addSubview(buttonStackView)
-        view.addSubview(actionButton)
-
+        view.addSubview(LotteryButton)
+        
         NSLayoutConstraint.activate([
             operationGuidanceLable.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 0),
             operationGuidanceLable.centerXAnchor.constraint(equalTo: view.centerXAnchor, constant: 0)
@@ -96,15 +122,28 @@ class BoxViewController: UIViewController {
         buttonStackView.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
-            actionButton.topAnchor.constraint(equalTo: buttonStackView.bottomAnchor, constant: 40),
-            actionButton.centerXAnchor.constraint(equalTo: view.centerXAnchor, constant: 0)
+            LotteryButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -(lotteryButtonConstant)),
+            LotteryButton.centerXAnchor.constraint(equalTo: view.centerXAnchor, constant: 0)
         ])
-        actionButton.translatesAutoresizingMaskIntoConstraints = false
-        
+        LotteryButton.translatesAutoresizingMaskIntoConstraints = false
     }
 
-    private func setupLayout() {
-        
+    // MARK: UIViewControllerTransitioningDelegate
+    
+    public func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        transition.transitionMode = .present
+        transition.startingPoint = LotteryButton.center
+        transition.bubbleColor = LotteryButton.backgroundColor!
+        return transition
     }
-
+    
+    public func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        transition.transitionMode = .dismiss
+        transition.startingPoint = LotteryButton.center
+        transition.bubbleColor = LotteryButton.backgroundColor!
+        return transition
+    }
+    func interactionControllerForDismissal(using animator: UIViewControllerAnimatedTransitioning) -> UIViewControllerInteractiveTransitioning? {
+        return interactiveTransition
+    }
 }
