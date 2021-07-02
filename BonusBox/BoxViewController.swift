@@ -17,6 +17,9 @@ class BoxViewController: UIViewController, UIViewControllerTransitioningDelegate
     var bubbleColor: UIColor = .white
     var startingPoint = CGPoint.zero
     var duration = 0.5
+    var tappedBonusBoxButtonToggle: Bool = false
+    var tappedpenaltyBoxButtonToggle: Bool = false
+    
 
     let operationGuidanceLable: UILabel = {
         let label = UILabel()
@@ -30,35 +33,25 @@ class BoxViewController: UIViewController, UIViewControllerTransitioningDelegate
         return label
     }()
     
-    let bonusBoxButton: UIButton = {
-        let button = UIButton()
-        button.backgroundColor = .blue
-        return button
-    }()
-    
     let bonusBoxSelectingButton: UIButton = {
         let button = UIButton()
-        button.setTitle("選択中", for: .normal)
-        button.backgroundColor = .systemBlue
+        button.setImage(UIImage(systemName: "archivebox"), for: .normal)
+        button.backgroundColor = .green
+        button.addTarget(self, action: #selector(tappedBonusBoxButton(_:)), for: .touchUpInside)
         return button
     }()
-    
+
     let penaltyBoxLable: UILabel = {
         let label = UILabel()
         label.text = "罰ゲーム"
         return label
     }()
     
-    let penaltyBoxButton: UIButton = {
-        let button = UIButton()
-        button.backgroundColor = .green
-        return button
-    }()
-    
     let penaltyBoxSelectingButton: UIButton = {
         let button = UIButton()
-        button.setTitle("選択中", for: .normal)
-        button.backgroundColor = .systemGreen
+        button.setImage(UIImage(systemName: "archivebox"), for: .normal)
+        button.backgroundColor = .green
+        button.addTarget(self, action: #selector(tappedPenaltyBoxButton(_:)), for: .touchUpInside)
         return button
     }()
     
@@ -81,6 +74,25 @@ class BoxViewController: UIViewController, UIViewControllerTransitioningDelegate
         present(modalViewController, animated: true, completion: nil)
     }
     
+    @objc func tappedBonusBoxButton(_ sender: UIButton) {
+        tappedBonusBoxButtonToggle.toggle()
+        
+        if tappedBonusBoxButtonToggle {
+            bonusBoxSelectingButton.setImage(UIImage(systemName: "archivebox.fill"), for: .normal)
+        } else {
+            bonusBoxSelectingButton.setImage(UIImage(systemName: "archivebox"), for: .normal)
+        }
+    }
+    @objc func tappedPenaltyBoxButton(_ sender: UIButton) {
+        tappedpenaltyBoxButtonToggle.toggle()
+        
+        if tappedpenaltyBoxButtonToggle {
+            penaltyBoxSelectingButton.setImage(UIImage(systemName: "archivebox.fill"), for: .normal)
+        } else {
+            penaltyBoxSelectingButton.setImage(UIImage(systemName: "archivebox"), for: .normal)
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -91,11 +103,11 @@ class BoxViewController: UIViewController, UIViewControllerTransitioningDelegate
     func setUpLayout() {
         view.backgroundColor = .white
         
-        let bonusBoxStackView = UIStackView(arrangedSubviews: [bonusBoxLable,bonusBoxButton,bonusBoxSelectingButton])
+        let bonusBoxStackView = UIStackView(arrangedSubviews: [bonusBoxLable,bonusBoxSelectingButton])
         bonusBoxStackView.axis = .vertical
         bonusBoxStackView.distribution = .fillEqually
         
-        let penaltyBoxStackView = UIStackView(arrangedSubviews: [penaltyBoxLable,penaltyBoxButton,penaltyBoxSelectingButton])
+        let penaltyBoxStackView = UIStackView(arrangedSubviews: [penaltyBoxLable,penaltyBoxSelectingButton])
         penaltyBoxStackView.axis = .vertical
         penaltyBoxStackView.distribution = .fillEqually
         
