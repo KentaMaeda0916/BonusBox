@@ -26,6 +26,7 @@
 		43E1CD4A268C38FA007E0EDB /* UIViewExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43E1CD49268C38FA007E0EDB /* UIViewExtention.swift */; };
 		43E1CD53268D8236007E0EDB /* BubbleTransition in Frameworks */ = {isa = PBXBuildFile; productRef = 43E1CD52268D8236007E0EDB /* BubbleTransition */; };
 		43E1CD58268D8B04007E0EDB /* LotteryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43E1CD57268D8B04007E0EDB /* LotteryViewController.swift */; };
+		43E1CD64268EE9B8007E0EDB /* MenuBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43E1CD63268EE9B8007E0EDB /* MenuBar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -94,6 +95,7 @@
 		43E1CD40268C28D3007E0EDB /* ContentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentsViewController.swift; sourceTree = "<group>"; };
 		43E1CD49268C38FA007E0EDB /* UIViewExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtention.swift; sourceTree = "<group>"; };
 		43E1CD57268D8B04007E0EDB /* LotteryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LotteryViewController.swift; sourceTree = "<group>"; };
+		43E1CD63268EE9B8007E0EDB /* MenuBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +150,7 @@
 				43E1CCEE268C0494007E0EDB /* LaunchScreen.storyboard */,
 				43E1CCF1268C0494007E0EDB /* Info.plist */,
 				43E1CD49268C38FA007E0EDB /* UIViewExtention.swift */,
+				43E1CD63268EE9B8007E0EDB /* MenuBar.swift */,
 			);
 			path = BonusBox;
 			sourceTree = "<group>";
@@ -314,6 +317,7 @@
 			files = (
 				43E1CCE4268C0490007E0EDB /* AppDelegate.swift in Sources */,
 				43E1CCE6268C0490007E0EDB /* SceneDelegate.swift in Sources */,
+				43E1CD64268EE9B8007E0EDB /* MenuBar.swift in Sources */,
 				43E1CD58268D8B04007E0EDB /* LotteryViewController.swift in Sources */,
 				43E1CD3C268C28A2007E0EDB /* BoxViewController.swift in Sources */,
 				43E1CD4A268C38FA007E0EDB /* UIViewExtention.swift in Sources */,

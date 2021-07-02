@@ -24,7 +24,8 @@ class HomeTabViewController: UITabBarController {
                                                     image: UIImage(systemName: "shippingbox"),
                                                     selectedImage: UIImage(systemName: "shippingbox.fill"))
         
-        let contentsViewController = ContentsViewController()
+        let layuot = UICollectionViewFlowLayout()
+        let contentsViewController = ContentsViewController(collectionViewLayout: layuot)
         contentsViewController.tabBarItem = UITabBarItem(title: "Contents",
                                                     image: UIImage(systemName: "rectangle.on.rectangle"),
                                                     selectedImage: UIImage(systemName: "rectangle.fill.on.rectangle.fill"))
