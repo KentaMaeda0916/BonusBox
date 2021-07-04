@@ -7,36 +7,22 @@
 
 import UIKit
 
-class ContentsViewController: UICollectionViewController {
+class ContentsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        navigationItem.title = "content"
-        collectionView.backgroundColor = .blue
-        
-        collectionView.register(ContentsCell.self, forCellWithReuseIdentifier: "cellId")
-//        setUpMenuBar()
-    }
-//
-//    let menuBar: MenuBar = {
-//        let menuBar = MenuBar()
-//        return menuBar
-//    }()
-//
-//    private func setUpMenuBar() {
-//        view.addSubview(menuBr)
-//        view.addCon
-//    }
-    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
-    }
-    
-    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellId", for: indexPath)
 
-        return cell
     }
+
+//    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+//        return 10
+//    }
+//
+//    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+//        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellId", for: indexPath)
+//
+//        return cell
+//    }
 }
 
 extension ContentsViewController: UICollectionViewDelegateFlowLayout {
@@ -61,18 +47,8 @@ class ContentsCell: UICollectionViewCell {
         super.init(frame: frame)
         
         backgroundColor = .white
-        setUpLayout()
     }
-    
-    private func setUpLayout() {
-        addSubview(contentsTitle)
-        
-        NSLayoutConstraint.activate([
-            contentsTitle.topAnchor.constraint(equalTo: self.topAnchor, constant: 5),
-            contentsTitle.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 5)
-        ])
-        contentsTitle.translatesAutoresizingMaskIntoConstraints = false
-    }
+
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")

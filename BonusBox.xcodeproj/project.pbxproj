@@ -23,10 +23,12 @@
 		43E1CD34268C2813007E0EDB /* HomeTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43E1CD33268C2813007E0EDB /* HomeTabViewController.swift */; };
 		43E1CD3C268C28A2007E0EDB /* BoxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43E1CD3B268C28A2007E0EDB /* BoxViewController.swift */; };
 		43E1CD41268C28D3007E0EDB /* ContentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43E1CD40268C28D3007E0EDB /* ContentsViewController.swift */; };
-		43E1CD4A268C38FA007E0EDB /* UIViewExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43E1CD49268C38FA007E0EDB /* UIViewExtention.swift */; };
 		43E1CD53268D8236007E0EDB /* BubbleTransition in Frameworks */ = {isa = PBXBuildFile; productRef = 43E1CD52268D8236007E0EDB /* BubbleTransition */; };
 		43E1CD58268D8B04007E0EDB /* LotteryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43E1CD57268D8B04007E0EDB /* LotteryViewController.swift */; };
-		43E1CD64268EE9B8007E0EDB /* MenuBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43E1CD63268EE9B8007E0EDB /* MenuBar.swift */; };
+		43E1CD6C26913882007E0EDB /* HomeTabView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43E1CD6B26913882007E0EDB /* HomeTabView.storyboard */; };
+		43E1CD712691400C007E0EDB /* BoxView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43E1CD702691400C007E0EDB /* BoxView.storyboard */; };
+		43E1CD7626914021007E0EDB /* LotteryView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43E1CD7526914021007E0EDB /* LotteryView.storyboard */; };
+		43E1CD7B26914034007E0EDB /* ContentsView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43E1CD7A26914034007E0EDB /* ContentsView.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,9 +95,11 @@
 		43E1CD33268C2813007E0EDB /* HomeTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabViewController.swift; sourceTree = "<group>"; };
 		43E1CD3B268C28A2007E0EDB /* BoxViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoxViewController.swift; sourceTree = "<group>"; };
 		43E1CD40268C28D3007E0EDB /* ContentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentsViewController.swift; sourceTree = "<group>"; };
-		43E1CD49268C38FA007E0EDB /* UIViewExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtention.swift; sourceTree = "<group>"; };
 		43E1CD57268D8B04007E0EDB /* LotteryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LotteryViewController.swift; sourceTree = "<group>"; };
-		43E1CD63268EE9B8007E0EDB /* MenuBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBar.swift; sourceTree = "<group>"; };
+		43E1CD6B26913882007E0EDB /* HomeTabView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomeTabView.storyboard; sourceTree = "<group>"; };
+		43E1CD702691400C007E0EDB /* BoxView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BoxView.storyboard; sourceTree = "<group>"; };
+		43E1CD7526914021007E0EDB /* LotteryView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LotteryView.storyboard; sourceTree = "<group>"; };
+		43E1CD7A26914034007E0EDB /* ContentsView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ContentsView.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,8 +153,10 @@
 				43E1CCEC268C0494007E0EDB /* Assets.xcassets */,
 				43E1CCEE268C0494007E0EDB /* LaunchScreen.storyboard */,
 				43E1CCF1268C0494007E0EDB /* Info.plist */,
-				43E1CD49268C38FA007E0EDB /* UIViewExtention.swift */,
-				43E1CD63268EE9B8007E0EDB /* MenuBar.swift */,
+				43E1CD6B26913882007E0EDB /* HomeTabView.storyboard */,
+				43E1CD702691400C007E0EDB /* BoxView.storyboard */,
+				43E1CD7526914021007E0EDB /* LotteryView.storyboard */,
+				43E1CD7A26914034007E0EDB /* ContentsView.storyboard */,
 			);
 			path = BonusBox;
 			sourceTree = "<group>";
@@ -286,8 +292,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43E1CD7626914021007E0EDB /* LotteryView.storyboard in Resources */,
 				43E1CCF0268C0494007E0EDB /* LaunchScreen.storyboard in Resources */,
+				43E1CD712691400C007E0EDB /* BoxView.storyboard in Resources */,
 				43E1CCED268C0494007E0EDB /* Assets.xcassets in Resources */,
+				43E1CD6C26913882007E0EDB /* HomeTabView.storyboard in Resources */,
+				43E1CD7B26914034007E0EDB /* ContentsView.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -317,10 +327,8 @@
 			files = (
 				43E1CCE4268C0490007E0EDB /* AppDelegate.swift in Sources */,
 				43E1CCE6268C0490007E0EDB /* SceneDelegate.swift in Sources */,
-				43E1CD64268EE9B8007E0EDB /* MenuBar.swift in Sources */,
 				43E1CD58268D8B04007E0EDB /* LotteryViewController.swift in Sources */,
 				43E1CD3C268C28A2007E0EDB /* BoxViewController.swift in Sources */,
-				43E1CD4A268C38FA007E0EDB /* UIViewExtention.swift in Sources */,
 				43E1CD34268C2813007E0EDB /* HomeTabViewController.swift in Sources */,
 				43E1CD41268C28D3007E0EDB /* ContentsViewController.swift in Sources */,
 			);

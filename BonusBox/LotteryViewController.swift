@@ -41,37 +41,8 @@ class LotteryViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setUpLayout()
-    }
-    
-    private func setUpLayout() {
-        view.backgroundColor  = .orange
-        let tabBarHeight = self.tabBarHeight(tabBarController: HomeTabViewController())
-        let dismissButtonConstant = tabBarHeight + lotteryButtonConstant
-        let resultStackView = UIStackView(arrangedSubviews: [resultTitleLable,resultLable])
-        resultStackView.axis = .vertical
-        resultStackView.distribution = .fillEqually
-        resultStackView.alignment = .center
-        
-        view.addSubview(dismissButton)
-        view.addSubview(resultStackView)
-        
-        
-        NSLayoutConstraint.activate([
-            dismissButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -(dismissButtonConstant)),
-            dismissButton.centerXAnchor.constraint(equalTo: view.centerXAnchor, constant: 0)
-        ])
-        dismissButton.translatesAutoresizingMaskIntoConstraints = false
-        
-        NSLayoutConstraint.activate([
-            resultStackView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 40),
-            resultStackView.centerXAnchor.constraint(equalTo: view.centerXAnchor, constant: 0)
-        ])
-        resultStackView.translatesAutoresizingMaskIntoConstraints = false
 
     }
-    
-    
     
     func tabBarHeight(tabBarController: UITabBarController) -> CGFloat {
         return tabBarController.tabBar.frame.size.height

@@ -105,51 +105,9 @@ class BoxViewController: UIViewController, UIViewControllerTransitioningDelegate
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        setUpLayout()
-        
+        view.backgroundColor = .white
     }
     
-    func setUpLayout() {
-        view.backgroundColor = .white
-        
-        let bonusBoxStackView = UIStackView(arrangedSubviews: [bonusBoxLable,bonusBoxSelectingButton])
-        bonusBoxStackView.axis = .vertical
-        bonusBoxStackView.distribution = .fillEqually
-        
-        let penaltyBoxStackView = UIStackView(arrangedSubviews: [penaltyBoxLable,penaltyBoxSelectingButton])
-        penaltyBoxStackView.axis = .vertical
-        penaltyBoxStackView.distribution = .fillEqually
-        
-        let buttonStackView = UIStackView(arrangedSubviews: [bonusBoxStackView,penaltyBoxStackView])
-        buttonStackView.axis = .horizontal
-        buttonStackView.distribution = .fillEqually
-        
-        view.addSubview(operationGuidanceLable)
-        view.addSubview(buttonStackView)
-        view.addSubview(LotteryButton)
-        
-        NSLayoutConstraint.activate([
-            operationGuidanceLable.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 0),
-            operationGuidanceLable.centerXAnchor.constraint(equalTo: view.centerXAnchor, constant: 0)
-        ])
-        operationGuidanceLable.translatesAutoresizingMaskIntoConstraints = false
-        
-        NSLayoutConstraint.activate([
-            buttonStackView.topAnchor.constraint(equalTo: operationGuidanceLable.bottomAnchor, constant: 40),
-            buttonStackView.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.8),
-            buttonStackView.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.5),
-            buttonStackView.centerXAnchor.constraint(equalTo: view.centerXAnchor, constant: 0)
-        ])
-        buttonStackView.translatesAutoresizingMaskIntoConstraints = false
-        
-        NSLayoutConstraint.activate([
-            LotteryButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -(lotteryButtonConstant)),
-            LotteryButton.centerXAnchor.constraint(equalTo: view.centerXAnchor, constant: 0)
-        ])
-        LotteryButton.translatesAutoresizingMaskIntoConstraints = false
-    }
-
     // MARK: UIViewControllerTransitioningDelegate
     
     public func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
