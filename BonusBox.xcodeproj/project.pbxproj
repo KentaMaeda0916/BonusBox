@@ -144,19 +144,13 @@
 		43E1CCE2268C0490007E0EDB /* BonusBox */ = {
 			isa = PBXGroup;
 			children = (
+				43E1CD86269145E6007E0EDB /* ViewControllers */,
+				43E1CD85269145B4007E0EDB /* Storyboards */,
 				43E1CCE3268C0490007E0EDB /* AppDelegate.swift */,
 				43E1CCE5268C0490007E0EDB /* SceneDelegate.swift */,
-				43E1CD33268C2813007E0EDB /* HomeTabViewController.swift */,
-				43E1CD3B268C28A2007E0EDB /* BoxViewController.swift */,
-				43E1CD57268D8B04007E0EDB /* LotteryViewController.swift */,
-				43E1CD40268C28D3007E0EDB /* ContentsViewController.swift */,
 				43E1CCEC268C0494007E0EDB /* Assets.xcassets */,
 				43E1CCEE268C0494007E0EDB /* LaunchScreen.storyboard */,
 				43E1CCF1268C0494007E0EDB /* Info.plist */,
-				43E1CD6B26913882007E0EDB /* HomeTabView.storyboard */,
-				43E1CD702691400C007E0EDB /* BoxView.storyboard */,
-				43E1CD7526914021007E0EDB /* LotteryView.storyboard */,
-				43E1CD7A26914034007E0EDB /* ContentsView.storyboard */,
 			);
 			path = BonusBox;
 			sourceTree = "<group>";
@@ -183,6 +177,28 @@
 				43E1CD13268C049A007E0EDB /* PushNotificationPayload.apns */,
 			);
 			path = "BonusBox WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		43E1CD85269145B4007E0EDB /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				43E1CD6B26913882007E0EDB /* HomeTabView.storyboard */,
+				43E1CD702691400C007E0EDB /* BoxView.storyboard */,
+				43E1CD7526914021007E0EDB /* LotteryView.storyboard */,
+				43E1CD7A26914034007E0EDB /* ContentsView.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		43E1CD86269145E6007E0EDB /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				43E1CD33268C2813007E0EDB /* HomeTabViewController.swift */,
+				43E1CD3B268C28A2007E0EDB /* BoxViewController.swift */,
+				43E1CD57268D8B04007E0EDB /* LotteryViewController.swift */,
+				43E1CD40268C28D3007E0EDB /* ContentsViewController.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
