@@ -23,12 +23,15 @@
 		43E1CD34268C2813007E0EDB /* HomeTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43E1CD33268C2813007E0EDB /* HomeTabViewController.swift */; };
 		43E1CD3C268C28A2007E0EDB /* BoxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43E1CD3B268C28A2007E0EDB /* BoxViewController.swift */; };
 		43E1CD41268C28D3007E0EDB /* ContentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43E1CD40268C28D3007E0EDB /* ContentsViewController.swift */; };
-		43E1CD53268D8236007E0EDB /* BubbleTransition in Frameworks */ = {isa = PBXBuildFile; productRef = 43E1CD52268D8236007E0EDB /* BubbleTransition */; };
+		43E1CD53268D8236007E0EDB /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = 43E1CD52268D8236007E0EDB /* SwiftPackageProductDependency */; };
 		43E1CD58268D8B04007E0EDB /* LotteryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43E1CD57268D8B04007E0EDB /* LotteryViewController.swift */; };
 		43E1CD6C26913882007E0EDB /* HomeTabView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43E1CD6B26913882007E0EDB /* HomeTabView.storyboard */; };
 		43E1CD712691400C007E0EDB /* BoxView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43E1CD702691400C007E0EDB /* BoxView.storyboard */; };
 		43E1CD7626914021007E0EDB /* LotteryView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43E1CD7526914021007E0EDB /* LotteryView.storyboard */; };
 		43E1CD7B26914034007E0EDB /* ContentsView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43E1CD7A26914034007E0EDB /* ContentsView.storyboard */; };
+		64D54799A8508F34A03D8E61 /* Pods_BonusBox_WatchKit_Extension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A90456E5528BABB2C62863DB /* Pods_BonusBox_WatchKit_Extension.framework */; };
+		A47AE5E492E25F8875748055 /* Pods_BonusBox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD11A31FE757E1F12139C0DC /* Pods_BonusBox.framework */; };
+		EAE71C7F5386B4D9671C89FD /* Pods_BonusBox_WatchKit_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BAAFF24A75A0F255C7C9284 /* Pods_BonusBox_WatchKit_App.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +77,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		1336C31E5FDF6AC7A6B9BDB7 /* Pods-BonusBox WatchKit Extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BonusBox WatchKit Extension.debug.xcconfig"; path = "Target Support Files/Pods-BonusBox WatchKit Extension/Pods-BonusBox WatchKit Extension.debug.xcconfig"; sourceTree = "<group>"; };
 		43E1CCE0268C0490007E0EDB /* BonusBox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BonusBox.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		43E1CCE3268C0490007E0EDB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		43E1CCE5268C0490007E0EDB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -100,6 +104,14 @@
 		43E1CD702691400C007E0EDB /* BoxView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BoxView.storyboard; sourceTree = "<group>"; };
 		43E1CD7526914021007E0EDB /* LotteryView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LotteryView.storyboard; sourceTree = "<group>"; };
 		43E1CD7A26914034007E0EDB /* ContentsView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ContentsView.storyboard; sourceTree = "<group>"; };
+		5D5A97A4EEDA76BC56B30279 /* Pods-BonusBox WatchKit App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BonusBox WatchKit App.release.xcconfig"; path = "Target Support Files/Pods-BonusBox WatchKit App/Pods-BonusBox WatchKit App.release.xcconfig"; sourceTree = "<group>"; };
+		630CAB5B6D7387E1009EE643 /* Pods-BonusBox WatchKit Extension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BonusBox WatchKit Extension.release.xcconfig"; path = "Target Support Files/Pods-BonusBox WatchKit Extension/Pods-BonusBox WatchKit Extension.release.xcconfig"; sourceTree = "<group>"; };
+		8BAAFF24A75A0F255C7C9284 /* Pods_BonusBox_WatchKit_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BonusBox_WatchKit_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9B1A59302A3D4F9477861A67 /* Pods-BonusBox.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BonusBox.release.xcconfig"; path = "Target Support Files/Pods-BonusBox/Pods-BonusBox.release.xcconfig"; sourceTree = "<group>"; };
+		A550FFE4D0FC2711DF65A60F /* Pods-BonusBox.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BonusBox.debug.xcconfig"; path = "Target Support Files/Pods-BonusBox/Pods-BonusBox.debug.xcconfig"; sourceTree = "<group>"; };
+		A90456E5528BABB2C62863DB /* Pods_BonusBox_WatchKit_Extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BonusBox_WatchKit_Extension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD11A31FE757E1F12139C0DC /* Pods_BonusBox.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BonusBox.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E387C25A8F329E0F16232D84 /* Pods-BonusBox WatchKit App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BonusBox WatchKit App.debug.xcconfig"; path = "Target Support Files/Pods-BonusBox WatchKit App/Pods-BonusBox WatchKit App.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,7 +119,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				43E1CD53268D8236007E0EDB /* BubbleTransition in Frameworks */,
+				43E1CD53268D8236007E0EDB /* BuildFile in Frameworks */,
+				A47AE5E492E25F8875748055 /* Pods_BonusBox.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -115,6 +128,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				64D54799A8508F34A03D8E61 /* Pods_BonusBox_WatchKit_Extension.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4E084ED0A12EC8D09EA8E079 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EAE71C7F5386B4D9671C89FD /* Pods_BonusBox_WatchKit_App.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -128,6 +150,8 @@
 				43E1CCF8268C0494007E0EDB /* BonusBox WatchKit App */,
 				43E1CD07268C0497007E0EDB /* BonusBox WatchKit Extension */,
 				43E1CCE1268C0490007E0EDB /* Products */,
+				95DB4725C6DE7D6C8366EBB9 /* Pods */,
+				5B0A29D1A641C7EA07AD5392 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -201,6 +225,30 @@
 			path = ViewControllers;
 			sourceTree = "<group>";
 		};
+		5B0A29D1A641C7EA07AD5392 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CD11A31FE757E1F12139C0DC /* Pods_BonusBox.framework */,
+				8BAAFF24A75A0F255C7C9284 /* Pods_BonusBox_WatchKit_App.framework */,
+				A90456E5528BABB2C62863DB /* Pods_BonusBox_WatchKit_Extension.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		95DB4725C6DE7D6C8366EBB9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A550FFE4D0FC2711DF65A60F /* Pods-BonusBox.debug.xcconfig */,
+				9B1A59302A3D4F9477861A67 /* Pods-BonusBox.release.xcconfig */,
+				E387C25A8F329E0F16232D84 /* Pods-BonusBox WatchKit App.debug.xcconfig */,
+				5D5A97A4EEDA76BC56B30279 /* Pods-BonusBox WatchKit App.release.xcconfig */,
+				1336C31E5FDF6AC7A6B9BDB7 /* Pods-BonusBox WatchKit Extension.debug.xcconfig */,
+				630CAB5B6D7387E1009EE643 /* Pods-BonusBox WatchKit Extension.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -208,10 +256,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 43E1CD1E268C049A007E0EDB /* Build configuration list for PBXNativeTarget "BonusBox" */;
 			buildPhases = (
+				008976EDBFB5D67093416C1D /* [CP] Check Pods Manifest.lock */,
 				43E1CCDC268C0490007E0EDB /* Sources */,
 				43E1CCDD268C0490007E0EDB /* Frameworks */,
 				43E1CCDE268C0490007E0EDB /* Resources */,
 				43E1CD1D268C049A007E0EDB /* Embed Watch Content */,
+				978EA1149C49CE91ADD7C4E2 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -220,7 +270,7 @@
 			);
 			name = BonusBox;
 			packageProductDependencies = (
-				43E1CD52268D8236007E0EDB /* BubbleTransition */,
+				43E1CD52268D8236007E0EDB /* SwiftPackageProductDependency */,
 			);
 			productName = BonusBox;
 			productReference = 43E1CCE0268C0490007E0EDB /* BonusBox.app */;
@@ -230,8 +280,10 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 43E1CD1A268C049A007E0EDB /* Build configuration list for PBXNativeTarget "BonusBox WatchKit App" */;
 			buildPhases = (
+				DABCCEDFCE04D96189530562 /* [CP] Check Pods Manifest.lock */,
 				43E1CCF2268C0494007E0EDB /* Resources */,
 				43E1CD19268C049A007E0EDB /* Embed App Extensions */,
+				4E084ED0A12EC8D09EA8E079 /* Frameworks */,
 			);
 			buildRules = (
 			);
@@ -247,6 +299,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 43E1CD16268C049A007E0EDB /* Build configuration list for PBXNativeTarget "BonusBox WatchKit Extension" */;
 			buildPhases = (
+				F724AB29E13E0E10EFA1158D /* [CP] Check Pods Manifest.lock */,
 				43E1CCFF268C0497007E0EDB /* Sources */,
 				43E1CD00268C0497007E0EDB /* Frameworks */,
 				43E1CD01268C0497007E0EDB /* Resources */,
@@ -290,7 +343,7 @@
 			);
 			mainGroup = 43E1CCD7268C0490007E0EDB;
 			packageReferences = (
-				43E1CD51268D8236007E0EDB /* XCRemoteSwiftPackageReference "BubbleTransition" */,
+				43E1CD51268D8236007E0EDB /* RemoteSwiftPackageReference */,
 			);
 			productRefGroup = 43E1CCE1268C0490007E0EDB /* Products */;
 			projectDirPath = "";
@@ -335,6 +388,92 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		008976EDBFB5D67093416C1D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BonusBox-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		978EA1149C49CE91ADD7C4E2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BonusBox/Pods-BonusBox-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BonusBox/Pods-BonusBox-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BonusBox/Pods-BonusBox-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DABCCEDFCE04D96189530562 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BonusBox WatchKit App-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F724AB29E13E0E10EFA1158D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BonusBox WatchKit Extension-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		43E1CCDC268C0490007E0EDB /* Sources */ = {
@@ -511,6 +650,7 @@
 		};
 		43E1CD17268C049A007E0EDB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1336C31E5FDF6AC7A6B9BDB7 /* Pods-BonusBox WatchKit Extension.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_STYLE = Automatic;
@@ -533,6 +673,7 @@
 		};
 		43E1CD18268C049A007E0EDB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 630CAB5B6D7387E1009EE643 /* Pods-BonusBox WatchKit Extension.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_STYLE = Automatic;
@@ -556,6 +697,7 @@
 		};
 		43E1CD1B268C049A007E0EDB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E387C25A8F329E0F16232D84 /* Pods-BonusBox WatchKit App.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -576,6 +718,7 @@
 		};
 		43E1CD1C268C049A007E0EDB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5D5A97A4EEDA76BC56B30279 /* Pods-BonusBox WatchKit App.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -597,6 +740,7 @@
 		};
 		43E1CD1F268C049A007E0EDB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A550FFE4D0FC2711DF65A60F /* Pods-BonusBox.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -618,6 +762,7 @@
 		};
 		43E1CD20268C049A007E0EDB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9B1A59302A3D4F9477861A67 /* Pods-BonusBox.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -680,7 +825,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		43E1CD51268D8236007E0EDB /* XCRemoteSwiftPackageReference "BubbleTransition" */ = {
+		43E1CD51268D8236007E0EDB /* RemoteSwiftPackageReference */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/andreamazz/BubbleTransition";
 			requirement = {
@@ -691,9 +836,9 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		43E1CD52268D8236007E0EDB /* BubbleTransition */ = {
+		43E1CD52268D8236007E0EDB /* SwiftPackageProductDependency */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 43E1CD51268D8236007E0EDB /* XCRemoteSwiftPackageReference "BubbleTransition" */;
+			package = 43E1CD51268D8236007E0EDB /* RemoteSwiftPackageReference */;
 			productName = BubbleTransition;
 		};
 /* End XCSwiftPackageProductDependency section */
