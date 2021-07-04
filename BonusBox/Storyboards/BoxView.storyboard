@@ -15,20 +15,97 @@
                     <view key="view" contentMode="scaleToFill" id="Mmc-bw-SqN">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="箱を選択してください" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zYG-XR-5fU">
+                                <rect key="frame" x="120.5" y="74" width="173.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="b2f-5Q-T02">
+                                <rect key="frame" x="12" y="119.5" width="390" height="389"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="F9e-Fe-bJH">
+                                        <rect key="frame" x="0.0" y="0.0" width="195" height="389"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ボーナス" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vgE-6m-BcF">
+                                                <rect key="frame" x="0.0" y="0.0" width="195" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="McY-X9-SCg">
+                                                <rect key="frame" x="0.0" y="20.5" width="195" height="368.5"/>
+                                                <color key="backgroundColor" red="0.27450980390000002" green="0.67843137249999996" blue="0.92156862750000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" title="Button"/>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="PGX-el-IFr">
+                                        <rect key="frame" x="195" y="0.0" width="195" height="389"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="罰ゲーム" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rmC-9n-TOP">
+                                                <rect key="frame" x="0.0" y="0.0" width="195" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GJA-N6-ZwI">
+                                                <rect key="frame" x="0.0" y="20.5" width="195" height="368.5"/>
+                                                <color key="backgroundColor" red="0.1960784314" green="0.7843137255" blue="0.35294117650000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" title="Button"/>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="b2f-5Q-T02" secondAttribute="height" multiplier="1:1" constant="1" id="hXe-nl-XTT"/>
+                                </constraints>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vyL-tn-fIQ">
+                                <rect key="frame" x="72" y="598.5" width="270" height="60"/>
+                                <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="nBE-nF-dro"/>
+                                    <constraint firstAttribute="width" constant="270" id="uWU-ae-Rtt"/>
+                                </constraints>
+                                <state key="normal" title="くじを引く"/>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="26B-ba-rNE"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="zYG-XR-5fU" firstAttribute="top" secondItem="26B-ba-rNE" secondAttribute="top" constant="30" id="19Q-ZQ-z7K"/>
+                            <constraint firstItem="vyL-tn-fIQ" firstAttribute="centerX" secondItem="26B-ba-rNE" secondAttribute="centerX" id="1Ds-kp-60E"/>
+                            <constraint firstItem="b2f-5Q-T02" firstAttribute="centerX" secondItem="26B-ba-rNE" secondAttribute="centerX" id="BHQ-gq-8Ez"/>
+                            <constraint firstItem="26B-ba-rNE" firstAttribute="trailing" secondItem="b2f-5Q-T02" secondAttribute="trailing" constant="12" id="VoI-zL-kmH"/>
+                            <constraint firstItem="b2f-5Q-T02" firstAttribute="leading" secondItem="26B-ba-rNE" secondAttribute="leading" constant="12" id="WOe-8G-SLK"/>
+                            <constraint firstItem="b2f-5Q-T02" firstAttribute="top" secondItem="zYG-XR-5fU" secondAttribute="bottom" constant="25" id="XMf-vi-Dtv"/>
+                            <constraint firstItem="vyL-tn-fIQ" firstAttribute="top" secondItem="b2f-5Q-T02" secondAttribute="bottom" constant="90" id="d5a-F3-6zN"/>
+                            <constraint firstItem="zYG-XR-5fU" firstAttribute="centerX" secondItem="Mmc-bw-SqN" secondAttribute="centerX" id="m8Q-lV-Sau"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" systemItem="favorites" id="7ex-Nf-RdV"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="bonusBoxLable" destination="vgE-6m-BcF" id="arY-1H-OhQ"/>
+                        <outlet property="bonusBoxSelectingButton" destination="McY-X9-SCg" id="QXZ-EX-CgF"/>
+                        <outlet property="operationGuidanceLable" destination="zYG-XR-5fU" id="Ghz-cm-V69"/>
+                        <outlet property="penaltyBoxLable" destination="rmC-9n-TOP" id="oEV-Kp-niV"/>
+                        <outlet property="penaltyBoxSelectingButton" destination="GJA-N6-ZwI" id="9On-h7-H9g"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="22A-fs-NM3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="122" y="127"/>
+            <point key="canvasLocation" x="121.73913043478262" y="126.5625"/>
         </scene>
     </scenes>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
