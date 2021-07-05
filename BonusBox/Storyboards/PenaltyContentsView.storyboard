@@ -15,18 +15,43 @@
                     <view key="view" contentMode="scaleToFill" id="fNb-19-txA">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="rKD-Tr-z5J">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CellId" id="VAM-cv-pG4">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="VAM-cv-pG4" id="uRH-QO-I90">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="sph-k8-cXz"/>
-                        <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="rKD-Tr-z5J" firstAttribute="top" secondItem="sph-k8-cXz" secondAttribute="top" id="2O8-Ur-xir"/>
+                            <constraint firstItem="rKD-Tr-z5J" firstAttribute="trailing" secondItem="sph-k8-cXz" secondAttribute="trailing" id="kDd-y0-kmv"/>
+                            <constraint firstItem="sph-k8-cXz" firstAttribute="bottom" secondItem="rKD-Tr-z5J" secondAttribute="bottom" id="tMV-yL-YTI"/>
+                            <constraint firstItem="rKD-Tr-z5J" firstAttribute="leading" secondItem="sph-k8-cXz" secondAttribute="leading" id="y9N-GG-QcX"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="penaltyContentsTableView" destination="rKD-Tr-z5J" id="zg3-qr-D80"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="keL-kj-C1b" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="151" y="131"/>
+            <point key="canvasLocation" x="-52.173913043478265" y="123.88392857142857"/>
         </scene>
     </scenes>
     <resources>
-        <systemColor name="systemIndigoColor">
-            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
     </resources>
 </document>
