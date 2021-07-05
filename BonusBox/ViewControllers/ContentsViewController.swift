@@ -1,44 +1,37 @@
 //
-//  ContentsViewController.swift
+//  ParentViewController.swift
 //  BonusBox
 //
 //  Created by まえけん on 2021/06/30.
 //
 
 import UIKit
+import XLPagerTabStrip
 
-class ContentsViewController: UIViewController {
-
-    @IBOutlet weak var contentsTableVIew: UITableView!
-    
-    var contents = ["A","B","C"]
+class ContentsViewController: ButtonBarPagerTabStripViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        contentsTableVIew.dataSource = self
-        contentsTableVIew.delegate = self
-        
-        contentsTableVIew.allowsMultipleSelectionDuringEditing = true
-        navigationItem.title = "内容"
-        navigationItem.rightBarButtonItem = editButtonItem
-        
-    }
-    override func setEditing(_ editing: Bool, animated: Bool) {
-        super.setEditing(editing, animated: animated)
-        contentsTableVIew.isEditing = editing
-    }
-}
-
-extension ContentsViewController: UITableViewDataSource, UITableViewDelegate {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return contents.count
+        // change selected bar color
+        settings.style.buttonBarBackgroundColor = .white
+        settings.style.buttonBarItemBackgroundColor = .white
+        settings.style.selectedBarBackgroundColor = .purple
+        settings.style.buttonBarItemFont = .boldSystemFont(ofSize: 14)
+        settings.style.selectedBarHeight = 2.0
+        settings.style.buttonBarMinimumLineSpacing = 0
+        settings.style.buttonBarItemTitleColor = .black
+        settings.style.buttonBarItemsShouldFillAvailableWidth = true
+        settings.style.buttonBarLeftContentInset = 0
+        settings.style.buttonBarRightContentInset = 0
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = contentsTableVIew.dequeueReusableCell(withIdentifier: "contentsCell", for: indexPath)
-        cell.textLabel?.text = contents[indexPath.row]
-        return cell
+    override func viewControllers(for pagerTabStripController: PagerTabStripViewController) -> [UIViewController] {
+        //管理されるViewControllerを返す処理
+        let firstVC = UIStoryboard(name: "BonusContentsView", bundle: nil).instantiateViewController(withIdentifier: "BonusContentsView")
+        let secondVC = UIStoryboard(name: "PenaltyContentsView", bundle: nil).instantiateViewController(withIdentifier: "PenaltyContentsView")
+        let childViewControllers:[UIViewController] = [firstVC, secondVC]
+        return childViewControllers
     }
-
 }
+

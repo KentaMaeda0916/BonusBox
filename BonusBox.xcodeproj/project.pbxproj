@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4347FA2D2692C97500C95EFC /* BonusContentsView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4347FA2C2692C97500C95EFC /* BonusContentsView.storyboard */; };
+		4347FA322692C98D00C95EFC /* PenaltyContentsView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4347FA312692C98D00C95EFC /* PenaltyContentsView.storyboard */; };
+		4347FA372692C9A600C95EFC /* BonusContentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4347FA362692C9A600C95EFC /* BonusContentsViewController.swift */; };
+		4347FA3C2692C9B400C95EFC /* PenaltyContentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4347FA3B2692C9B400C95EFC /* PenaltyContentsViewController.swift */; };
 		43E1CCE4268C0490007E0EDB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43E1CCE3268C0490007E0EDB /* AppDelegate.swift */; };
 		43E1CCE6268C0490007E0EDB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43E1CCE5268C0490007E0EDB /* SceneDelegate.swift */; };
 		43E1CCED268C0494007E0EDB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43E1CCEC268C0494007E0EDB /* Assets.xcassets */; };
@@ -23,7 +27,7 @@
 		43E1CD34268C2813007E0EDB /* HomeTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43E1CD33268C2813007E0EDB /* HomeTabViewController.swift */; };
 		43E1CD3C268C28A2007E0EDB /* BoxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43E1CD3B268C28A2007E0EDB /* BoxViewController.swift */; };
 		43E1CD41268C28D3007E0EDB /* ContentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43E1CD40268C28D3007E0EDB /* ContentsViewController.swift */; };
-		43E1CD53268D8236007E0EDB /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = 43E1CD52268D8236007E0EDB /* SwiftPackageProductDependency */; };
+		43E1CD53268D8236007E0EDB /* BubbleTransition in Frameworks */ = {isa = PBXBuildFile; productRef = 43E1CD52268D8236007E0EDB /* BubbleTransition */; };
 		43E1CD58268D8B04007E0EDB /* LotteryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43E1CD57268D8B04007E0EDB /* LotteryViewController.swift */; };
 		43E1CD6C26913882007E0EDB /* HomeTabView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43E1CD6B26913882007E0EDB /* HomeTabView.storyboard */; };
 		43E1CD712691400C007E0EDB /* BoxView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43E1CD702691400C007E0EDB /* BoxView.storyboard */; };
@@ -78,6 +82,10 @@
 
 /* Begin PBXFileReference section */
 		1336C31E5FDF6AC7A6B9BDB7 /* Pods-BonusBox WatchKit Extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BonusBox WatchKit Extension.debug.xcconfig"; path = "Target Support Files/Pods-BonusBox WatchKit Extension/Pods-BonusBox WatchKit Extension.debug.xcconfig"; sourceTree = "<group>"; };
+		4347FA2C2692C97500C95EFC /* BonusContentsView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BonusContentsView.storyboard; sourceTree = "<group>"; };
+		4347FA312692C98D00C95EFC /* PenaltyContentsView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PenaltyContentsView.storyboard; sourceTree = "<group>"; };
+		4347FA362692C9A600C95EFC /* BonusContentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BonusContentsViewController.swift; sourceTree = "<group>"; };
+		4347FA3B2692C9B400C95EFC /* PenaltyContentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PenaltyContentsViewController.swift; sourceTree = "<group>"; };
 		43E1CCE0268C0490007E0EDB /* BonusBox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BonusBox.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		43E1CCE3268C0490007E0EDB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		43E1CCE5268C0490007E0EDB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -119,7 +127,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				43E1CD53268D8236007E0EDB /* BuildFile in Frameworks */,
+				43E1CD53268D8236007E0EDB /* BubbleTransition in Frameworks */,
 				A47AE5E492E25F8875748055 /* Pods_BonusBox.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -210,6 +218,8 @@
 				43E1CD702691400C007E0EDB /* BoxView.storyboard */,
 				43E1CD7526914021007E0EDB /* LotteryView.storyboard */,
 				43E1CD7A26914034007E0EDB /* ContentsView.storyboard */,
+				4347FA2C2692C97500C95EFC /* BonusContentsView.storyboard */,
+				4347FA312692C98D00C95EFC /* PenaltyContentsView.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -221,6 +231,8 @@
 				43E1CD3B268C28A2007E0EDB /* BoxViewController.swift */,
 				43E1CD57268D8B04007E0EDB /* LotteryViewController.swift */,
 				43E1CD40268C28D3007E0EDB /* ContentsViewController.swift */,
+				4347FA362692C9A600C95EFC /* BonusContentsViewController.swift */,
+				4347FA3B2692C9B400C95EFC /* PenaltyContentsViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -245,7 +257,6 @@
 				1336C31E5FDF6AC7A6B9BDB7 /* Pods-BonusBox WatchKit Extension.debug.xcconfig */,
 				630CAB5B6D7387E1009EE643 /* Pods-BonusBox WatchKit Extension.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -261,6 +272,7 @@
 				43E1CCDD268C0490007E0EDB /* Frameworks */,
 				43E1CCDE268C0490007E0EDB /* Resources */,
 				43E1CD1D268C049A007E0EDB /* Embed Watch Content */,
+				5E994C234DFA6EB881FF0342 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -269,7 +281,7 @@
 			);
 			name = BonusBox;
 			packageProductDependencies = (
-				43E1CD52268D8236007E0EDB /* SwiftPackageProductDependency */,
+				43E1CD52268D8236007E0EDB /* BubbleTransition */,
 			);
 			productName = BonusBox;
 			productReference = 43E1CCE0268C0490007E0EDB /* BonusBox.app */;
@@ -342,7 +354,7 @@
 			);
 			mainGroup = 43E1CCD7268C0490007E0EDB;
 			packageReferences = (
-				43E1CD51268D8236007E0EDB /* RemoteSwiftPackageReference */,
+				43E1CD51268D8236007E0EDB /* XCRemoteSwiftPackageReference "BubbleTransition" */,
 			);
 			productRefGroup = 43E1CCE1268C0490007E0EDB /* Products */;
 			projectDirPath = "";
@@ -363,8 +375,10 @@
 				43E1CD7626914021007E0EDB /* LotteryView.storyboard in Resources */,
 				43E1CCF0268C0494007E0EDB /* LaunchScreen.storyboard in Resources */,
 				43E1CD712691400C007E0EDB /* BoxView.storyboard in Resources */,
+				4347FA322692C98D00C95EFC /* PenaltyContentsView.storyboard in Resources */,
 				43E1CCED268C0494007E0EDB /* Assets.xcassets in Resources */,
 				43E1CD6C26913882007E0EDB /* HomeTabView.storyboard in Resources */,
+				4347FA2D2692C97500C95EFC /* BonusContentsView.storyboard in Resources */,
 				43E1CD7B26914034007E0EDB /* ContentsView.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -409,6 +423,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5E994C234DFA6EB881FF0342 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BonusBox/Pods-BonusBox-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BonusBox/Pods-BonusBox-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BonusBox/Pods-BonusBox-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		DABCCEDFCE04D96189530562 /* [CP] Check Pods Manifest.lock */ = {
@@ -462,12 +493,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4347FA3C2692C9B400C95EFC /* PenaltyContentsViewController.swift in Sources */,
 				43E1CCE4268C0490007E0EDB /* AppDelegate.swift in Sources */,
 				43E1CCE6268C0490007E0EDB /* SceneDelegate.swift in Sources */,
 				43E1CD58268D8B04007E0EDB /* LotteryViewController.swift in Sources */,
 				43E1CD3C268C28A2007E0EDB /* BoxViewController.swift in Sources */,
 				43E1CD34268C2813007E0EDB /* HomeTabViewController.swift in Sources */,
 				43E1CD41268C28D3007E0EDB /* ContentsViewController.swift in Sources */,
+				4347FA372692C9A600C95EFC /* BonusContentsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -807,7 +840,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		43E1CD51268D8236007E0EDB /* RemoteSwiftPackageReference */ = {
+		43E1CD51268D8236007E0EDB /* XCRemoteSwiftPackageReference "BubbleTransition" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/andreamazz/BubbleTransition";
 			requirement = {
@@ -818,9 +851,9 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		43E1CD52268D8236007E0EDB /* SwiftPackageProductDependency */ = {
+		43E1CD52268D8236007E0EDB /* BubbleTransition */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 43E1CD51268D8236007E0EDB /* RemoteSwiftPackageReference */;
+			package = 43E1CD51268D8236007E0EDB /* XCRemoteSwiftPackageReference "BubbleTransition" */;
 			productName = BubbleTransition;
 		};
 /* End XCSwiftPackageProductDependency section */
