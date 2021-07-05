@@ -21,15 +21,9 @@ class BonusContentsViewController: UIViewController, IndicatorInfoProvider {
         bonusContentsTableView.delegate = self
         
         bonusContentsTableView.allowsMultipleSelectionDuringEditing = true
-        navigationItem.title = "内容"
-        navigationItem.rightBarButtonItem = editButtonItem
         
     }
 
-    override func setEditing(_ editing: Bool, animated: Bool) {
-        super.setEditing(editing, animated: animated)
-        bonusContentsTableView.isEditing = editing
-    }
     func indicatorInfo(for pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo {
         return IndicatorInfo(title: "Bonus")
     }

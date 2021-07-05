@@ -10,6 +10,13 @@ import XLPagerTabStrip
 
 class ContentsViewController: ButtonBarPagerTabStripViewController {
     
+    var bonusContentsView: BonusContentsViewController? {
+        return children.first { $0 is BonusContentsViewController} as? BonusContentsViewController
+    }
+    var penaltyContentsView: PenaltyContentsViewController? {
+        return children.first { $0 is PenaltyContentsViewController} as? PenaltyContentsViewController
+    }
+    
     override func viewDidLoad() {
         
         // change selected bar color
@@ -21,9 +28,22 @@ class ContentsViewController: ButtonBarPagerTabStripViewController {
         settings.style.buttonBarMinimumInteritemSpacing = 0
         
         super.viewDidLoad()
+        navigationItem.title = "内容"
+        navigationItem.rightBarButtonItem = editButtonItem
 
     }
     
+    override func setEditing(_ editing: Bool, animated: Bool) {
+        super.setEditing(editing, animated: animated)
+        bonusContentsView?.bonusContentsTableView.setEditing(editing, animated: animated)
+        penaltyContentsView?.penaltyContentsTableView.setEditing(editing, animated: animated)
+        
+        if editing {
+            containerView.isScrollEnabled = false
+        } else {
+            containerView.isScrollEnabled = true
+        }
+    }
     override func viewControllers(for pagerTabStripController: PagerTabStripViewController) -> [UIViewController] {
         //管理されるViewControllerを返す処理
         let firstVC = UIStoryboard(name: "BonusContentsView", bundle: nil).instantiateViewController(withIdentifier: "BonusContentsView")

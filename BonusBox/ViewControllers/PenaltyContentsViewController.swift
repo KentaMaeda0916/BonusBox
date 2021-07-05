@@ -21,15 +21,9 @@ class PenaltyContentsViewController: UIViewController, IndicatorInfoProvider {
         penaltyContentsTableView.delegate = self
         
         penaltyContentsTableView.allowsMultipleSelectionDuringEditing = true
-        navigationItem.title = "内容"
-        navigationItem.rightBarButtonItem = editButtonItem
-        
+
     }
 
-    override func setEditing(_ editing: Bool, animated: Bool) {
-        super.setEditing(editing, animated: animated)
-        penaltyContentsTableView.isEditing = editing
-    }
     func indicatorInfo(for pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo {
         return IndicatorInfo(title: "Penalty")
     }
