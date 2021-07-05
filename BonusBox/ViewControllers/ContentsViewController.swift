@@ -16,14 +16,8 @@ class ContentsViewController: ButtonBarPagerTabStripViewController {
         settings.style.buttonBarBackgroundColor = .white
         settings.style.buttonBarItemBackgroundColor = .white
         settings.style.buttonBarItemTitleColor = .black
-////        settings.style.selectedBarBackgroundColor = .purple
-//        settings.style.buttonBarItemFont = .boldSystemFont(ofSize: 14)
-//        settings.style.selectedBarHeight = 2.0
         settings.style.buttonBarMinimumLineSpacing = 0
-
         settings.style.buttonBarItemsShouldFillAvailableWidth = true
-//        settings.style.buttonBarLeftContentInset = 50
-//        settings.style.buttonBarRightContentInset = 0
         settings.style.buttonBarMinimumInteritemSpacing = 0
         
         super.viewDidLoad()
