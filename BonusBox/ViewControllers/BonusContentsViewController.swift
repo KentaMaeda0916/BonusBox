@@ -33,11 +33,18 @@ extension BonusContentsViewController: UITableViewDataSource, UITableViewDelegat
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = bonusContentsTableView.dequeueReusableCell(withIdentifier: "CellId", for: indexPath)
+        cell.selectionStyle = .none
         cell.textLabel?.text = contents[indexPath.row]
         return cell
     }
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         contents.remove(at: indexPath.row)
         bonusContentsTableView.deleteRows(at: [indexPath], with: .automatic)
+    }
+    func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
+        if bonusContentsTableView.isEditing {
+            return .delete
+        }
+        return .none
     }
 }

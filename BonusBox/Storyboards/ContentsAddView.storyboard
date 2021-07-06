@@ -52,6 +52,9 @@
                                 <state key="normal" title="追加">
                                     <color key="titleColor" red="0.94898968939999995" green="0.94904297589999997" blue="0.9693621993" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="tappedAddButton:" destination="Rdl-C4-3PG" eventType="touchUpInside" id="d9t-xv-2Gb"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="lQU-SO-fi5"/>
@@ -72,6 +75,11 @@
                             <constraint firstItem="9Pd-2b-OCD" firstAttribute="centerX" secondItem="lQU-SO-fi5" secondAttribute="centerX" id="zmf-BZ-7JH"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="addButton" destination="Jeh-C7-LOr" id="8Nc-sh-Bhj"/>
+                        <outlet property="contentsType" destination="9Pd-2b-OCD" id="GkF-fs-RBC"/>
+                        <outlet property="newContentsTextField" destination="ik1-hg-Ahm" id="SrX-od-E2t"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jPh-TI-9ir" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
