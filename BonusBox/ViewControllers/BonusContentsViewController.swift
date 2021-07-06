@@ -19,9 +19,7 @@ class BonusContentsViewController: UIViewController, IndicatorInfoProvider {
 
         bonusContentsTableView.dataSource = self
         bonusContentsTableView.delegate = self
-        
-        bonusContentsTableView.allowsMultipleSelectionDuringEditing = true
-        
+                
     }
 
     func indicatorInfo(for pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo {
@@ -37,5 +35,9 @@ extension BonusContentsViewController: UITableViewDataSource, UITableViewDelegat
         let cell = bonusContentsTableView.dequeueReusableCell(withIdentifier: "CellId", for: indexPath)
         cell.textLabel?.text = contents[indexPath.row]
         return cell
+    }
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        contents.remove(at: indexPath.row)
+        bonusContentsTableView.deleteRows(at: [indexPath], with: .automatic)
     }
 }

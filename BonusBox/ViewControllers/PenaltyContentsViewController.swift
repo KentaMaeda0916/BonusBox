@@ -20,8 +20,6 @@ class PenaltyContentsViewController: UIViewController, IndicatorInfoProvider {
         penaltyContentsTableView.dataSource = self
         penaltyContentsTableView.delegate = self
         
-        penaltyContentsTableView.allowsMultipleSelectionDuringEditing = true
-
     }
 
     func indicatorInfo(for pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo {
@@ -37,5 +35,9 @@ extension PenaltyContentsViewController: UITableViewDataSource, UITableViewDeleg
         let cell = penaltyContentsTableView.dequeueReusableCell(withIdentifier: "CellId", for: indexPath)
         cell.textLabel?.text = contents[indexPath.row]
         return cell
+    }
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        contents.remove(at: indexPath.row)
+        penaltyContentsTableView.deleteRows(at: [indexPath], with: .automatic)
     }
 }
