@@ -12,8 +12,7 @@ class BoxViewController: UIViewController, UIViewControllerTransitioningDelegate
     let transition = BubbleTransition()
     let interactiveTransition = BubbleInteractiveTransition()
     
-//    let lotteryButtonConstant: CGFloat = 80
-//
+
 //    var bubbleColor: UIColor = .white
 //    var startingPoint = CGPoint.zero
 //    var duration = 0.5
@@ -28,28 +27,21 @@ class BoxViewController: UIViewController, UIViewControllerTransitioningDelegate
     @IBOutlet weak var penaltyBoxLable: UILabel!
     @IBOutlet weak var penaltyBoxSelectingButton: UIButton!
 
-    @objc func tappedLotteryButton(_ sender: UIButton) {
-        let modalViewController = LotteryViewController()
-//        modalViewController.transitioningDelegate = self
-//        modalViewController.modalPresentationStyle = .custom
-//        modalViewController.modalPresentationCapturesStatusBarAppearance = true
-//        modalViewController.interactiveTransition = interactiveTransition
-//        modalViewController.lotteryButtonConstant = lotteryButtonConstant
-        
+    @IBAction func tappedLotteryButton(_ sender: Any) {
+        let modalViewController = UIStoryboard(name: "LotteryView", bundle: nil).instantiateViewController(withIdentifier: "LotteryView") as! LotteryViewController
         if tappedBonusBoxButtonToggle && tappedpenaltyBoxButtonToggle {
-            modalViewController.resultLable.text = "ボーナス＋バツ"
+            modalViewController.resultText = "ボーナス＋バツ"
         } else if tappedBonusBoxButtonToggle == true && tappedpenaltyBoxButtonToggle == false {
-            modalViewController.resultLable.text = "ボーナス"
+            modalViewController.resultText = "ボーナス"
         } else if tappedBonusBoxButtonToggle == false && tappedpenaltyBoxButtonToggle == true{
-            modalViewController.resultLable.text = "バツ"
+            modalViewController.resultText = "バツ"
         } else {
             
         }
-        
         present(modalViewController, animated: true, completion: nil)
     }
-    
-    @objc func tappedBonusBoxButton(_ sender: UIButton) {
+
+    @IBAction func tappedBonusBoxButton(_ sender: Any) {
         if tappedBonusBoxButtonToggle {
             tappedBonusBoxButtonToggle = false
             bonusBoxSelectingButton.setImage(UIImage(systemName: "archivebox"), for: .normal)
@@ -58,19 +50,19 @@ class BoxViewController: UIViewController, UIViewControllerTransitioningDelegate
             bonusBoxSelectingButton.setImage(UIImage(systemName: "archivebox.fill"), for: .normal)
         }
     }
-//    @objc func tappedPenaltyBoxButton(_ sender: UIButton) {
-//        if tappedpenaltyBoxButtonToggle {
-//            tappedpenaltyBoxButtonToggle = false
-//            penaltyBoxSelectingButton.setImage(UIImage(systemName: "archivebox"), for: .normal)
-//        } else {
-//            tappedpenaltyBoxButtonToggle = true
-//            penaltyBoxSelectingButton.setImage(UIImage(systemName: "archivebox.fill"), for: .normal)
-//        }
-//    }
+    @IBAction func tappedPenaltyBoxButton(_ sender: Any) {
+        if tappedpenaltyBoxButtonToggle {
+            tappedpenaltyBoxButtonToggle = false
+            penaltyBoxSelectingButton.setImage(UIImage(systemName: "archivebox"), for: .normal)
+        } else {
+            tappedpenaltyBoxButtonToggle = true
+            penaltyBoxSelectingButton.setImage(UIImage(systemName: "archivebox.fill"), for: .normal)
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .white
+
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

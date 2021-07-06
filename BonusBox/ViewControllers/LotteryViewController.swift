@@ -11,6 +11,8 @@ import BubbleTransition
 class LotteryViewController: UIViewController {
     let transition = BubbleTransition()
     weak var interactiveTransition: BubbleInteractiveTransition?
+    
+    var resultText = ""
 
     @IBOutlet weak var dismissButton: UIButton!
     @IBOutlet weak var resultTitleLable: UILabel!
@@ -24,5 +26,6 @@ class LotteryViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemYellow
+        resultLable.text = resultText
     }
 }

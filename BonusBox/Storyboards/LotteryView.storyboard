@@ -11,7 +11,7 @@
         <!--Lottery View Controller-->
         <scene sceneID="U9G-Es-jkD">
             <objects>
-                <viewController id="Whu-eS-qYH" customClass="LotteryViewController" customModule="BonusBox" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LotteryView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Whu-eS-qYH" customClass="LotteryViewController" customModule="BonusBox" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7R8-40-2Q0">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

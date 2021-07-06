@@ -38,6 +38,9 @@
                                                 <rect key="frame" x="0.0" y="20.5" width="195" height="368.5"/>
                                                 <color key="backgroundColor" red="0.27450980390000002" green="0.67843137249999996" blue="0.92156862750000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <state key="normal" title="Button"/>
+                                                <connections>
+                                                    <action selector="tappedBonusBoxButton:" destination="Fb3-0d-1Cx" eventType="touchUpInside" id="v0j-EY-s47"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -54,6 +57,9 @@
                                                 <rect key="frame" x="0.0" y="20.5" width="195" height="368.5"/>
                                                 <color key="backgroundColor" red="0.1960784314" green="0.7843137255" blue="0.35294117650000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <state key="normal" title="Button"/>
+                                                <connections>
+                                                    <action selector="tappedPenaltyBoxButton:" destination="Fb3-0d-1Cx" eventType="touchUpInside" id="JRo-E7-ZTn"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -71,7 +77,7 @@
                                 </constraints>
                                 <state key="normal" title="くじを引く"/>
                                 <connections>
-                                    <segue destination="T7H-jZ-N02" kind="presentation" id="dUQ-rT-7IS"/>
+                                    <action selector="tappedLotteryButton:" destination="Fb3-0d-1Cx" eventType="touchUpInside" id="2s6-2o-tgZ"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -102,14 +108,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="22A-fs-NM3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="121.73913043478262" y="126.5625"/>
-        </scene>
-        <!--LotteryView-->
-        <scene sceneID="oTp-tC-e7Z">
-            <objects>
-                <viewControllerPlaceholder storyboardName="LotteryView" id="T7H-jZ-N02" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="h35-8W-mjm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="607" y="248"/>
         </scene>
     </scenes>
     <resources>
