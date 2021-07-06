@@ -12,15 +12,16 @@ class BoxViewController: UIViewController, UIViewControllerTransitioningDelegate
     let transition = BubbleTransition()
     let interactiveTransition = BubbleInteractiveTransition()
     
-    let lotteryButtonConstant: CGFloat = 80
+//    let lotteryButtonConstant: CGFloat = 80
+//
+//    var bubbleColor: UIColor = .white
+//    var startingPoint = CGPoint.zero
+//    var duration = 0.5
     
-    var bubbleColor: UIColor = .white
-    var startingPoint = CGPoint.zero
-    var duration = 0.5
     var tappedBonusBoxButtonToggle: Bool = true
     var tappedpenaltyBoxButtonToggle: Bool = true
     
-
+    @IBOutlet weak var lotteryButton: UIButton!
     @IBOutlet weak var operationGuidanceLable: UILabel!
     @IBOutlet weak var bonusBoxLable: UILabel!
     @IBOutlet weak var bonusBoxSelectingButton: UIButton!
@@ -29,11 +30,11 @@ class BoxViewController: UIViewController, UIViewControllerTransitioningDelegate
 
     @objc func tappedLotteryButton(_ sender: UIButton) {
         let modalViewController = LotteryViewController()
-        modalViewController.transitioningDelegate = self
-        modalViewController.modalPresentationStyle = .custom
-        modalViewController.modalPresentationCapturesStatusBarAppearance = true
-        modalViewController.interactiveTransition = interactiveTransition
-        modalViewController.lotteryButtonConstant = lotteryButtonConstant
+//        modalViewController.transitioningDelegate = self
+//        modalViewController.modalPresentationStyle = .custom
+//        modalViewController.modalPresentationCapturesStatusBarAppearance = true
+//        modalViewController.interactiveTransition = interactiveTransition
+//        modalViewController.lotteryButtonConstant = lotteryButtonConstant
         
         if tappedBonusBoxButtonToggle && tappedpenaltyBoxButtonToggle {
             modalViewController.resultLable.text = "ボーナス＋バツ"
@@ -72,21 +73,29 @@ class BoxViewController: UIViewController, UIViewControllerTransitioningDelegate
         view.backgroundColor = .white
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+      if let controller = segue.destination as? LotteryViewController {
+        controller.transitioningDelegate = self
+        controller.modalPresentationStyle = .custom
+        controller.modalPresentationCapturesStatusBarAppearance = true
+        controller.interactiveTransition = interactiveTransition
+        interactiveTransition.attach(to: controller)
+      }
+    }
     // MARK: UIViewControllerTransitioningDelegate
     
-//    public func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-//        transition.transitionMode = .present
-//        transition.startingPoint = LotteryButton.center
-//        transition.bubbleColor = LotteryButton.backgroundColor!
-//        return transition
-//    }
-//
-//    public func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-//        transition.transitionMode = .dismiss
-//        transition.startingPoint = LotteryButton.center
-//        transition.bubbleColor = LotteryButton.backgroundColor!
-//        return transition
-//    }
+    public func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        transition.transitionMode = .present
+        transition.startingPoint = lotteryButton.center
+        transition.bubbleColor = lotteryButton.backgroundColor!
+        return transition
+    }
+    public func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        transition.transitionMode = .dismiss
+        transition.startingPoint = lotteryButton.center
+        transition.bubbleColor = lotteryButton.backgroundColor!
+        return transition
+    }
     func interactionControllerForDismissal(using animator: UIViewControllerAnimatedTransitioning) -> UIViewControllerInteractiveTransitioning? {
         return interactiveTransition
     }

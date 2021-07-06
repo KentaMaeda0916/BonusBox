@@ -63,13 +63,16 @@
                                 </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vyL-tn-fIQ">
-                                <rect key="frame" x="72" y="598.5" width="270" height="60"/>
+                                <rect key="frame" x="72" y="596" width="270" height="60"/>
                                 <color key="backgroundColor" systemColor="systemYellowColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="nBE-nF-dro"/>
                                     <constraint firstAttribute="width" constant="270" id="uWU-ae-Rtt"/>
                                 </constraints>
                                 <state key="normal" title="くじを引く"/>
+                                <connections>
+                                    <segue destination="T7H-jZ-N02" kind="presentation" id="dUQ-rT-7IS"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="26B-ba-rNE"/>
@@ -81,8 +84,8 @@
                             <constraint firstItem="26B-ba-rNE" firstAttribute="trailing" secondItem="b2f-5Q-T02" secondAttribute="trailing" constant="12" id="VoI-zL-kmH"/>
                             <constraint firstItem="b2f-5Q-T02" firstAttribute="leading" secondItem="26B-ba-rNE" secondAttribute="leading" constant="12" id="WOe-8G-SLK"/>
                             <constraint firstItem="b2f-5Q-T02" firstAttribute="top" secondItem="zYG-XR-5fU" secondAttribute="bottom" constant="25" id="XMf-vi-Dtv"/>
-                            <constraint firstItem="vyL-tn-fIQ" firstAttribute="top" secondItem="b2f-5Q-T02" secondAttribute="bottom" constant="90" id="d5a-F3-6zN"/>
                             <constraint firstItem="zYG-XR-5fU" firstAttribute="centerX" secondItem="Mmc-bw-SqN" secondAttribute="centerX" id="m8Q-lV-Sau"/>
+                            <constraint firstAttribute="bottom" secondItem="vyL-tn-fIQ" secondAttribute="bottom" constant="240" id="vIG-kj-Vz3"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" systemItem="favorites" id="7ex-Nf-RdV"/>
@@ -90,6 +93,7 @@
                     <connections>
                         <outlet property="bonusBoxLable" destination="vgE-6m-BcF" id="arY-1H-OhQ"/>
                         <outlet property="bonusBoxSelectingButton" destination="McY-X9-SCg" id="QXZ-EX-CgF"/>
+                        <outlet property="lotteryButton" destination="vyL-tn-fIQ" id="A1f-OT-8mc"/>
                         <outlet property="operationGuidanceLable" destination="zYG-XR-5fU" id="Ghz-cm-V69"/>
                         <outlet property="penaltyBoxLable" destination="rmC-9n-TOP" id="oEV-Kp-niV"/>
                         <outlet property="penaltyBoxSelectingButton" destination="GJA-N6-ZwI" id="9On-h7-H9g"/>
@@ -98,6 +102,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="22A-fs-NM3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="121.73913043478262" y="126.5625"/>
+        </scene>
+        <!--LotteryView-->
+        <scene sceneID="oTp-tC-e7Z">
+            <objects>
+                <viewControllerPlaceholder storyboardName="LotteryView" id="T7H-jZ-N02" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="h35-8W-mjm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="607" y="248"/>
         </scene>
     </scenes>
     <resources>

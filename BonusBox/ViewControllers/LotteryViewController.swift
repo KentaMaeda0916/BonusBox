@@ -9,42 +9,20 @@ import UIKit
 import BubbleTransition
 
 class LotteryViewController: UIViewController {
-
+    let transition = BubbleTransition()
     weak var interactiveTransition: BubbleInteractiveTransition?
-    var lotteryButtonConstant: CGFloat = 0
+
+    @IBOutlet weak var dismissButton: UIButton!
+    @IBOutlet weak var resultTitleLable: UILabel!
+    @IBOutlet weak var resultLable: UILabel!
     
-    let resultTitleLable: UILabel = {
-        let label = UILabel()
-        label.text = "くじ結果"
-        return label
-    }()
-    
-    let resultLable: UILabel = {
-        let label = UILabel()
-        label.text = "結果"
-        return label
-    }()
-    
-    
-    let dismissButton: UIButton = {
-        let button = UIButton()
-        button.setTitle("閉じる", for: .normal)
-        button.backgroundColor = .orange
-        button.addTarget(self, action: #selector(dismissButton(_:)), for: .touchUpInside)
-        return button
-    }()
-    
-    @objc func dismissButton(_ sender: UIButton) {
+    @IBAction func tappedDismissButton(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
         interactiveTransition?.finish()
     }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-
-    }
-    
-    func tabBarHeight(tabBarController: UITabBarController) -> CGFloat {
-        return tabBarController.tabBar.frame.size.height
+        view.backgroundColor = .systemYellow
     }
 }
