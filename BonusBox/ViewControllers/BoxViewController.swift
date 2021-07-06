@@ -63,6 +63,8 @@ class BoxViewController: UIViewController, UIViewControllerTransitioningDelegate
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        bonusBoxSelectingButton.setImage(UIImage(systemName: "archivebox.fill"), for: .normal)
+        penaltyBoxSelectingButton.setImage(UIImage(systemName: "archivebox.fill"), for: .normal)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
