@@ -46,6 +46,19 @@
                                 </collectionViewFlowLayout>
                                 <cells/>
                             </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bjv-gA-ICe">
+                                <rect key="frame" x="40" y="602" width="334" height="60"/>
+                                <color key="backgroundColor" red="0.1960784314" green="0.7843137255" blue="0.35294117650000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="10a-y0-JLk"/>
+                                </constraints>
+                                <state key="normal" title="追加">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="LSb-L8-NV7" kind="presentation" id="NEt-9D-WAF"/>
+                                </connections>
+                            </button>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" contentInsetAdjustmentBehavior="never" translatesAutoresizingMaskIntoConstraints="NO" id="Lc0-mO-Yed">
                                 <rect key="frame" x="0.0" y="152" width="414" height="400"/>
                                 <subviews>
@@ -72,11 +85,14 @@
                         <viewLayoutGuide key="safeArea" id="fJw-Tj-7sN"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="Bjv-gA-ICe" firstAttribute="top" secondItem="Lc0-mO-Yed" secondAttribute="bottom" constant="50" id="4Cf-UJ-gJB"/>
                             <constraint firstItem="AUs-ma-nX1" firstAttribute="leading" secondItem="fJw-Tj-7sN" secondAttribute="leading" id="4hx-TY-MfE"/>
                             <constraint firstItem="Lc0-mO-Yed" firstAttribute="top" secondItem="AUs-ma-nX1" secondAttribute="bottom" id="5Ou-kH-dAr"/>
                             <constraint firstItem="AUs-ma-nX1" firstAttribute="top" secondItem="fJw-Tj-7sN" secondAttribute="top" id="HPX-k2-2ub"/>
+                            <constraint firstItem="fJw-Tj-7sN" firstAttribute="trailing" secondItem="Bjv-gA-ICe" secondAttribute="trailing" constant="40" id="KuR-tj-gdL"/>
                             <constraint firstItem="fJw-Tj-7sN" firstAttribute="trailing" secondItem="AUs-ma-nX1" secondAttribute="trailing" id="PeG-79-fJC"/>
                             <constraint firstItem="Lc0-mO-Yed" firstAttribute="trailing" secondItem="fJw-Tj-7sN" secondAttribute="trailing" id="Pir-6E-UcZ"/>
+                            <constraint firstItem="Bjv-gA-ICe" firstAttribute="leading" secondItem="fJw-Tj-7sN" secondAttribute="leading" constant="40" id="nCO-Ru-IIO"/>
                             <constraint firstItem="Lc0-mO-Yed" firstAttribute="leading" secondItem="fJw-Tj-7sN" secondAttribute="leading" id="slm-Cx-O1u"/>
                         </constraints>
                     </view>
@@ -86,11 +102,12 @@
                     <connections>
                         <outlet property="buttonBarView" destination="AUs-ma-nX1" id="uDv-Ge-6Ff"/>
                         <outlet property="containerView" destination="Lc0-mO-Yed" id="O3R-HE-fCy"/>
+                        <outlet property="contentsAddButton" destination="Bjv-gA-ICe" id="7Jp-0b-IU1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FHE-eH-qSJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="426" y="-204"/>
+            <point key="canvasLocation" x="424.63768115942031" y="-204.24107142857142"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="39Q-oB-lAH">
@@ -105,7 +122,17 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SzK-lm-uXM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1125" y="-204"/>
+            <point key="canvasLocation" x="1188" y="-291"/>
+        </scene>
+        <!--ContentsAddView-->
+        <scene sceneID="nVv-iU-znG">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DcG-QP-Y2R" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <viewControllerPlaceholder storyboardIdentifier="ContentsAddView" storyboardName="ContentsAddView" id="LSb-L8-NV7" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="Gha-sF-7c3"/>
+                </viewControllerPlaceholder>
+            </objects>
+            <point key="canvasLocation" x="1063" y="-78"/>
         </scene>
     </scenes>
     <resources>

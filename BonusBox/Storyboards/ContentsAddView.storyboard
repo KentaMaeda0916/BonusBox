@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Rdl-C4-3PG">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Contents Add View Controller-->
+        <scene sceneID="r00-gX-tG7">
+            <objects>
+                <viewController storyboardIdentifier="ContentsAddView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Rdl-C4-3PG" customClass="ContentsAddViewController" customModule="BonusBox" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="o9R-qP-lLC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ik1-hg-Ahm">
+                                <rect key="frame" x="53" y="219" width="308" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="UD3-2U-qjO"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="くじ箱の中身を追加" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6F7-M6-ICo">
+                                <rect key="frame" x="50" y="64" width="314" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="GFa-KQ-WFn"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="9Pd-2b-OCD">
+                                <rect key="frame" x="50" y="139" width="314" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="k9M-66-OfF"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="Bonus"/>
+                                    <segment title="Penalty"/>
+                                </segments>
+                            </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jeh-C7-LOr">
+                                <rect key="frame" x="43" y="303" width="328" height="50"/>
+                                <color key="backgroundColor" red="0.1960784314" green="0.7843137255" blue="0.35294117650000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="v3C-aI-Vb8"/>
+                                </constraints>
+                                <state key="normal" title="追加">
+                                    <color key="titleColor" red="0.94898968939999995" green="0.94904297589999997" blue="0.9693621993" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="lQU-SO-fi5"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ik1-hg-Ahm" firstAttribute="top" secondItem="9Pd-2b-OCD" secondAttribute="bottom" constant="50" id="2Ii-WP-gcP"/>
+                            <constraint firstItem="lQU-SO-fi5" firstAttribute="trailing" secondItem="6F7-M6-ICo" secondAttribute="trailing" constant="50" id="8TD-rh-IL2"/>
+                            <constraint firstItem="ik1-hg-Ahm" firstAttribute="width" secondItem="9Pd-2b-OCD" secondAttribute="width" multiplier="0.982036" id="N2Y-Jb-JF0"/>
+                            <constraint firstItem="9Pd-2b-OCD" firstAttribute="leading" secondItem="lQU-SO-fi5" secondAttribute="leading" constant="50" id="N3G-Kt-vqR"/>
+                            <constraint firstItem="Jeh-C7-LOr" firstAttribute="centerX" secondItem="lQU-SO-fi5" secondAttribute="centerX" id="PRD-cb-VbX"/>
+                            <constraint firstItem="Jeh-C7-LOr" firstAttribute="top" secondItem="ik1-hg-Ahm" secondAttribute="bottom" constant="50" id="VEo-DM-3jA"/>
+                            <constraint firstItem="Jeh-C7-LOr" firstAttribute="width" secondItem="9Pd-2b-OCD" secondAttribute="width" multiplier="1.04459" id="Xg0-4G-uVU"/>
+                            <constraint firstItem="6F7-M6-ICo" firstAttribute="leading" secondItem="lQU-SO-fi5" secondAttribute="leading" constant="50" id="jf6-nL-n0C"/>
+                            <constraint firstItem="lQU-SO-fi5" firstAttribute="trailing" secondItem="9Pd-2b-OCD" secondAttribute="trailing" constant="50" id="kh2-cb-G2V"/>
+                            <constraint firstItem="ik1-hg-Ahm" firstAttribute="centerX" secondItem="lQU-SO-fi5" secondAttribute="centerX" id="um5-fC-yiG"/>
+                            <constraint firstItem="6F7-M6-ICo" firstAttribute="top" secondItem="lQU-SO-fi5" secondAttribute="top" constant="20" id="vdn-Vn-JJw"/>
+                            <constraint firstItem="9Pd-2b-OCD" firstAttribute="top" secondItem="6F7-M6-ICo" secondAttribute="bottom" constant="50" id="xLd-VR-bD4"/>
+                            <constraint firstItem="9Pd-2b-OCD" firstAttribute="centerX" secondItem="lQU-SO-fi5" secondAttribute="centerX" id="zmf-BZ-7JH"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jPh-TI-9ir" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="200.00000000000003" y="80.357142857142847"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

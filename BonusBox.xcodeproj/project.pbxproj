@@ -11,6 +11,8 @@
 		4347FA322692C98D00C95EFC /* PenaltyContentsView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4347FA312692C98D00C95EFC /* PenaltyContentsView.storyboard */; };
 		4347FA372692C9A600C95EFC /* BonusContentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4347FA362692C9A600C95EFC /* BonusContentsViewController.swift */; };
 		4347FA3C2692C9B400C95EFC /* PenaltyContentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4347FA3B2692C9B400C95EFC /* PenaltyContentsViewController.swift */; };
+		4347FA6A2693EC6600C95EFC /* ContentsAddView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4347FA692693EC6600C95EFC /* ContentsAddView.storyboard */; };
+		4347FA6F2693ECB800C95EFC /* ContentsAddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4347FA6E2693ECB800C95EFC /* ContentsAddViewController.swift */; };
 		43E1CCE4268C0490007E0EDB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43E1CCE3268C0490007E0EDB /* AppDelegate.swift */; };
 		43E1CCE6268C0490007E0EDB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43E1CCE5268C0490007E0EDB /* SceneDelegate.swift */; };
 		43E1CCED268C0494007E0EDB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43E1CCEC268C0494007E0EDB /* Assets.xcassets */; };
@@ -86,6 +88,8 @@
 		4347FA312692C98D00C95EFC /* PenaltyContentsView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PenaltyContentsView.storyboard; sourceTree = "<group>"; };
 		4347FA362692C9A600C95EFC /* BonusContentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BonusContentsViewController.swift; sourceTree = "<group>"; };
 		4347FA3B2692C9B400C95EFC /* PenaltyContentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PenaltyContentsViewController.swift; sourceTree = "<group>"; };
+		4347FA692693EC6600C95EFC /* ContentsAddView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ContentsAddView.storyboard; sourceTree = "<group>"; };
+		4347FA6E2693ECB800C95EFC /* ContentsAddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentsAddViewController.swift; sourceTree = "<group>"; };
 		43E1CCE0268C0490007E0EDB /* BonusBox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BonusBox.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		43E1CCE3268C0490007E0EDB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		43E1CCE5268C0490007E0EDB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -220,6 +224,7 @@
 				43E1CD7A26914034007E0EDB /* ContentsView.storyboard */,
 				4347FA2C2692C97500C95EFC /* BonusContentsView.storyboard */,
 				4347FA312692C98D00C95EFC /* PenaltyContentsView.storyboard */,
+				4347FA692693EC6600C95EFC /* ContentsAddView.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -233,6 +238,7 @@
 				43E1CD40268C28D3007E0EDB /* ContentsViewController.swift */,
 				4347FA362692C9A600C95EFC /* BonusContentsViewController.swift */,
 				4347FA3B2692C9B400C95EFC /* PenaltyContentsViewController.swift */,
+				4347FA6E2693ECB800C95EFC /* ContentsAddViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -373,6 +379,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				43E1CD7626914021007E0EDB /* LotteryView.storyboard in Resources */,
+				4347FA6A2693EC6600C95EFC /* ContentsAddView.storyboard in Resources */,
 				43E1CCF0268C0494007E0EDB /* LaunchScreen.storyboard in Resources */,
 				43E1CD712691400C007E0EDB /* BoxView.storyboard in Resources */,
 				4347FA322692C98D00C95EFC /* PenaltyContentsView.storyboard in Resources */,
@@ -495,6 +502,7 @@
 			files = (
 				4347FA3C2692C9B400C95EFC /* PenaltyContentsViewController.swift in Sources */,
 				43E1CCE4268C0490007E0EDB /* AppDelegate.swift in Sources */,
+				4347FA6F2693ECB800C95EFC /* ContentsAddViewController.swift in Sources */,
 				43E1CCE6268C0490007E0EDB /* SceneDelegate.swift in Sources */,
 				43E1CD58268D8B04007E0EDB /* LotteryViewController.swift in Sources */,
 				43E1CD3C268C28A2007E0EDB /* BoxViewController.swift in Sources */,

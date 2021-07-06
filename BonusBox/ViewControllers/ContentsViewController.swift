@@ -16,6 +16,7 @@ class ContentsViewController: ButtonBarPagerTabStripViewController {
     var penaltyContentsView: PenaltyContentsViewController? {
         return children.first { $0 is PenaltyContentsViewController} as? PenaltyContentsViewController
     }
+    @IBOutlet weak var contentsAddButton: UIButton!
     
     override func viewDidLoad() {
         
