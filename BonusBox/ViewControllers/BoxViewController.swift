@@ -38,6 +38,11 @@ class BoxViewController: UIViewController, UIViewControllerTransitioningDelegate
         } else {
             
         }
+        modalViewController.transitioningDelegate = self
+        modalViewController.modalPresentationStyle = .custom
+        modalViewController.modalPresentationCapturesStatusBarAppearance = true
+        modalViewController.interactiveTransition = interactiveTransition
+        interactiveTransition.attach(to: modalViewController)
         present(modalViewController, animated: true, completion: nil)
     }
 
@@ -67,29 +72,22 @@ class BoxViewController: UIViewController, UIViewControllerTransitioningDelegate
         penaltyBoxSelectingButton.setImage(UIImage(systemName: "archivebox.fill"), for: .normal)
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-      if let controller = segue.destination as? LotteryViewController {
-        controller.transitioningDelegate = self
-        controller.modalPresentationStyle = .custom
-        controller.modalPresentationCapturesStatusBarAppearance = true
-        controller.interactiveTransition = interactiveTransition
-        interactiveTransition.attach(to: controller)
-      }
-    }
     // MARK: UIViewControllerTransitioningDelegate
     
-    public func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+    func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         transition.transitionMode = .present
         transition.startingPoint = lotteryButton.center
         transition.bubbleColor = lotteryButton.backgroundColor!
         return transition
     }
-    public func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+    
+    func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         transition.transitionMode = .dismiss
         transition.startingPoint = lotteryButton.center
         transition.bubbleColor = lotteryButton.backgroundColor!
         return transition
     }
+    
     func interactionControllerForDismissal(using animator: UIViewControllerAnimatedTransitioning) -> UIViewControllerInteractiveTransitioning? {
         return interactiveTransition
     }

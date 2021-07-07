@@ -13,6 +13,7 @@
 		4347FA3C2692C9B400C95EFC /* PenaltyContentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4347FA3B2692C9B400C95EFC /* PenaltyContentsViewController.swift */; };
 		4347FA6A2693EC6600C95EFC /* ContentsAddView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4347FA692693EC6600C95EFC /* ContentsAddView.storyboard */; };
 		4347FA6F2693ECB800C95EFC /* ContentsAddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4347FA6E2693ECB800C95EFC /* ContentsAddViewController.swift */; };
+		43CAE638269574480037A2C5 /* BubbleTransition in Frameworks */ = {isa = PBXBuildFile; productRef = 43CAE637269574480037A2C5 /* BubbleTransition */; };
 		43E1CCE4268C0490007E0EDB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43E1CCE3268C0490007E0EDB /* AppDelegate.swift */; };
 		43E1CCE6268C0490007E0EDB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43E1CCE5268C0490007E0EDB /* SceneDelegate.swift */; };
 		43E1CCED268C0494007E0EDB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43E1CCEC268C0494007E0EDB /* Assets.xcassets */; };
@@ -29,7 +30,6 @@
 		43E1CD34268C2813007E0EDB /* HomeTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43E1CD33268C2813007E0EDB /* HomeTabViewController.swift */; };
 		43E1CD3C268C28A2007E0EDB /* BoxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43E1CD3B268C28A2007E0EDB /* BoxViewController.swift */; };
 		43E1CD41268C28D3007E0EDB /* ContentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43E1CD40268C28D3007E0EDB /* ContentsViewController.swift */; };
-		43E1CD53268D8236007E0EDB /* BubbleTransition in Frameworks */ = {isa = PBXBuildFile; productRef = 43E1CD52268D8236007E0EDB /* BubbleTransition */; };
 		43E1CD58268D8B04007E0EDB /* LotteryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43E1CD57268D8B04007E0EDB /* LotteryViewController.swift */; };
 		43E1CD6C26913882007E0EDB /* HomeTabView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43E1CD6B26913882007E0EDB /* HomeTabView.storyboard */; };
 		43E1CD712691400C007E0EDB /* BoxView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43E1CD702691400C007E0EDB /* BoxView.storyboard */; };
@@ -131,8 +131,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				43E1CD53268D8236007E0EDB /* BubbleTransition in Frameworks */,
 				A47AE5E492E25F8875748055 /* Pods_BonusBox.framework in Frameworks */,
+				43CAE638269574480037A2C5 /* BubbleTransition in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,7 +287,7 @@
 			);
 			name = BonusBox;
 			packageProductDependencies = (
-				43E1CD52268D8236007E0EDB /* BubbleTransition */,
+				43CAE637269574480037A2C5 /* BubbleTransition */,
 			);
 			productName = BonusBox;
 			productReference = 43E1CCE0268C0490007E0EDB /* BonusBox.app */;
@@ -360,7 +360,7 @@
 			);
 			mainGroup = 43E1CCD7268C0490007E0EDB;
 			packageReferences = (
-				43E1CD51268D8236007E0EDB /* XCRemoteSwiftPackageReference "BubbleTransition" */,
+				43CAE636269574480037A2C5 /* XCRemoteSwiftPackageReference "BubbleTransition" */,
 			);
 			productRefGroup = 43E1CCE1268C0490007E0EDB /* Products */;
 			projectDirPath = "";
@@ -848,9 +848,9 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		43E1CD51268D8236007E0EDB /* XCRemoteSwiftPackageReference "BubbleTransition" */ = {
+		43CAE636269574480037A2C5 /* XCRemoteSwiftPackageReference "BubbleTransition" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/andreamazz/BubbleTransition";
+			repositoryURL = "https://github.com/andreamazz/BubbleTransition.git";
 			requirement = {
 				kind = upToNextMajorVersion;
 				minimumVersion = 4.1.0;
@@ -859,9 +859,9 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		43E1CD52268D8236007E0EDB /* BubbleTransition */ = {
+		43CAE637269574480037A2C5 /* BubbleTransition */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 43E1CD51268D8236007E0EDB /* XCRemoteSwiftPackageReference "BubbleTransition" */;
+			package = 43CAE636269574480037A2C5 /* XCRemoteSwiftPackageReference "BubbleTransition" */;
 			productName = BubbleTransition;
 		};
 /* End XCSwiftPackageProductDependency section */
