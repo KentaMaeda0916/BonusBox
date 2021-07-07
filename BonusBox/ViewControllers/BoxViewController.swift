@@ -12,13 +12,15 @@ class BoxViewController: UIViewController, UIViewControllerTransitioningDelegate
     let transition = BubbleTransition()
     let interactiveTransition = BubbleInteractiveTransition()
     
-
-//    var bubbleColor: UIColor = .white
-//    var startingPoint = CGPoint.zero
-//    var duration = 0.5
+    
+    //    var bubbleColor: UIColor = .white
+    //    var startingPoint = CGPoint.zero
+    //    var duration = 0.5
     
     var tappedBonusBoxButtonToggle: Bool = true
     var tappedpenaltyBoxButtonToggle: Bool = true
+    
+    var lotteyBox:[String] = []
     
     @IBOutlet weak var lotteryButton: UIButton!
     @IBOutlet weak var operationGuidanceLable: UILabel!
@@ -26,26 +28,59 @@ class BoxViewController: UIViewController, UIViewControllerTransitioningDelegate
     @IBOutlet weak var bonusBoxSelectingButton: UIButton!
     @IBOutlet weak var penaltyBoxLable: UILabel!
     @IBOutlet weak var penaltyBoxSelectingButton: UIButton!
-
+    
     @IBAction func tappedLotteryButton(_ sender: Any) {
-        let modalViewController = UIStoryboard(name: "LotteryView", bundle: nil).instantiateViewController(withIdentifier: "LotteryView") as! LotteryViewController
+        
+        let lotteryViewController = UIStoryboard(name: "LotteryView", bundle: nil).instantiateViewController(withIdentifier: "LotteryView") as! LotteryViewController
+        
+        lotteryAction(lotteryViewController: lotteryViewController)
+        transitionAnimation(lotteryViewController: lotteryViewController)
+        present(lotteryViewController, animated: true, completion: nil)
+    }
+    
+    func lotteryAction(lotteryViewController: LotteryViewController) {
+        lotteyBox.removeAll()
+
         if tappedBonusBoxButtonToggle && tappedpenaltyBoxButtonToggle {
-            modalViewController.resultText = "ボーナス＋バツ"
+            addBonusContentToLotteyBox()
+            addPenaltyContentToLotteyBox()
+            randomValue(lotteryViewController: lotteryViewController)
+            
         } else if tappedBonusBoxButtonToggle == true && tappedpenaltyBoxButtonToggle == false {
-            modalViewController.resultText = "ボーナス"
+            addBonusContentToLotteyBox()
+            randomValue(lotteryViewController: lotteryViewController)
+                        
         } else if tappedBonusBoxButtonToggle == false && tappedpenaltyBoxButtonToggle == true{
-            modalViewController.resultText = "バツ"
+            addPenaltyContentToLotteyBox()
+            randomValue(lotteryViewController: lotteryViewController)
+            
         } else {
             
         }
-        modalViewController.transitioningDelegate = self
-        modalViewController.modalPresentationStyle = .custom
-        modalViewController.modalPresentationCapturesStatusBarAppearance = true
-        modalViewController.interactiveTransition = interactiveTransition
-        interactiveTransition.attach(to: modalViewController)
-        present(modalViewController, animated: true, completion: nil)
-    }
 
+    }
+    
+    func addBonusContentToLotteyBox() {
+        let bonusContentsView = UIStoryboard(name: "BonusContentsView", bundle: nil).instantiateViewController(withIdentifier: "BonusContentsView") as! BonusContentsViewController
+        lotteyBox.append(contentsOf: bonusContentsView.contents)
+    }
+    func addPenaltyContentToLotteyBox() {
+        let penaltyContentsView = UIStoryboard(name: "PenaltyContentsView", bundle: nil).instantiateViewController(withIdentifier: "PenaltyContentsView") as! PenaltyContentsViewController
+        lotteyBox.append(contentsOf: penaltyContentsView.contents)
+    }
+    
+    func randomValue(lotteryViewController: LotteryViewController) {
+        guard let lotteyResult = lotteyBox.randomElement() else { return }
+        lotteryViewController.resultText = lotteyResult
+    }
+    func transitionAnimation(lotteryViewController: LotteryViewController) {
+        lotteryViewController.transitioningDelegate = self
+        lotteryViewController.modalPresentationStyle = .custom
+        lotteryViewController.modalPresentationCapturesStatusBarAppearance = true
+        lotteryViewController.interactiveTransition = interactiveTransition
+        interactiveTransition.attach(to: lotteryViewController)
+    }
+    
     @IBAction func tappedBonusBoxButton(_ sender: Any) {
         if tappedBonusBoxButtonToggle {
             tappedBonusBoxButtonToggle = false
