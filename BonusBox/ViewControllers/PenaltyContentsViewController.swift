@@ -23,7 +23,7 @@ class PenaltyContentsViewController: UIViewController, IndicatorInfoProvider {
     }
 
     func indicatorInfo(for pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo {
-        return IndicatorInfo(title: "Penalty")
+        return IndicatorInfo(title: "バツゲーム")
     }
 }
 extension PenaltyContentsViewController: UITableViewDataSource, UITableViewDelegate {

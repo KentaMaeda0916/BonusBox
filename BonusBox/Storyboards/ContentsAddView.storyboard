@@ -39,8 +39,8 @@
                                     <constraint firstAttribute="height" constant="30" id="k9M-66-OfF"/>
                                 </constraints>
                                 <segments>
-                                    <segment title="Bonus"/>
-                                    <segment title="Penalty"/>
+                                    <segment title="ボーナス"/>
+                                    <segment title="バツゲーム"/>
                                 </segments>
                             </segmentedControl>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jeh-C7-LOr">

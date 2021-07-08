@@ -22,7 +22,7 @@ class ContentsViewController: ButtonBarPagerTabStripViewController {
         setUpPagerTab()
         super.viewDidLoad()
         setUpButton(button: contentsAddButton)
-        navigationItem.title = "内容"
+        navigationItem.title = "はこの中身"
         navigationItem.rightBarButtonItem = editButtonItem
         
     }

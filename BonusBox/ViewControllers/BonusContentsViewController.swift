@@ -23,7 +23,7 @@ class BonusContentsViewController: UIViewController, IndicatorInfoProvider {
     }
 
     func indicatorInfo(for pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo {
-        return IndicatorInfo(title: "Bonus")
+        return IndicatorInfo(title: "ボーナス")
     }
 }
 extension BonusContentsViewController: UITableViewDataSource, UITableViewDelegate {
