@@ -18,7 +18,7 @@ class ContentsAddViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        setUpButton(button: addButton)
         newContentsTextField.text = ""
     }
     @IBAction func tappedAddButton(_ sender: Any) {
