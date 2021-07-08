@@ -22,22 +22,25 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="b2f-5Q-T02">
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="b2f-5Q-T02">
                                 <rect key="frame" x="12" y="119.5" width="390" height="389"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="F9e-Fe-bJH">
-                                        <rect key="frame" x="0.0" y="0.0" width="195" height="389"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="185" height="389"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ボーナス" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vgE-6m-BcF">
-                                                <rect key="frame" x="0.0" y="0.0" width="195" height="20.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="185" height="111.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="McY-X9-SCg">
-                                                <rect key="frame" x="0.0" y="20.5" width="195" height="368.5"/>
-                                                <color key="backgroundColor" red="0.27450980390000002" green="0.67843137249999996" blue="0.92156862750000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <state key="normal" title="Button"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="McY-X9-SCg">
+                                                <rect key="frame" x="0.0" y="111.5" width="185" height="277.5"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="McY-X9-SCg" secondAttribute="height" multiplier="1:1.5" id="nJy-sW-eri"/>
+                                                </constraints>
+                                                <state key="normal" image="歓喜"/>
                                                 <connections>
                                                     <action selector="tappedBonusBoxButton:" destination="Fb3-0d-1Cx" eventType="touchUpInside" id="v0j-EY-s47"/>
                                                 </connections>
@@ -45,18 +48,21 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="PGX-el-IFr">
-                                        <rect key="frame" x="195" y="0.0" width="195" height="389"/>
+                                        <rect key="frame" x="205" y="0.0" width="185" height="389"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="罰ゲーム" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rmC-9n-TOP">
-                                                <rect key="frame" x="0.0" y="0.0" width="195" height="20.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="185" height="111.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GJA-N6-ZwI">
-                                                <rect key="frame" x="0.0" y="20.5" width="195" height="368.5"/>
-                                                <color key="backgroundColor" red="0.1960784314" green="0.7843137255" blue="0.35294117650000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <state key="normal" title="Button"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GJA-N6-ZwI">
+                                                <rect key="frame" x="0.0" y="111.5" width="185" height="277.5"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="GJA-N6-ZwI" secondAttribute="height" multiplier="1:1.5" id="z6K-Oz-6H2"/>
+                                                </constraints>
+                                                <state key="normal" image="オーマイゴット"/>
                                                 <connections>
                                                     <action selector="tappedPenaltyBoxButton:" destination="Fb3-0d-1Cx" eventType="touchUpInside" id="JRo-E7-ZTn"/>
                                                 </connections>
@@ -82,7 +88,7 @@
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="26B-ba-rNE"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="systemGray6Color"/>
                         <constraints>
                             <constraint firstItem="zYG-XR-5fU" firstAttribute="top" secondItem="26B-ba-rNE" secondAttribute="top" constant="30" id="19Q-ZQ-z7K"/>
                             <constraint firstItem="vyL-tn-fIQ" firstAttribute="centerX" secondItem="26B-ba-rNE" secondAttribute="centerX" id="1Ds-kp-60E"/>
@@ -107,12 +113,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="22A-fs-NM3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="121.73913043478262" y="126.5625"/>
+            <point key="canvasLocation" x="-375" y="78"/>
         </scene>
     </scenes>
     <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        <image name="オーマイゴット" width="250" height="250"/>
+        <image name="歓喜" width="250" height="250"/>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemYellowColor">
             <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

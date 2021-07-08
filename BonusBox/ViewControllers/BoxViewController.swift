@@ -82,29 +82,38 @@ class BoxViewController: UIViewController, UIViewControllerTransitioningDelegate
     }
     
     @IBAction func tappedBonusBoxButton(_ sender: Any) {
-        if tappedBonusBoxButtonToggle {
-            tappedBonusBoxButtonToggle = false
-            bonusBoxSelectingButton.setImage(UIImage(systemName: "archivebox"), for: .normal)
-        } else {
-            tappedBonusBoxButtonToggle = true
-            bonusBoxSelectingButton.setImage(UIImage(systemName: "archivebox.fill"), for: .normal)
-        }
+        tappedBonusBoxButtonToggle = tappedButtonEffect(toggle: tappedBonusBoxButtonToggle, button: bonusBoxSelectingButton)
     }
     @IBAction func tappedPenaltyBoxButton(_ sender: Any) {
-        if tappedpenaltyBoxButtonToggle {
-            tappedpenaltyBoxButtonToggle = false
-            penaltyBoxSelectingButton.setImage(UIImage(systemName: "archivebox"), for: .normal)
+        tappedpenaltyBoxButtonToggle = tappedButtonEffect(toggle: tappedpenaltyBoxButtonToggle, button: penaltyBoxSelectingButton)
+    }
+    
+    func tappedButtonEffect(toggle: Bool, button: UIButton) -> Bool {
+        if toggle {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.005) {
+                button.alpha = 0.4
+              }
+            return false
         } else {
-            tappedpenaltyBoxButtonToggle = true
-            penaltyBoxSelectingButton.setImage(UIImage(systemName: "archivebox.fill"), for: .normal)
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.005) {
+                button.alpha = 1
+              }
+            return true
         }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        bonusBoxSelectingButton.setImage(UIImage(systemName: "archivebox.fill"), for: .normal)
-        penaltyBoxSelectingButton.setImage(UIImage(systemName: "archivebox.fill"), for: .normal)
+        setUpButton(button: bonusBoxSelectingButton)
+        setUpButton(button: penaltyBoxSelectingButton)
+    }
+    
+    func setUpButton(button: UIButton) {
+        button.layer.cornerRadius = 10
+        button.layer.shadowOpacity = 0.7
+        button.layer.shadowRadius = 3
+        button.layer.shadowColor = UIColor.systemGray4.cgColor
+        button.layer.shadowOffset = CGSize(width: 3, height: 3)
     }
     
     // MARK: UIViewControllerTransitioningDelegate
