@@ -16,14 +16,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lrx-Tp-hNr">
-                                <rect key="frame" x="72" y="596" width="270" height="60"/>
-                                <color key="backgroundColor" systemColor="systemYellowColor"/>
+                            <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lrx-Tp-hNr">
+                                <rect key="frame" x="157" y="616" width="100" height="100"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="MJM-Mc-tyb"/>
-                                    <constraint firstAttribute="width" constant="270" id="aC6-Yu-9Rk"/>
+                                    <constraint firstAttribute="width" secondItem="Lrx-Tp-hNr" secondAttribute="height" multiplier="1:1" id="2H2-pu-6qL"/>
+                                    <constraint firstAttribute="width" constant="100" id="aC6-Yu-9Rk"/>
                                 </constraints>
-                                <state key="normal" title="閉じる"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" image="multiply" catalog="system"/>
                                 <connections>
                                     <action selector="tappedDismissButton:" destination="Whu-eS-qYH" eventType="touchUpInside" id="5tJ-ey-WrY"/>
                                 </connections>
@@ -63,7 +65,7 @@
                             <constraint firstItem="Lrx-Tp-hNr" firstAttribute="centerX" secondItem="Oig-X6-1z5" secondAttribute="centerX" id="byZ-yQ-ld5"/>
                             <constraint firstItem="Oig-X6-1z5" firstAttribute="trailing" secondItem="006-lT-UIv" secondAttribute="trailing" constant="72" id="dZh-2d-K9g"/>
                             <constraint firstItem="006-lT-UIv" firstAttribute="top" secondItem="Oig-X6-1z5" secondAttribute="top" constant="60" id="f6w-ss-tZe"/>
-                            <constraint firstAttribute="bottom" secondItem="Lrx-Tp-hNr" secondAttribute="bottom" constant="240" id="fY7-LB-blR"/>
+                            <constraint firstAttribute="bottom" secondItem="Lrx-Tp-hNr" secondAttribute="bottom" constant="180" id="fY7-LB-blR"/>
                             <constraint firstItem="006-lT-UIv" firstAttribute="centerX" secondItem="Oig-X6-1z5" secondAttribute="centerX" id="jM8-Y8-2I9"/>
                             <constraint firstItem="DZ2-Cx-RsN" firstAttribute="centerX" secondItem="Oig-X6-1z5" secondAttribute="centerX" id="jb1-5x-o2e"/>
                             <constraint firstItem="0LB-ZE-lg8" firstAttribute="top" secondItem="006-lT-UIv" secondAttribute="bottom" constant="90" id="mj1-Hq-CzH"/>
@@ -82,11 +84,9 @@
         </scene>
     </scenes>
     <resources>
+        <image name="multiply" catalog="system" width="128" height="111"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemYellowColor">
-            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

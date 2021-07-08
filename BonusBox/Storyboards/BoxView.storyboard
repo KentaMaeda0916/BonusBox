@@ -74,18 +74,25 @@
                                     <constraint firstAttribute="width" secondItem="b2f-5Q-T02" secondAttribute="height" multiplier="1:1" constant="1" id="hXe-nl-XTT"/>
                                 </constraints>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vyL-tn-fIQ">
-                                <rect key="frame" x="72" y="596" width="270" height="60"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vyL-tn-fIQ">
+                                <rect key="frame" x="157" y="616" width="100" height="100"/>
                                 <color key="backgroundColor" systemColor="systemYellowColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="nBE-nF-dro"/>
-                                    <constraint firstAttribute="width" constant="270" id="uWU-ae-Rtt"/>
+                                    <constraint firstAttribute="width" secondItem="vyL-tn-fIQ" secondAttribute="height" multiplier="1:1" id="I4F-7i-BUw"/>
+                                    <constraint firstAttribute="width" constant="100" id="s2E-ao-7PR"/>
                                 </constraints>
-                                <state key="normal" title="くじを引く"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" image="shippingbox" catalog="system"/>
                                 <connections>
                                     <action selector="tappedLotteryButton:" destination="Fb3-0d-1Cx" eventType="touchUpInside" id="2s6-2o-tgZ"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="くじを引く" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z16-pF-Le9">
+                                <rect key="frame" x="163.5" y="585.5" width="87" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="26B-ba-rNE"/>
                         <color key="backgroundColor" systemColor="systemGray6Color"/>
@@ -93,11 +100,13 @@
                             <constraint firstItem="zYG-XR-5fU" firstAttribute="top" secondItem="26B-ba-rNE" secondAttribute="top" constant="30" id="19Q-ZQ-z7K"/>
                             <constraint firstItem="vyL-tn-fIQ" firstAttribute="centerX" secondItem="26B-ba-rNE" secondAttribute="centerX" id="1Ds-kp-60E"/>
                             <constraint firstItem="b2f-5Q-T02" firstAttribute="centerX" secondItem="26B-ba-rNE" secondAttribute="centerX" id="BHQ-gq-8Ez"/>
+                            <constraint firstItem="vyL-tn-fIQ" firstAttribute="top" secondItem="z16-pF-Le9" secondAttribute="bottom" constant="10" id="PDS-Ny-cl7"/>
                             <constraint firstItem="26B-ba-rNE" firstAttribute="trailing" secondItem="b2f-5Q-T02" secondAttribute="trailing" constant="12" id="VoI-zL-kmH"/>
                             <constraint firstItem="b2f-5Q-T02" firstAttribute="leading" secondItem="26B-ba-rNE" secondAttribute="leading" constant="12" id="WOe-8G-SLK"/>
                             <constraint firstItem="b2f-5Q-T02" firstAttribute="top" secondItem="zYG-XR-5fU" secondAttribute="bottom" constant="25" id="XMf-vi-Dtv"/>
+                            <constraint firstItem="z16-pF-Le9" firstAttribute="centerX" secondItem="26B-ba-rNE" secondAttribute="centerX" id="iP5-d9-boF"/>
                             <constraint firstItem="zYG-XR-5fU" firstAttribute="centerX" secondItem="Mmc-bw-SqN" secondAttribute="centerX" id="m8Q-lV-Sau"/>
-                            <constraint firstAttribute="bottom" secondItem="vyL-tn-fIQ" secondAttribute="bottom" constant="240" id="vIG-kj-Vz3"/>
+                            <constraint firstAttribute="bottom" secondItem="vyL-tn-fIQ" secondAttribute="bottom" constant="180" id="vIG-kj-Vz3"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" systemItem="favorites" id="7ex-Nf-RdV"/>
@@ -113,10 +122,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="22A-fs-NM3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-375" y="78"/>
+            <point key="canvasLocation" x="-375.36231884057975" y="77.678571428571431"/>
         </scene>
     </scenes>
     <resources>
+        <image name="shippingbox" catalog="system" width="128" height="124"/>
         <image name="オーマイゴット" width="250" height="250"/>
         <image name="歓喜" width="250" height="250"/>
         <systemColor name="systemGray6Color">

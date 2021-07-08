@@ -27,5 +27,10 @@ class LotteryViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .systemYellow
         resultLable.text = resultText
+        setupDismissButtonButton()
+    }
+    
+    func setupDismissButtonButton() {
+        dismissButton.layer.cornerRadius = 50
     }
 }

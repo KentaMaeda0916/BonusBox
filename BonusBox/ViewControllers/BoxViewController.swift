@@ -104,11 +104,23 @@ class BoxViewController: UIViewController, UIViewControllerTransitioningDelegate
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setUpButton(button: bonusBoxSelectingButton)
-        setUpButton(button: penaltyBoxSelectingButton)
+        setupLotteyButton()
+        setUpBoxButton(button: bonusBoxSelectingButton)
+        setUpBoxButton(button: penaltyBoxSelectingButton)
     }
     
-    func setUpButton(button: UIButton) {
+    func setupLotteyButton() {
+        lotteryButton.layer.cornerRadius = 50
+        lotteryButton.layer.shadowOpacity = 0.7
+        lotteryButton.layer.shadowRadius = 3
+        lotteryButton.layer.shadowColor = UIColor.systemGray4.cgColor
+        lotteryButton.layer.shadowOffset = CGSize(width: 3, height: 3)
+        lotteryButton.imageView?.contentMode = .scaleAspectFit
+        lotteryButton.contentHorizontalAlignment = .fill
+        lotteryButton.contentVerticalAlignment = .fill
+    }
+    
+    func setUpBoxButton(button: UIButton) {
         button.layer.cornerRadius = 10
         button.layer.shadowOpacity = 0.7
         button.layer.shadowRadius = 3
