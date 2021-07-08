@@ -32,6 +32,7 @@ class ContentsViewController: ButtonBarPagerTabStripViewController {
         settings.style.buttonBarBackgroundColor = .systemGray6
         settings.style.buttonBarItemBackgroundColor = .systemGray6
         settings.style.buttonBarItemTitleColor = .black
+        settings.style.selectedBarBackgroundColor = .systemGreen
         settings.style.buttonBarMinimumLineSpacing = 0
         settings.style.buttonBarItemsShouldFillAvailableWidth = true
         settings.style.buttonBarMinimumInteritemSpacing = 0
