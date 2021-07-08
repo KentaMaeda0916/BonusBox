@@ -19,7 +19,15 @@ class ContentsViewController: ButtonBarPagerTabStripViewController {
     @IBOutlet weak var contentsAddButton: UIButton!
     
     override func viewDidLoad() {
+        setUpPagerTab()
+        super.viewDidLoad()
+        setUpButton(button: contentsAddButton)
+        navigationItem.title = "内容"
+        navigationItem.rightBarButtonItem = editButtonItem
         
+    }
+    
+    func setUpPagerTab() {
         // change selected bar color
         settings.style.buttonBarBackgroundColor = .systemGray6
         settings.style.buttonBarItemBackgroundColor = .systemGray6
@@ -27,13 +35,8 @@ class ContentsViewController: ButtonBarPagerTabStripViewController {
         settings.style.buttonBarMinimumLineSpacing = 0
         settings.style.buttonBarItemsShouldFillAvailableWidth = true
         settings.style.buttonBarMinimumInteritemSpacing = 0
-        
-        super.viewDidLoad()
-        navigationItem.title = "内容"
-        navigationItem.rightBarButtonItem = editButtonItem
-
     }
-    
+
     override func setEditing(_ editing: Bool, animated: Bool) {
         super.setEditing(editing, animated: animated)
         bonusContentsView?.bonusContentsTableView.setEditing(editing, animated: animated)
