@@ -36,4 +36,7 @@ class ContentsAddViewController: UIViewController {
 
     }
     
+    @IBAction func tappedCancelButton(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
 }
