@@ -83,7 +83,7 @@
                             </scrollView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="fJw-Tj-7sN"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="systemGray6Color"/>
                         <constraints>
                             <constraint firstItem="Bjv-gA-ICe" firstAttribute="top" secondItem="Lc0-mO-Yed" secondAttribute="bottom" constant="50" id="4Cf-UJ-gJB"/>
                             <constraint firstItem="AUs-ma-nX1" firstAttribute="leading" secondItem="fJw-Tj-7sN" secondAttribute="leading" id="4hx-TY-MfE"/>
@@ -142,6 +142,9 @@
         <image name="doc.text.fill" catalog="system" width="115" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

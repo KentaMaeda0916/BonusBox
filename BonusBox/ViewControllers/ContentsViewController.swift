@@ -21,8 +21,8 @@ class ContentsViewController: ButtonBarPagerTabStripViewController {
     override func viewDidLoad() {
         
         // change selected bar color
-        settings.style.buttonBarBackgroundColor = .white
-        settings.style.buttonBarItemBackgroundColor = .white
+        settings.style.buttonBarBackgroundColor = .systemGray6
+        settings.style.buttonBarItemBackgroundColor = .systemGray6
         settings.style.buttonBarItemTitleColor = .black
         settings.style.buttonBarMinimumLineSpacing = 0
         settings.style.buttonBarItemsShouldFillAvailableWidth = true
