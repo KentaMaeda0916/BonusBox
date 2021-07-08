@@ -1,0 +1,23 @@
+{
+  "images" : [
+    {
+      "filename" : "「ぱぁぁぁ」.jpg",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "filename" : "「ぱぁぁぁ」-1.jpg",
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "filename" : "「ぱぁぁぁ」-2.jpg",
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
