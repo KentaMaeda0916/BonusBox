@@ -24,7 +24,7 @@
             </objects>
             <point key="canvasLocation" x="-500" y="-204"/>
         </scene>
-        <!--Contents View Controller-->
+        <!--中身-->
         <scene sceneID="iU0-bS-IYB">
             <objects>
                 <viewController storyboardIdentifier="ContentsView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="RQf-GE-wV9" customClass="ContentsViewController" customModule="BonusBox" customModuleProvider="target" sceneMemberID="viewController">
@@ -96,7 +96,9 @@
                             <constraint firstItem="Lc0-mO-Yed" firstAttribute="leading" secondItem="fJw-Tj-7sN" secondAttribute="leading" id="slm-Cx-O1u"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" systemItem="history" id="956-Ji-XVR"/>
+                    <tabBarItem key="tabBarItem" title="中身" image="doc.text" catalog="system" selectedImage="doc.text.fill" id="956-Ji-XVR">
+                        <color key="badgeColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBarItem>
                     <navigationItem key="navigationItem" id="bxO-nO-0GV"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
@@ -127,15 +129,17 @@
         <!--ContentsAddView-->
         <scene sceneID="nVv-iU-znG">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="DcG-QP-Y2R" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewControllerPlaceholder storyboardIdentifier="ContentsAddView" storyboardName="ContentsAddView" id="LSb-L8-NV7" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="Gha-sF-7c3"/>
                 </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DcG-QP-Y2R" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1063" y="-78"/>
         </scene>
     </scenes>
     <resources>
+        <image name="doc.text" catalog="system" width="115" height="128"/>
+        <image name="doc.text.fill" catalog="system" width="115" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

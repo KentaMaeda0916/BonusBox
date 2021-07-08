@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Box View Controller-->
+        <!--くじ-->
         <scene sceneID="pNt-GE-MTN">
             <objects>
                 <viewController id="Fb3-0d-1Cx" customClass="BoxViewController" customModule="BonusBox" customModuleProvider="target" sceneMemberID="viewController">
@@ -109,7 +109,7 @@
                             <constraint firstAttribute="bottom" secondItem="vyL-tn-fIQ" secondAttribute="bottom" constant="180" id="vIG-kj-Vz3"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" systemItem="favorites" id="7ex-Nf-RdV"/>
+                    <tabBarItem key="tabBarItem" title="くじ" image="shippingbox" catalog="system" selectedImage="shippingbox.fill" id="7ex-Nf-RdV"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="bonusBoxLable" destination="vgE-6m-BcF" id="arY-1H-OhQ"/>
@@ -127,6 +127,7 @@
     </scenes>
     <resources>
         <image name="shippingbox" catalog="system" width="128" height="124"/>
+        <image name="shippingbox.fill" catalog="system" width="128" height="124"/>
         <image name="オーマイゴット" width="250" height="250"/>
         <image name="歓喜" width="250" height="250"/>
         <systemColor name="systemGray6Color">
