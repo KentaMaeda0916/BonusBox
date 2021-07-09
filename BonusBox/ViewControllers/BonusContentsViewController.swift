@@ -18,6 +18,9 @@ class BonusContentsViewController: UIViewController, IndicatorInfoProvider {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        guard let bonusContents = userDefault.stringArray(forKey: "bonus") else { return }
+        contents.append(contentsOf: bonusContents)
+        
         bonusContentsTableView.dataSource = self
         bonusContentsTableView.delegate = self
         

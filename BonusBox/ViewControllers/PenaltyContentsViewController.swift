@@ -18,6 +18,9 @@ class PenaltyContentsViewController: UIViewController, IndicatorInfoProvider {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        guard let penaltyContents = userDefault.stringArray(forKey: "penalty") else { return }
+        contents.append(contentsOf: penaltyContents)
+        
         penaltyContentsTableView.dataSource = self
         penaltyContentsTableView.delegate = self
         
