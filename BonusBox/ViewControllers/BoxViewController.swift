@@ -19,7 +19,8 @@ class BoxViewController: UIViewController, UIViewControllerTransitioningDelegate
     
     var tappedBonusBoxButtonToggle: Bool = true
     var tappedpenaltyBoxButtonToggle: Bool = true
-    
+    var userDefault = UserDefaults.standard
+
     var lotteyBox:[String] = []
     
     @IBOutlet weak var lotteryButton: UIButton!
@@ -61,12 +62,12 @@ class BoxViewController: UIViewController, UIViewControllerTransitioningDelegate
     }
     
     func addBonusContentToLotteyBox() {
-        let bonusContentsView = UIStoryboard(name: "BonusContentsView", bundle: nil).instantiateViewController(withIdentifier: "BonusContentsView") as! BonusContentsViewController
-        lotteyBox.append(contentsOf: bonusContentsView.contents)
+        guard let bonusContents = userDefault.stringArray(forKey: "bonus") else { return }
+        lotteyBox.append(contentsOf: bonusContents)
     }
     func addPenaltyContentToLotteyBox() {
-        let penaltyContentsView = UIStoryboard(name: "PenaltyContentsView", bundle: nil).instantiateViewController(withIdentifier: "PenaltyContentsView") as! PenaltyContentsViewController
-        lotteyBox.append(contentsOf: penaltyContentsView.contents)
+        guard let penaltyContents = userDefault.stringArray(forKey: "bonus") else { return }
+        lotteyBox.append(contentsOf: penaltyContents)
     }
     
     func randomValue(lotteryViewController: LotteryViewController) {
