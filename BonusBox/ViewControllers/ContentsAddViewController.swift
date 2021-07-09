@@ -30,8 +30,9 @@ class ContentsAddViewController: UIViewController {
         
         if contentsType.selectedSegmentIndex == 0 {
             getContentArray.removeAll()
-            guard let contents = userDefault.stringArray(forKey: "bonus") else { return }
-            getContentArray.append(contentsOf: contents)
+            if let contents = userDefault.stringArray(forKey: "bonus") {
+                getContentArray.append(contentsOf: contents)
+            }
             getContentArray.append(newcontent)
             userDefault.set(getContentArray, forKey: "bonus")
             bonusContentsView.bonusContentsTableView?.reloadData()
