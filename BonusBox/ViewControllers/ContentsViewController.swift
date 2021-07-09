@@ -18,6 +18,9 @@ class ContentsViewController: ButtonBarPagerTabStripViewController {
     }
     @IBOutlet weak var contentsAddButton: UIButton!
     
+    var userDefault = UserDefaults.standard
+
+    
     override func viewDidLoad() {
         setUpPagerTab()
         super.viewDidLoad()
@@ -25,6 +28,24 @@ class ContentsViewController: ButtonBarPagerTabStripViewController {
         navigationItem.title = "はこの中身"
         navigationItem.rightBarButtonItem = editButtonItem
         
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        reloadBonusContentsTableView()
+        reloadPenaltyContentsTableView()
+    }
+    
+    func reloadBonusContentsTableView() {
+        bonusContentsView?.contents.removeAll()
+        guard let contents = userDefault.stringArray(forKey: "bonus") else { return }
+        bonusContentsView?.contents.append(contentsOf: contents)
+        bonusContentsView?.bonusContentsTableView.reloadData()
+    }
+    func reloadPenaltyContentsTableView() {
+        penaltyContentsView?.contents.removeAll()
+        guard let contents = userDefault.stringArray(forKey: "penalty") else { return }
+        penaltyContentsView?.contents.append(contentsOf: contents)
+        penaltyContentsView?.penaltyContentsTableView.reloadData()
     }
     
     func setUpPagerTab() {

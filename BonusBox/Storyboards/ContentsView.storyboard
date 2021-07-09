@@ -57,7 +57,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="LSb-L8-NV7" kind="presentation" id="NEt-9D-WAF"/>
+                                    <segue destination="LSb-L8-NV7" kind="presentation" modalPresentationStyle="fullScreen" id="NEt-9D-WAF"/>
                                 </connections>
                             </button>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" contentInsetAdjustmentBehavior="never" translatesAutoresizingMaskIntoConstraints="NO" id="Lc0-mO-Yed">

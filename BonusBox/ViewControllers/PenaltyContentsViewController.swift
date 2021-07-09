@@ -12,7 +12,7 @@ class PenaltyContentsViewController: UIViewController, IndicatorInfoProvider {
 
     @IBOutlet weak var penaltyContentsTableView: UITableView!
 
-    var contents = ["A","B","C"]
+    var contents:[String] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -12,14 +12,14 @@ class BonusContentsViewController: UIViewController, IndicatorInfoProvider {
 
     @IBOutlet weak var bonusContentsTableView: UITableView!
     
-    var contents = ["A","B","C"]
+    var contents:[String] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         bonusContentsTableView.dataSource = self
         bonusContentsTableView.delegate = self
-                
+        
     }
 
     func indicatorInfo(for pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo {
