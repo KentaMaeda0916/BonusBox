@@ -12,6 +12,7 @@ class PenaltyContentsViewController: UIViewController, IndicatorInfoProvider {
 
     @IBOutlet weak var penaltyContentsTableView: UITableView!
 
+    var userDefault = UserDefaults.standard
     var contents:[String] = []
     
     override func viewDidLoad() {
@@ -40,6 +41,7 @@ extension PenaltyContentsViewController: UITableViewDataSource, UITableViewDeleg
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         contents.remove(at: indexPath.row)
         penaltyContentsTableView.deleteRows(at: [indexPath], with: .automatic)
+        userDefault.setValue(contents, forKey: "penalty")
     }
     func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
         if penaltyContentsTableView.isEditing {

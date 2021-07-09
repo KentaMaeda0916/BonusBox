@@ -12,6 +12,7 @@ class BonusContentsViewController: UIViewController, IndicatorInfoProvider {
 
     @IBOutlet weak var bonusContentsTableView: UITableView!
     
+    var userDefault = UserDefaults.standard
     var contents:[String] = []
     
     override func viewDidLoad() {
@@ -40,6 +41,7 @@ extension BonusContentsViewController: UITableViewDataSource, UITableViewDelegat
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         contents.remove(at: indexPath.row)
         bonusContentsTableView.deleteRows(at: [indexPath], with: .automatic)
+        userDefault.setValue(contents, forKey: "bonus")
     }
     func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
         if bonusContentsTableView.isEditing {
