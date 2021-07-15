@@ -19,15 +19,6 @@
 		43E1CCE6268C0490007E0EDB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43E1CCE5268C0490007E0EDB /* SceneDelegate.swift */; };
 		43E1CCED268C0494007E0EDB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43E1CCEC268C0494007E0EDB /* Assets.xcassets */; };
 		43E1CCF0268C0494007E0EDB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43E1CCEE268C0494007E0EDB /* LaunchScreen.storyboard */; };
-		43E1CCF5268C0494007E0EDB /* BonusBox WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 43E1CCF4268C0494007E0EDB /* BonusBox WatchKit App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		43E1CCFB268C0494007E0EDB /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43E1CCF9268C0494007E0EDB /* Interface.storyboard */; };
-		43E1CCFD268C0497007E0EDB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43E1CCFC268C0497007E0EDB /* Assets.xcassets */; };
-		43E1CD04268C0497007E0EDB /* BonusBox WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 43E1CD03268C0497007E0EDB /* BonusBox WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		43E1CD09268C0497007E0EDB /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43E1CD08268C0497007E0EDB /* InterfaceController.swift */; };
-		43E1CD0B268C0497007E0EDB /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43E1CD0A268C0497007E0EDB /* ExtensionDelegate.swift */; };
-		43E1CD0D268C0497007E0EDB /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43E1CD0C268C0497007E0EDB /* NotificationController.swift */; };
-		43E1CD0F268C0497007E0EDB /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43E1CD0E268C0497007E0EDB /* ComplicationController.swift */; };
-		43E1CD11268C049A007E0EDB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43E1CD10268C049A007E0EDB /* Assets.xcassets */; };
 		43E1CD34268C2813007E0EDB /* HomeTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43E1CD33268C2813007E0EDB /* HomeTabViewController.swift */; };
 		43E1CD3C268C28A2007E0EDB /* BoxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43E1CD3B268C28A2007E0EDB /* BoxViewController.swift */; };
 		43E1CD41268C28D3007E0EDB /* ContentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43E1CD40268C28D3007E0EDB /* ContentsViewController.swift */; };
@@ -36,47 +27,16 @@
 		43E1CD712691400C007E0EDB /* BoxView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43E1CD702691400C007E0EDB /* BoxView.storyboard */; };
 		43E1CD7626914021007E0EDB /* LotteryView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43E1CD7526914021007E0EDB /* LotteryView.storyboard */; };
 		43E1CD7B26914034007E0EDB /* ContentsView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43E1CD7A26914034007E0EDB /* ContentsView.storyboard */; };
-		64D54799A8508F34A03D8E61 /* Pods_BonusBox_WatchKit_Extension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A90456E5528BABB2C62863DB /* Pods_BonusBox_WatchKit_Extension.framework */; };
 		A47AE5E492E25F8875748055 /* Pods_BonusBox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD11A31FE757E1F12139C0DC /* Pods_BonusBox.framework */; };
-		EAE71C7F5386B4D9671C89FD /* Pods_BonusBox_WatchKit_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BAAFF24A75A0F255C7C9284 /* Pods_BonusBox_WatchKit_App.framework */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		43E1CCF6268C0494007E0EDB /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 43E1CCD8268C0490007E0EDB /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 43E1CCF3268C0494007E0EDB;
-			remoteInfo = "BonusBox WatchKit App";
-		};
-		43E1CD05268C0497007E0EDB /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 43E1CCD8268C0490007E0EDB /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 43E1CD02268C0497007E0EDB;
-			remoteInfo = "BonusBox WatchKit Extension";
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXCopyFilesBuildPhase section */
-		43E1CD19268C049A007E0EDB /* Embed App Extensions */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 13;
-			files = (
-				43E1CD04268C0497007E0EDB /* BonusBox WatchKit Extension.appex in Embed App Extensions */,
-			);
-			name = "Embed App Extensions";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		43E1CD1D268C049A007E0EDB /* Embed Watch Content */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
 			dstSubfolderSpec = 16;
 			files = (
-				43E1CCF5268C0494007E0EDB /* BonusBox WatchKit App.app in Embed Watch Content */,
 			);
 			name = "Embed Watch Content";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -98,18 +58,6 @@
 		43E1CCEC268C0494007E0EDB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		43E1CCEF268C0494007E0EDB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		43E1CCF1268C0494007E0EDB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		43E1CCF4268C0494007E0EDB /* BonusBox WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BonusBox WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		43E1CCFA268C0494007E0EDB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
-		43E1CCFC268C0497007E0EDB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		43E1CCFE268C0497007E0EDB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		43E1CD03268C0497007E0EDB /* BonusBox WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "BonusBox WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
-		43E1CD08268C0497007E0EDB /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
-		43E1CD0A268C0497007E0EDB /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
-		43E1CD0C268C0497007E0EDB /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
-		43E1CD0E268C0497007E0EDB /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
-		43E1CD10268C049A007E0EDB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		43E1CD12268C049A007E0EDB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		43E1CD13268C049A007E0EDB /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
 		43E1CD33268C2813007E0EDB /* HomeTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabViewController.swift; sourceTree = "<group>"; };
 		43E1CD3B268C28A2007E0EDB /* BoxViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoxViewController.swift; sourceTree = "<group>"; };
 		43E1CD40268C28D3007E0EDB /* ContentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentsViewController.swift; sourceTree = "<group>"; };
@@ -138,22 +86,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		43E1CD00268C0497007E0EDB /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				64D54799A8508F34A03D8E61 /* Pods_BonusBox_WatchKit_Extension.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		4E084ED0A12EC8D09EA8E079 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				EAE71C7F5386B4D9671C89FD /* Pods_BonusBox_WatchKit_App.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -161,8 +93,6 @@
 			isa = PBXGroup;
 			children = (
 				43E1CCE2268C0490007E0EDB /* BonusBox */,
-				43E1CCF8268C0494007E0EDB /* BonusBox WatchKit App */,
-				43E1CD07268C0497007E0EDB /* BonusBox WatchKit Extension */,
 				43E1CCE1268C0490007E0EDB /* Products */,
 				95DB4725C6DE7D6C8366EBB9 /* Pods */,
 				5B0A29D1A641C7EA07AD5392 /* Frameworks */,
@@ -173,8 +103,6 @@
 			isa = PBXGroup;
 			children = (
 				43E1CCE0268C0490007E0EDB /* BonusBox.app */,
-				43E1CCF4268C0494007E0EDB /* BonusBox WatchKit App.app */,
-				43E1CD03268C0497007E0EDB /* BonusBox WatchKit Extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -192,30 +120,6 @@
 				438E1DF22696DFDB00A8ACDD /* Extention.swift */,
 			);
 			path = BonusBox;
-			sourceTree = "<group>";
-		};
-		43E1CCF8268C0494007E0EDB /* BonusBox WatchKit App */ = {
-			isa = PBXGroup;
-			children = (
-				43E1CCF9268C0494007E0EDB /* Interface.storyboard */,
-				43E1CCFC268C0497007E0EDB /* Assets.xcassets */,
-				43E1CCFE268C0497007E0EDB /* Info.plist */,
-			);
-			path = "BonusBox WatchKit App";
-			sourceTree = "<group>";
-		};
-		43E1CD07268C0497007E0EDB /* BonusBox WatchKit Extension */ = {
-			isa = PBXGroup;
-			children = (
-				43E1CD08268C0497007E0EDB /* InterfaceController.swift */,
-				43E1CD0A268C0497007E0EDB /* ExtensionDelegate.swift */,
-				43E1CD0C268C0497007E0EDB /* NotificationController.swift */,
-				43E1CD0E268C0497007E0EDB /* ComplicationController.swift */,
-				43E1CD10268C049A007E0EDB /* Assets.xcassets */,
-				43E1CD12268C049A007E0EDB /* Info.plist */,
-				43E1CD13268C049A007E0EDB /* PushNotificationPayload.apns */,
-			);
-			path = "BonusBox WatchKit Extension";
 			sourceTree = "<group>";
 		};
 		43E1CD85269145B4007E0EDB /* Storyboards */ = {
@@ -286,7 +190,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				43E1CCF7268C0494007E0EDB /* PBXTargetDependency */,
 			);
 			name = BonusBox;
 			packageProductDependencies = (
@@ -295,43 +198,6 @@
 			productName = BonusBox;
 			productReference = 43E1CCE0268C0490007E0EDB /* BonusBox.app */;
 			productType = "com.apple.product-type.application";
-		};
-		43E1CCF3268C0494007E0EDB /* BonusBox WatchKit App */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 43E1CD1A268C049A007E0EDB /* Build configuration list for PBXNativeTarget "BonusBox WatchKit App" */;
-			buildPhases = (
-				DABCCEDFCE04D96189530562 /* [CP] Check Pods Manifest.lock */,
-				43E1CCF2268C0494007E0EDB /* Resources */,
-				43E1CD19268C049A007E0EDB /* Embed App Extensions */,
-				4E084ED0A12EC8D09EA8E079 /* Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				43E1CD06268C0497007E0EDB /* PBXTargetDependency */,
-			);
-			name = "BonusBox WatchKit App";
-			productName = "BonusBox WatchKit App";
-			productReference = 43E1CCF4268C0494007E0EDB /* BonusBox WatchKit App.app */;
-			productType = "com.apple.product-type.application.watchapp2";
-		};
-		43E1CD02268C0497007E0EDB /* BonusBox WatchKit Extension */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 43E1CD16268C049A007E0EDB /* Build configuration list for PBXNativeTarget "BonusBox WatchKit Extension" */;
-			buildPhases = (
-				F724AB29E13E0E10EFA1158D /* [CP] Check Pods Manifest.lock */,
-				43E1CCFF268C0497007E0EDB /* Sources */,
-				43E1CD00268C0497007E0EDB /* Frameworks */,
-				43E1CD01268C0497007E0EDB /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "BonusBox WatchKit Extension";
-			productName = "BonusBox WatchKit Extension";
-			productReference = 43E1CD03268C0497007E0EDB /* BonusBox WatchKit Extension.appex */;
-			productType = "com.apple.product-type.watchkit2-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -343,12 +209,6 @@
 				LastUpgradeCheck = 1240;
 				TargetAttributes = {
 					43E1CCDF268C0490007E0EDB = {
-						CreatedOnToolsVersion = 12.4;
-					};
-					43E1CCF3268C0494007E0EDB = {
-						CreatedOnToolsVersion = 12.4;
-					};
-					43E1CD02268C0497007E0EDB = {
 						CreatedOnToolsVersion = 12.4;
 					};
 				};
@@ -370,8 +230,6 @@
 			projectRoot = "";
 			targets = (
 				43E1CCDF268C0490007E0EDB /* BonusBox */,
-				43E1CCF3268C0494007E0EDB /* BonusBox WatchKit App */,
-				43E1CD02268C0497007E0EDB /* BonusBox WatchKit Extension */,
 			);
 		};
 /* End PBXProject section */
@@ -390,23 +248,6 @@
 				43E1CD6C26913882007E0EDB /* HomeTabView.storyboard in Resources */,
 				4347FA2D2692C97500C95EFC /* BonusContentsView.storyboard in Resources */,
 				43E1CD7B26914034007E0EDB /* ContentsView.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		43E1CCF2268C0494007E0EDB /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				43E1CCFD268C0497007E0EDB /* Assets.xcassets in Resources */,
-				43E1CCFB268C0494007E0EDB /* Interface.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		43E1CD01268C0497007E0EDB /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				43E1CD11268C049A007E0EDB /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -452,50 +293,6 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BonusBox/Pods-BonusBox-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		DABCCEDFCE04D96189530562 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-BonusBox WatchKit App-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		F724AB29E13E0E10EFA1158D /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-BonusBox WatchKit Extension-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -516,31 +313,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		43E1CCFF268C0497007E0EDB /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				43E1CD0D268C0497007E0EDB /* NotificationController.swift in Sources */,
-				43E1CD0F268C0497007E0EDB /* ComplicationController.swift in Sources */,
-				43E1CD0B268C0497007E0EDB /* ExtensionDelegate.swift in Sources */,
-				43E1CD09268C0497007E0EDB /* InterfaceController.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		43E1CCF7268C0494007E0EDB /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 43E1CCF3268C0494007E0EDB /* BonusBox WatchKit App */;
-			targetProxy = 43E1CCF6268C0494007E0EDB /* PBXContainerItemProxy */;
-		};
-		43E1CD06268C0497007E0EDB /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 43E1CD02268C0497007E0EDB /* BonusBox WatchKit Extension */;
-			targetProxy = 43E1CD05268C0497007E0EDB /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		43E1CCEE268C0494007E0EDB /* LaunchScreen.storyboard */ = {
@@ -549,14 +322,6 @@
 				43E1CCEF268C0494007E0EDB /* Base */,
 			);
 			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-		43E1CCF9268C0494007E0EDB /* Interface.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				43E1CCFA268C0494007E0EDB /* Base */,
-			);
-			name = Interface.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -675,96 +440,6 @@
 			};
 			name = Release;
 		};
-		43E1CD17268C049A007E0EDB /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1336C31E5FDF6AC7A6B9BDB7 /* Pods-BonusBox WatchKit Extension.debug.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 27AABG3WWT;
-				INFOPLIST_FILE = "BonusBox WatchKit Extension/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.maeken.BonusBox.watchkitapp.watchkitextension;
-				PRODUCT_NAME = "${TARGET_NAME}";
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 7.2;
-			};
-			name = Debug;
-		};
-		43E1CD18268C049A007E0EDB /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 630CAB5B6D7387E1009EE643 /* Pods-BonusBox WatchKit Extension.release.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 27AABG3WWT;
-				INFOPLIST_FILE = "BonusBox WatchKit Extension/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.maeken.BonusBox.watchkitapp.watchkitextension;
-				PRODUCT_NAME = "${TARGET_NAME}";
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 4;
-				VALIDATE_PRODUCT = YES;
-				WATCHOS_DEPLOYMENT_TARGET = 7.2;
-			};
-			name = Release;
-		};
-		43E1CD1B268C049A007E0EDB /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = E387C25A8F329E0F16232D84 /* Pods-BonusBox WatchKit App.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 27AABG3WWT;
-				IBSC_MODULE = BonusBox_WatchKit_Extension;
-				INFOPLIST_FILE = "BonusBox WatchKit App/Info.plist";
-				PRODUCT_BUNDLE_IDENTIFIER = com.maeken.BonusBox.watchkitapp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 7.2;
-			};
-			name = Debug;
-		};
-		43E1CD1C268C049A007E0EDB /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5D5A97A4EEDA76BC56B30279 /* Pods-BonusBox WatchKit App.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 27AABG3WWT;
-				IBSC_MODULE = BonusBox_WatchKit_Extension;
-				INFOPLIST_FILE = "BonusBox WatchKit App/Info.plist";
-				PRODUCT_BUNDLE_IDENTIFIER = com.maeken.BonusBox.watchkitapp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 4;
-				VALIDATE_PRODUCT = YES;
-				WATCHOS_DEPLOYMENT_TARGET = 7.2;
-			};
-			name = Release;
-		};
 		43E1CD1F268C049A007E0EDB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A550FFE4D0FC2711DF65A60F /* Pods-BonusBox.debug.xcconfig */;
@@ -818,24 +493,6 @@
 			buildConfigurations = (
 				43E1CD14268C049A007E0EDB /* Debug */,
 				43E1CD15268C049A007E0EDB /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		43E1CD16268C049A007E0EDB /* Build configuration list for PBXNativeTarget "BonusBox WatchKit Extension" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				43E1CD17268C049A007E0EDB /* Debug */,
-				43E1CD18268C049A007E0EDB /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		43E1CD1A268C049A007E0EDB /* Build configuration list for PBXNativeTarget "BonusBox WatchKit App" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				43E1CD1B268C049A007E0EDB /* Debug */,
-				43E1CD1C268C049A007E0EDB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
