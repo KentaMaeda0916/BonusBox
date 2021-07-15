@@ -47,7 +47,7 @@
                                 <cells/>
                             </collectionView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bjv-gA-ICe">
-                                <rect key="frame" x="40" y="602" width="334" height="60"/>
+                                <rect key="frame" x="40" y="552" width="334" height="60"/>
                                 <color key="backgroundColor" systemColor="systemGreenColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="10a-y0-JLk"/>
@@ -61,10 +61,10 @@
                                 </connections>
                             </button>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" contentInsetAdjustmentBehavior="never" translatesAutoresizingMaskIntoConstraints="NO" id="Lc0-mO-Yed">
-                                <rect key="frame" x="0.0" y="152" width="414" height="400"/>
+                                <rect key="frame" x="0.0" y="152" width="414" height="350"/>
                                 <subviews>
                                     <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uls-Xc-z3j">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="400"/>
+                                        <rect key="frame" x="0.0" y="-25" width="414" height="400"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="400" id="KOz-q5-4dj"/>
                                         </constraints>
@@ -76,7 +76,7 @@
                                 <constraints>
                                     <constraint firstItem="uls-Xc-z3j" firstAttribute="centerY" secondItem="Lc0-mO-Yed" secondAttribute="centerY" id="ABO-r7-WOh"/>
                                     <constraint firstAttribute="bottom" secondItem="uls-Xc-z3j" secondAttribute="bottom" id="G20-fJ-VsS"/>
-                                    <constraint firstAttribute="height" constant="400" id="dNP-Tk-vWk"/>
+                                    <constraint firstAttribute="height" constant="350" id="dNP-Tk-vWk"/>
                                     <constraint firstItem="uls-Xc-z3j" firstAttribute="centerX" secondItem="Lc0-mO-Yed" secondAttribute="centerX" id="frN-E1-9xO"/>
                                     <constraint firstAttribute="trailing" secondItem="uls-Xc-z3j" secondAttribute="trailing" id="kFc-au-q8V"/>
                                     <constraint firstItem="uls-Xc-z3j" firstAttribute="leading" secondItem="Lc0-mO-Yed" secondAttribute="leading" id="xCL-cr-e69"/>
