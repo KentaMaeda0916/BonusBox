@@ -33,7 +33,7 @@
                                     <action selector="tappedDismissButton:" destination="Whu-eS-qYH" eventType="touchUpInside" id="5tJ-ey-WrY"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="結果" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0LB-ZE-lg8">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="結果" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" translatesAutoresizingMaskIntoConstraints="NO" id="0LB-ZE-lg8">
                                 <rect key="frame" x="72" y="185" width="270" height="70"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="70" id="3gW-GN-R4R"/>

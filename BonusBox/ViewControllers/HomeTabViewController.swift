@@ -23,6 +23,7 @@ class HomeTabViewController: UITabBarController {
         if userDefaults.bool(forKey: firstLunchKey) {
             userDefaults.setValue(demoBonusContents, forKey: "bonus")
             userDefaults.setValue(demoPenaltyContents, forKey: "penalty")
+            userDefaults.setValue(false, forKey: firstLunchKey)
         }
     }
 }
