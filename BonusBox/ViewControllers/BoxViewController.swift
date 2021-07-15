@@ -32,11 +32,19 @@ class BoxViewController: UIViewController, UIViewControllerTransitioningDelegate
     
     @IBAction func tappedLotteryButton(_ sender: Any) {
         
-        let lotteryViewController = UIStoryboard(name: "LotteryView", bundle: nil).instantiateViewController(withIdentifier: "LotteryView") as! LotteryViewController
-        
-        lotteryAction(lotteryViewController: lotteryViewController)
-        transitionAnimation(lotteryViewController: lotteryViewController)
-        present(lotteryViewController, animated: true, completion: nil)
+        if tappedBonusBoxButtonToggle == false && tappedpenaltyBoxButtonToggle == false {
+            let alert: UIAlertController = UIAlertController(title: "エラー", message: "箱が選択されていません",
+                                                             preferredStyle:  UIAlertController.Style.alert)
+            let defaultAction: UIAlertAction = UIAlertAction(title: "OK", style: UIAlertAction.Style.default)
+            alert.addAction(defaultAction)
+            present(alert, animated: true, completion: nil)
+        } else {
+            let lotteryViewController = UIStoryboard(name: "LotteryView", bundle: nil).instantiateViewController(withIdentifier: "LotteryView") as! LotteryViewController
+            
+            lotteryAction(lotteryViewController: lotteryViewController)
+            transitionAnimation(lotteryViewController: lotteryViewController)
+            present(lotteryViewController, animated: true, completion: nil)
+        }
     }
     
     func lotteryAction(lotteryViewController: LotteryViewController) {
