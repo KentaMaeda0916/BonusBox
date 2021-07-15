@@ -33,11 +33,7 @@ class BoxViewController: UIViewController, UIViewControllerTransitioningDelegate
     @IBAction func tappedLotteryButton(_ sender: Any) {
         
         if tappedBonusBoxButtonToggle == false && tappedpenaltyBoxButtonToggle == false {
-            let alert: UIAlertController = UIAlertController(title: "エラー", message: "箱が選択されていません",
-                                                             preferredStyle:  UIAlertController.Style.alert)
-            let defaultAction: UIAlertAction = UIAlertAction(title: "OK", style: UIAlertAction.Style.default)
-            alert.addAction(defaultAction)
-            present(alert, animated: true, completion: nil)
+            alert(text: "箱が選択されていません")
         } else {
             let lotteryViewController = UIStoryboard(name: "LotteryView", bundle: nil).instantiateViewController(withIdentifier: "LotteryView") as! LotteryViewController
             
@@ -74,11 +70,7 @@ class BoxViewController: UIViewController, UIViewControllerTransitioningDelegate
             guard let bonusContents = userDefault.stringArray(forKey: "bonus") else { return }
             lotteyBox.append(contentsOf: bonusContents)
         } else {
-            let alert: UIAlertController = UIAlertController(title: "エラー", message: "「ボーナス」箱の中身がありません",
-                                                             preferredStyle:  UIAlertController.Style.alert)
-            let defaultAction: UIAlertAction = UIAlertAction(title: "OK", style: UIAlertAction.Style.default)
-            alert.addAction(defaultAction)
-            present(alert, animated: true, completion: nil)
+            alert(text: "「ボーナス」箱の中身がありません")
         }
     }
     func addPenaltyContentToLotteyBox() {
@@ -86,11 +78,7 @@ class BoxViewController: UIViewController, UIViewControllerTransitioningDelegate
             guard let penaltyContents = userDefault.stringArray(forKey: "penalty") else { return }
             lotteyBox.append(contentsOf: penaltyContents)
         } else {
-            let alert: UIAlertController = UIAlertController(title: "エラー", message: "「バツゲーム」箱の中身がありません",
-                                                             preferredStyle:  UIAlertController.Style.alert)
-            let defaultAction: UIAlertAction = UIAlertAction(title: "OK", style: UIAlertAction.Style.default)
-            alert.addAction(defaultAction)
-            present(alert, animated: true, completion: nil)
+            alert(text: "「バツゲーム」箱の中身がありません")
         }
     }
     
@@ -163,5 +151,12 @@ class BoxViewController: UIViewController, UIViewControllerTransitioningDelegate
     
     func interactionControllerForDismissal(using animator: UIViewControllerAnimatedTransitioning) -> UIViewControllerInteractiveTransitioning? {
         return interactiveTransition
+    }
+    private func alert(text: String) {
+        let alert: UIAlertController = UIAlertController(title: "エラー", message: text,
+                                                         preferredStyle:  UIAlertController.Style.alert)
+        let defaultAction: UIAlertAction = UIAlertAction(title: "OK", style: UIAlertAction.Style.default)
+        alert.addAction(defaultAction)
+        present(alert, animated: true, completion: nil)
     }
 }
