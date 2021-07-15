@@ -37,6 +37,10 @@ class BoxViewController: UIViewController, UIViewControllerTransitioningDelegate
         } else {
             let lotteryViewController = UIStoryboard(name: "LotteryView", bundle: nil).instantiateViewController(withIdentifier: "LotteryView") as! LotteryViewController
             
+            let lotteryButtonConvertCGPoint = lotteryButton.convert(CGPoint.zero, to: view)
+            let lotteryButtonCGPointY = lotteryButtonConvertCGPoint.y
+            lotteryViewController.lotteryButtonY = lotteryButtonCGPointY
+            
             lotteryAction(lotteryViewController: lotteryViewController)
             transitionAnimation(lotteryViewController: lotteryViewController)
             present(lotteryViewController, animated: true, completion: nil)
@@ -137,14 +141,22 @@ class BoxViewController: UIViewController, UIViewControllerTransitioningDelegate
     
     func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         transition.transitionMode = .present
-        transition.startingPoint = lotteryButton.center
+        let lotteryButtonConvertCGPoint = lotteryButton.convert(CGPoint.zero, to: view)
+        let centerX = lotteryButtonConvertCGPoint.x + lotteryButton.frame.width/2
+        let centerY = lotteryButtonConvertCGPoint.y + lotteryButton.frame.height/2
+        let centerPoint: CGPoint = CGPoint(x: centerX, y: centerY)
+        transition.startingPoint = centerPoint
         transition.bubbleColor = lotteryButton.backgroundColor!
         return transition
     }
     
     func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         transition.transitionMode = .dismiss
-        transition.startingPoint = lotteryButton.center
+        let lotteryButtonConvertCGPoint = lotteryButton.convert(CGPoint.zero, to: view)
+        let centerX = lotteryButtonConvertCGPoint.x + lotteryButton.frame.width/2
+        let centerY = lotteryButtonConvertCGPoint.y + lotteryButton.frame.height/2
+        let centerPoint: CGPoint = CGPoint(x: centerX, y: centerY)
+        transition.startingPoint = centerPoint
         transition.bubbleColor = lotteryButton.backgroundColor!
         return transition
     }

@@ -17,22 +17,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lrx-Tp-hNr">
-                                <rect key="frame" x="157" y="616" width="100" height="100"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="Lrx-Tp-hNr" secondAttribute="height" multiplier="1:1" id="2H2-pu-6qL"/>
-                                    <constraint firstAttribute="width" constant="100" id="aC6-Yu-9Rk"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
-                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal">
-                                    <imageReference key="image" image="multiply" catalog="system" renderingMode="original"/>
-                                </state>
-                                <connections>
-                                    <action selector="tappedDismissButton:" destination="Whu-eS-qYH" eventType="touchUpInside" id="5tJ-ey-WrY"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="結果" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" translatesAutoresizingMaskIntoConstraints="NO" id="0LB-ZE-lg8">
                                 <rect key="frame" x="72" y="185" width="270" height="70"/>
                                 <constraints>
@@ -51,16 +35,32 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lrx-Tp-hNr">
+                                <rect key="frame" x="157" y="600" width="100" height="100"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Lrx-Tp-hNr" secondAttribute="height" multiplier="1:1" id="2H2-pu-6qL"/>
+                                    <constraint firstAttribute="width" constant="100" id="aC6-Yu-9Rk"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal">
+                                    <imageReference key="image" image="multiply" catalog="system" renderingMode="original"/>
+                                </state>
+                                <connections>
+                                    <action selector="tappedDismissButton:" destination="Whu-eS-qYH" eventType="touchUpInside" id="5tJ-ey-WrY"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Oig-X6-1z5"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="006-lT-UIv" firstAttribute="leading" secondItem="Oig-X6-1z5" secondAttribute="leading" constant="72" id="EW2-rw-urd"/>
                             <constraint firstItem="0LB-ZE-lg8" firstAttribute="centerX" secondItem="Oig-X6-1z5" secondAttribute="centerX" id="MXK-dA-oIv"/>
+                            <constraint firstItem="Lrx-Tp-hNr" firstAttribute="top" secondItem="7R8-40-2Q0" secondAttribute="top" constant="600" id="XPG-5R-yiM"/>
                             <constraint firstItem="Lrx-Tp-hNr" firstAttribute="centerX" secondItem="Oig-X6-1z5" secondAttribute="centerX" id="byZ-yQ-ld5"/>
                             <constraint firstItem="Oig-X6-1z5" firstAttribute="trailing" secondItem="006-lT-UIv" secondAttribute="trailing" constant="72" id="dZh-2d-K9g"/>
                             <constraint firstItem="006-lT-UIv" firstAttribute="top" secondItem="Oig-X6-1z5" secondAttribute="top" constant="60" id="f6w-ss-tZe"/>
-                            <constraint firstAttribute="bottom" secondItem="Lrx-Tp-hNr" secondAttribute="bottom" constant="180" id="fY7-LB-blR"/>
                             <constraint firstItem="006-lT-UIv" firstAttribute="centerX" secondItem="Oig-X6-1z5" secondAttribute="centerX" id="jM8-Y8-2I9"/>
                             <constraint firstItem="0LB-ZE-lg8" firstAttribute="top" secondItem="006-lT-UIv" secondAttribute="bottom" constant="60" id="mj1-Hq-CzH"/>
                             <constraint firstItem="0LB-ZE-lg8" firstAttribute="width" secondItem="006-lT-UIv" secondAttribute="width" id="msq-JB-HNf"/>
@@ -68,6 +68,7 @@
                     </view>
                     <connections>
                         <outlet property="dismissButton" destination="Lrx-Tp-hNr" id="g1v-hB-kcx"/>
+                        <outlet property="dismissButtonY" destination="XPG-5R-yiM" id="mJx-sL-Cb7"/>
                         <outlet property="resultLable" destination="0LB-ZE-lg8" id="LVa-H5-u8d"/>
                         <outlet property="resultTitleLable" destination="006-lT-UIv" id="hsC-fo-uVG"/>
                     </connections>

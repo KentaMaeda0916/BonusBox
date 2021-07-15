@@ -13,16 +13,23 @@ class LotteryViewController: UIViewController {
     weak var interactiveTransition: BubbleInteractiveTransition?
     
     var resultText = ""
-
+    var lotteryButtonY: CGFloat = 0
+    
     @IBOutlet weak var dismissButton: UIButton!
     @IBOutlet weak var resultTitleLable: UILabel!
     @IBOutlet weak var resultLable: UILabel!
+    @IBOutlet weak var dismissButtonY: NSLayoutConstraint!
     
     @IBAction func tappedDismissButton(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
         interactiveTransition?.finish()
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        dismissButtonY.constant = lotteryButtonY
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemYellow
