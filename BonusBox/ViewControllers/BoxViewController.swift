@@ -62,12 +62,28 @@ class BoxViewController: UIViewController, UIViewControllerTransitioningDelegate
     }
     
     func addBonusContentToLotteyBox() {
-        guard let bonusContents = userDefault.stringArray(forKey: "bonus") else { return }
-        lotteyBox.append(contentsOf: bonusContents)
+        if userDefault.stringArray(forKey: "bonus")?.count != 0 {
+            guard let bonusContents = userDefault.stringArray(forKey: "bonus") else { return }
+            lotteyBox.append(contentsOf: bonusContents)
+        } else {
+            let alert: UIAlertController = UIAlertController(title: "エラー", message: "「ボーナス」箱の中身がありません",
+                                                             preferredStyle:  UIAlertController.Style.alert)
+            let defaultAction: UIAlertAction = UIAlertAction(title: "OK", style: UIAlertAction.Style.default)
+            alert.addAction(defaultAction)
+            present(alert, animated: true, completion: nil)
+        }
     }
     func addPenaltyContentToLotteyBox() {
-        guard let penaltyContents = userDefault.stringArray(forKey: "bonus") else { return }
-        lotteyBox.append(contentsOf: penaltyContents)
+        if userDefault.stringArray(forKey: "penalty")?.count != 0 {
+            guard let penaltyContents = userDefault.stringArray(forKey: "penalty") else { return }
+            lotteyBox.append(contentsOf: penaltyContents)
+        } else {
+            let alert: UIAlertController = UIAlertController(title: "エラー", message: "「バツゲーム」箱の中身がありません",
+                                                             preferredStyle:  UIAlertController.Style.alert)
+            let defaultAction: UIAlertAction = UIAlertAction(title: "OK", style: UIAlertAction.Style.default)
+            alert.addAction(defaultAction)
+            present(alert, animated: true, completion: nil)
+        }
     }
     
     func randomValue(lotteryViewController: LotteryViewController) {
