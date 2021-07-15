@@ -21,6 +21,7 @@ class ContentsAddViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        updateTextFieldButton()
         setUpButton(button: addButton)
         newContentsTextField.text = ""
         
@@ -54,5 +55,18 @@ class ContentsAddViewController: UIViewController {
     
     @IBAction func tappedCancelButton(_ sender: Any) {
         dismiss(animated: true, completion: nil)
+    }
+    @IBAction func textEditingDidChanged(_ sender: Any) {
+        updateTextFieldButton()
+    }
+    
+    private func updateTextFieldButton() {
+        if newContentsTextField.text == "" {
+            addButton.isEnabled = false
+            addButton.layer.opacity = 0.4
+        } else {
+            addButton.isEnabled = true
+            addButton.layer.opacity = 1
+        }
     }
 }
