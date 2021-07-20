@@ -12,11 +12,6 @@ class BoxViewController: UIViewController, UIViewControllerTransitioningDelegate
     let transition = BubbleTransition()
     let interactiveTransition = BubbleInteractiveTransition()
     
-    
-    //    var bubbleColor: UIColor = .white
-    //    var startingPoint = CGPoint.zero
-    //    var duration = 0.5
-    
     var tappedBonusBoxButtonToggle: Bool = true
     var tappedpenaltyBoxButtonToggle: Bool = true
     var userDefault = UserDefaults.standard
