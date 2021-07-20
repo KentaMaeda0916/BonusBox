@@ -46,16 +46,16 @@ class BoxViewController: UIViewController {
         lotteyBox.removeAll()
 
         if tappedBonusBoxButtonToggle && tappedpenaltyBoxButtonToggle {
-            addBonusContentToLotteyBox()
-            addPenaltyContentToLotteyBox()
+            addBonusContentToLotteyBox(type: BoxType.bonus)
+            addPenaltyContentToLotteyBox(type: BoxType.penalty)
             randomValue(lotteryViewController: lotteryViewController)
             
         } else if tappedBonusBoxButtonToggle == true && tappedpenaltyBoxButtonToggle == false {
-            addBonusContentToLotteyBox()
+            addBonusContentToLotteyBox(type: BoxType.bonus)
             randomValue(lotteryViewController: lotteryViewController)
                         
         } else if tappedBonusBoxButtonToggle == false && tappedpenaltyBoxButtonToggle == true{
-            addPenaltyContentToLotteyBox()
+            addPenaltyContentToLotteyBox(type: BoxType.penalty)
             randomValue(lotteryViewController: lotteryViewController)
             
         } else {
@@ -64,17 +64,17 @@ class BoxViewController: UIViewController {
 
     }
     
-    func addBonusContentToLotteyBox() {
-        if userDefault.stringArray(forKey: "bonus")?.count != 0 {
-            guard let bonusContents = userDefault.stringArray(forKey: "bonus") else { return }
+    func addBonusContentToLotteyBox(type: BoxType) {
+        if userDefault.stringArray(forKey: type.rawValue)?.count != 0 {
+            guard let bonusContents = userDefault.stringArray(forKey: type.rawValue) else { return }
             lotteyBox.append(contentsOf: bonusContents)
         } else {
             alert(text: "「ボーナス」箱の中身がありません")
         }
     }
-    func addPenaltyContentToLotteyBox() {
-        if userDefault.stringArray(forKey: "penalty")?.count != 0 {
-            guard let penaltyContents = userDefault.stringArray(forKey: "penalty") else { return }
+    func addPenaltyContentToLotteyBox(type: BoxType) {
+        if userDefault.stringArray(forKey: type.rawValue)?.count != 0 {
+            guard let penaltyContents = userDefault.stringArray(forKey: type.rawValue) else { return }
             lotteyBox.append(contentsOf: penaltyContents)
         } else {
             alert(text: "「バツゲーム」箱の中身がありません")
