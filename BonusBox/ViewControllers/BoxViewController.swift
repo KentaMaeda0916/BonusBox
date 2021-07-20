@@ -159,11 +159,4 @@ class BoxViewController: UIViewController, UIViewControllerTransitioningDelegate
     func interactionControllerForDismissal(using animator: UIViewControllerAnimatedTransitioning) -> UIViewControllerInteractiveTransitioning? {
         return interactiveTransition
     }
-    private func alert(text: String) {
-        let alert: UIAlertController = UIAlertController(title: "エラー", message: text,
-                                                         preferredStyle:  UIAlertController.Style.alert)
-        let defaultAction: UIAlertAction = UIAlertAction(title: "OK", style: UIAlertAction.Style.default)
-        alert.addAction(defaultAction)
-        present(alert, animated: true, completion: nil)
-    }
 }

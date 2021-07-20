@@ -32,3 +32,13 @@ extension UIViewController: UITextFieldDelegate{
         view.endEditing(true)
     }
 }
+
+extension UIViewController {
+    func alert(text: String) {
+        let alert: UIAlertController = UIAlertController(title: "エラー", message: text,
+                                                         preferredStyle:  UIAlertController.Style.alert)
+        let defaultAction: UIAlertAction = UIAlertAction(title: "OK", style: UIAlertAction.Style.default)
+        alert.addAction(defaultAction)
+        present(alert, animated: true, completion: nil)
+    }
+}
