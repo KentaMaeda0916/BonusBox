@@ -28,7 +28,7 @@ class BoxViewController: UIViewController {
     @IBAction func tappedLotteryButton(_ sender: Any) {
         
         if tappedBonusBoxButtonToggle == false && tappedpenaltyBoxButtonToggle == false {
-            alert(text: "箱が選択されていません")
+            alert(text: LotteryErrorMassage.noSelected.rawValue)
         } else {
             let lotteryViewController = UIStoryboard(name: "LotteryView", bundle: nil).instantiateViewController(withIdentifier: "LotteryView") as! LotteryViewController
             
@@ -69,7 +69,7 @@ class BoxViewController: UIViewController {
             guard let bonusContents = userDefault.stringArray(forKey: type.rawValue) else { return }
             lotteyBox.append(contentsOf: bonusContents)
         } else {
-            alert(text: "「ボーナス」箱の中身がありません")
+            alert(text: LotteryErrorMassage.noContentsInBonusBox.rawValue)
         }
     }
     func addPenaltyContentToLotteyBox(type: BoxType) {
@@ -77,7 +77,7 @@ class BoxViewController: UIViewController {
             guard let penaltyContents = userDefault.stringArray(forKey: type.rawValue) else { return }
             lotteyBox.append(contentsOf: penaltyContents)
         } else {
-            alert(text: "「バツゲーム」箱の中身がありません")
+            alert(text: LotteryErrorMassage.noContentsInPenaltyBox.rawValue)
         }
     }
     
