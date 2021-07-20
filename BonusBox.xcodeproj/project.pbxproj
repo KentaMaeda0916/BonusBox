@@ -95,6 +95,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		438E1ED126A6833000A8ACDD /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		43E1CCD7268C0490007E0EDB = {
 			isa = PBXGroup;
 			children = (
@@ -116,6 +123,7 @@
 		43E1CCE2268C0490007E0EDB /* BonusBox */ = {
 			isa = PBXGroup;
 			children = (
+				438E1ED126A6833000A8ACDD /* Models */,
 				43E1CD86269145E6007E0EDB /* ViewControllers */,
 				43E1CD85269145B4007E0EDB /* Storyboards */,
 				43E1CCE3268C0490007E0EDB /* AppDelegate.swift */,
