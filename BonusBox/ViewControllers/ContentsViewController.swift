@@ -31,19 +31,19 @@ class ContentsViewController: ButtonBarPagerTabStripViewController {
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        reloadBonusContentsTableView()
-        reloadPenaltyContentsTableView()
+        reloadBonusContentsTableView(boxType: BoxType.bonus)
+        reloadPenaltyContentsTableView(boxType: BoxType.penalty)
     }
     
-    func reloadBonusContentsTableView() {
+    func reloadBonusContentsTableView(boxType: BoxType) {
         bonusContentsView?.contents.removeAll()
-        guard let contents = userDefault.stringArray(forKey: "bonus") else { return }
+        guard let contents = userDefault.stringArray(forKey: boxType.rawValue) else { return }
         bonusContentsView?.contents.append(contentsOf: contents)
         bonusContentsView?.bonusContentsTableView.reloadData()
     }
-    func reloadPenaltyContentsTableView() {
+    func reloadPenaltyContentsTableView(boxType: BoxType) {
         penaltyContentsView?.contents.removeAll()
-        guard let contents = userDefault.stringArray(forKey: "penalty") else { return }
+        guard let contents = userDefault.stringArray(forKey: boxType.rawValue) else { return }
         penaltyContentsView?.contents.append(contentsOf: contents)
         penaltyContentsView?.penaltyContentsTableView.reloadData()
     }

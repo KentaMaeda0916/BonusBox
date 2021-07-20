@@ -25,8 +25,8 @@ class HomeTabViewController: UITabBarController {
         let demoPenaltyContents: [String] = ["スクワット１０回"]
         
         if userDefaults.bool(forKey: firstLunchKey) {
-            userDefaults.setValue(demoBonusContents, forKey: "bonus")
-            userDefaults.setValue(demoPenaltyContents, forKey: "penalty")
+            userDefaults.setValue(demoBonusContents, forKey: BoxType.bonus.rawValue)
+            userDefaults.setValue(demoPenaltyContents, forKey: BoxType.penalty.rawValue)
             userDefaults.setValue(false, forKey: firstLunchKey)
         }
 
