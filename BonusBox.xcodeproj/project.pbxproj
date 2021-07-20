@@ -14,6 +14,9 @@
 		4347FA6A2693EC6600C95EFC /* ContentsAddView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4347FA692693EC6600C95EFC /* ContentsAddView.storyboard */; };
 		4347FA6F2693ECB800C95EFC /* ContentsAddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4347FA6E2693ECB800C95EFC /* ContentsAddViewController.swift */; };
 		438E1DF32696DFDB00A8ACDD /* Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438E1DF22696DFDB00A8ACDD /* Extention.swift */; };
+		438E1EC826A653D500A8ACDD /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 438E1EC726A653D500A8ACDD /* RxSwift */; };
+		438E1ECA26A653D500A8ACDD /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 438E1EC926A653D500A8ACDD /* RxCocoa */; };
+		438E1ECC26A653D500A8ACDD /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = 438E1ECB26A653D500A8ACDD /* RxRelay */; };
 		43CAE638269574480037A2C5 /* BubbleTransition in Frameworks */ = {isa = PBXBuildFile; productRef = 43CAE637269574480037A2C5 /* BubbleTransition */; };
 		43E1CCE4268C0490007E0EDB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43E1CCE3268C0490007E0EDB /* AppDelegate.swift */; };
 		43E1CCE6268C0490007E0EDB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43E1CCE5268C0490007E0EDB /* SceneDelegate.swift */; };
@@ -81,7 +84,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				438E1ECC26A653D500A8ACDD /* RxRelay in Frameworks */,
+				438E1EC826A653D500A8ACDD /* RxSwift in Frameworks */,
 				A47AE5E492E25F8875748055 /* Pods_BonusBox.framework in Frameworks */,
+				438E1ECA26A653D500A8ACDD /* RxCocoa in Frameworks */,
 				43CAE638269574480037A2C5 /* BubbleTransition in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -194,6 +200,9 @@
 			name = BonusBox;
 			packageProductDependencies = (
 				43CAE637269574480037A2C5 /* BubbleTransition */,
+				438E1EC726A653D500A8ACDD /* RxSwift */,
+				438E1EC926A653D500A8ACDD /* RxCocoa */,
+				438E1ECB26A653D500A8ACDD /* RxRelay */,
 			);
 			productName = BonusBox;
 			productReference = 43E1CCE0268C0490007E0EDB /* BonusBox.app */;
@@ -224,6 +233,7 @@
 			mainGroup = 43E1CCD7268C0490007E0EDB;
 			packageReferences = (
 				43CAE636269574480037A2C5 /* XCRemoteSwiftPackageReference "BubbleTransition" */,
+				438E1EC626A653D500A8ACDD /* XCRemoteSwiftPackageReference "RxSwift" */,
 			);
 			productRefGroup = 43E1CCE1268C0490007E0EDB /* Products */;
 			projectDirPath = "";
@@ -509,6 +519,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		438E1EC626A653D500A8ACDD /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.2.0;
+			};
+		};
 		43CAE636269574480037A2C5 /* XCRemoteSwiftPackageReference "BubbleTransition" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/andreamazz/BubbleTransition.git";
@@ -520,6 +538,21 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		438E1EC726A653D500A8ACDD /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 438E1EC626A653D500A8ACDD /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+		438E1EC926A653D500A8ACDD /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 438E1EC626A653D500A8ACDD /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		438E1ECB26A653D500A8ACDD /* RxRelay */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 438E1EC626A653D500A8ACDD /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxRelay;
+		};
 		43CAE637269574480037A2C5 /* BubbleTransition */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 43CAE636269574480037A2C5 /* XCRemoteSwiftPackageReference "BubbleTransition" */;
