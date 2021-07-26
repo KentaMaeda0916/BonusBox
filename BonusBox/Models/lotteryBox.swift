@@ -6,6 +6,9 @@
 //
 
 import Foundation
+import UIKit
+import RxSwift
+import RxCocoa
 
 enum BoxType: String {
     case bonus = "bonus"
@@ -16,4 +19,18 @@ enum LotteryError: Error {
     case noSelected
     case noContentsInBonusBox
     case noContentsInPenaltyBox
+}
+
+protocol BoxSelected {
+    func selectedState(bonusBoxSelected: Bool, penaltyBoxSelected: Bool) -> Observable<Void>
+}
+
+class BoxSelect: BoxSelected {
+    func selectedState(bonusBoxSelected: Bool, penaltyBoxSelected: Bool) -> Observable<Void> {
+        switch (bonusBoxSelected, penaltyBoxSelected) {
+        case (false, false): return Observable.error(LotteryError.noSelected)
+        default: return Observable.just(())
+        }
+    }
+    
 }
