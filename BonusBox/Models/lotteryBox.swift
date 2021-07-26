@@ -12,8 +12,8 @@ enum BoxType: String {
     case penalty = "penalty"
 }
 
-enum LotteryErrorMassage: String {
-    case noSelected = "箱が選択されていません"
-    case noContentsInBonusBox = "「ボーナス」箱の中身がありません"
-    case noContentsInPenaltyBox = "「バツゲーム」箱の中身がありません"
+enum LotteryError: Error {
+    case noSelected
+    case noContentsInBonusBox
+    case noContentsInPenaltyBox
 }

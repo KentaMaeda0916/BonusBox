@@ -18,7 +18,7 @@
 		438E1ECA26A653D500A8ACDD /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 438E1EC926A653D500A8ACDD /* RxCocoa */; };
 		438E1ECC26A653D500A8ACDD /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = 438E1ECB26A653D500A8ACDD /* RxRelay */; };
 		438E1EF926A69B1B00A8ACDD /* lotteryBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438E1EF826A69B1B00A8ACDD /* lotteryBox.swift */; };
-		438E1EFD26A69EF000A8ACDD /* BoxSelectViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438E1EFC26A69EF000A8ACDD /* BoxSelectViewModel.swift */; };
+		438E1F8626AE83EA00A8ACDD /* LotteryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438E1F8526AE83EA00A8ACDD /* LotteryViewModel.swift */; };
 		43CAE638269574480037A2C5 /* BubbleTransition in Frameworks */ = {isa = PBXBuildFile; productRef = 43CAE637269574480037A2C5 /* BubbleTransition */; };
 		43E1CCE4268C0490007E0EDB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43E1CCE3268C0490007E0EDB /* AppDelegate.swift */; };
 		43E1CCE6268C0490007E0EDB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43E1CCE5268C0490007E0EDB /* SceneDelegate.swift */; };
@@ -58,7 +58,7 @@
 		4347FA6E2693ECB800C95EFC /* ContentsAddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentsAddViewController.swift; sourceTree = "<group>"; };
 		438E1DF22696DFDB00A8ACDD /* Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extention.swift; sourceTree = "<group>"; };
 		438E1EF826A69B1B00A8ACDD /* lotteryBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = lotteryBox.swift; sourceTree = "<group>"; };
-		438E1EFC26A69EF000A8ACDD /* BoxSelectViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoxSelectViewModel.swift; sourceTree = "<group>"; };
+		438E1F8526AE83EA00A8ACDD /* LotteryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LotteryViewModel.swift; sourceTree = "<group>"; };
 		43E1CCE0268C0490007E0EDB /* BonusBox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BonusBox.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		43E1CCE3268C0490007E0EDB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		43E1CCE5268C0490007E0EDB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -110,7 +110,7 @@
 		438E1EFB26A69E7200A8ACDD /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				438E1EFC26A69EF000A8ACDD /* BoxSelectViewModel.swift */,
+				438E1F8526AE83EA00A8ACDD /* LotteryViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -332,11 +332,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				438E1EFD26A69EF000A8ACDD /* BoxSelectViewModel.swift in Sources */,
 				4347FA3C2692C9B400C95EFC /* PenaltyContentsViewController.swift in Sources */,
 				43E1CCE4268C0490007E0EDB /* AppDelegate.swift in Sources */,
 				4347FA6F2693ECB800C95EFC /* ContentsAddViewController.swift in Sources */,
 				43E1CCE6268C0490007E0EDB /* SceneDelegate.swift in Sources */,
+				438E1F8626AE83EA00A8ACDD /* LotteryViewModel.swift in Sources */,
 				438E1DF32696DFDB00A8ACDD /* Extention.swift in Sources */,
 				43E1CD58268D8B04007E0EDB /* LotteryViewController.swift in Sources */,
 				43E1CD3C268C28A2007E0EDB /* BoxViewController.swift in Sources */,
