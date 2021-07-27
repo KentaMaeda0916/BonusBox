@@ -7,10 +7,17 @@
 
 import UIKit
 import BubbleTransition
+import RxSwift
+import RxCocoa
 
 class BoxViewController: UIViewController {
     let transition = BubbleTransition()
     let interactiveTransition = BubbleInteractiveTransition()
+    let disposeBag = DisposeBag()
+    
+    private let bonusBoxSelectSubject = BehaviorSubject(value: true)
+    
+    var bonusBoxSelected: Observable<Bool> { return bonusBoxSelectSubject }
     
     var tappedBonusBoxButtonToggle: Bool = true
     var tappedpenaltyBoxButtonToggle: Bool = true
@@ -28,7 +35,7 @@ class BoxViewController: UIViewController {
     @IBAction func tappedLotteryButton(_ sender: Any) {
         
         if tappedBonusBoxButtonToggle == false && tappedpenaltyBoxButtonToggle == false {
-            alert(text: LotteryErrorMassage.noSelected.rawValue)
+//            alert(text: LotteryError.noSelected.rawValue)
         } else {
             let lotteryViewController = UIStoryboard(name: "LotteryView", bundle: nil).instantiateViewController(withIdentifier: "LotteryView") as! LotteryViewController
             
@@ -69,7 +76,7 @@ class BoxViewController: UIViewController {
             guard let bonusContents = userDefault.stringArray(forKey: type.rawValue) else { return }
             lotteyBox.append(contentsOf: bonusContents)
         } else {
-            alert(text: LotteryErrorMassage.noContentsInBonusBox.rawValue)
+//            alert(text: LotteryErrorMassage.noContentsInBonusBox.rawValue)
         }
     }
     func addPenaltyContentToLotteyBox(type: BoxType) {
@@ -77,7 +84,7 @@ class BoxViewController: UIViewController {
             guard let penaltyContents = userDefault.stringArray(forKey: type.rawValue) else { return }
             lotteyBox.append(contentsOf: penaltyContents)
         } else {
-            alert(text: LotteryErrorMassage.noContentsInPenaltyBox.rawValue)
+//            alert(text: LotteryErrorMassage.noContentsInPenaltyBox.rawValue)
         }
     }
     
@@ -94,7 +101,7 @@ class BoxViewController: UIViewController {
     }
     
     @IBAction func tappedBonusBoxButton(_ sender: Any) {
-        tappedBonusBoxButtonToggle = tappedButtonEffect(toggle: tappedBonusBoxButtonToggle, button: bonusBoxSelectingButton)
+//        tappedBonusBoxButtonToggle = tappedButtonEffect(toggle: tappedBonusBoxButtonToggle, button: bonusBoxSelectingButton)
     }
     @IBAction func tappedPenaltyBoxButton(_ sender: Any) {
         tappedpenaltyBoxButtonToggle = tappedButtonEffect(toggle: tappedpenaltyBoxButtonToggle, button: penaltyBoxSelectingButton)
@@ -119,6 +126,13 @@ class BoxViewController: UIViewController {
         setupLotteyButton()
         setUpButton(button: bonusBoxSelectingButton)
         setUpButton(button: penaltyBoxSelectingButton)
+        
+        bonusBoxSelectingButton.rx.tap.asObservable()
+            .scan(false) { flag, _ in !flag }
+            .bind(to: bonusBoxSelectingButton.rx.valid)
+            .disposed(by: disposeBag)
+        
+            
     }
     
     func setupLotteyButton() {
@@ -131,7 +145,17 @@ class BoxViewController: UIViewController {
         lotteryButton.contentHorizontalAlignment = .fill
         lotteryButton.contentVerticalAlignment = .fill
     }
-    
+}
+extension Reactive where Base : UIButton {
+    public var valid : Binder<Bool> {
+        return Binder(self.base) { button, valid in
+            if valid {
+                button.alpha = 0.4
+            } else {
+                button.alpha = 1
+            }
+        }
+    }
 }
 
 extension BoxViewController: UIViewControllerTransitioningDelegate {
