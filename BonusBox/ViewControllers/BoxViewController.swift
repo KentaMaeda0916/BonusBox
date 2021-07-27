@@ -14,11 +14,7 @@ class BoxViewController: UIViewController {
     let transition = BubbleTransition()
     let interactiveTransition = BubbleInteractiveTransition()
     let disposeBag = DisposeBag()
-    
-    private let bonusBoxSelectSubject = BehaviorSubject(value: true)
-    
-    var bonusBoxSelected: Observable<Bool> { return bonusBoxSelectSubject }
-    
+
     var tappedBonusBoxButtonToggle: Bool = true
     var tappedpenaltyBoxButtonToggle: Bool = true
     var userDefault = UserDefaults.standard
@@ -99,28 +95,7 @@ class BoxViewController: UIViewController {
         lotteryViewController.interactiveTransition = interactiveTransition
         interactiveTransition.attach(to: lotteryViewController)
     }
-    
-    @IBAction func tappedBonusBoxButton(_ sender: Any) {
-//        tappedBonusBoxButtonToggle = tappedButtonEffect(toggle: tappedBonusBoxButtonToggle, button: bonusBoxSelectingButton)
-    }
-    @IBAction func tappedPenaltyBoxButton(_ sender: Any) {
-        tappedpenaltyBoxButtonToggle = tappedButtonEffect(toggle: tappedpenaltyBoxButtonToggle, button: penaltyBoxSelectingButton)
-    }
-    
-    func tappedButtonEffect(toggle: Bool, button: UIButton) -> Bool {
-        if toggle {
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.005) {
-                button.alpha = 0.4
-              }
-            return false
-        } else {
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.005) {
-                button.alpha = 1
-              }
-            return true
-        }
-    }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         setupLotteyButton()
@@ -130,6 +105,11 @@ class BoxViewController: UIViewController {
         bonusBoxSelectingButton.rx.tap.asObservable()
             .scan(false) { flag, _ in !flag }
             .bind(to: bonusBoxSelectingButton.rx.valid)
+            .disposed(by: disposeBag)
+        
+        penaltyBoxSelectingButton.rx.tap.asObservable()
+            .scan(false) { flag, _ in !flag }
+            .bind(to: penaltyBoxSelectingButton.rx.valid)
             .disposed(by: disposeBag)
         
             

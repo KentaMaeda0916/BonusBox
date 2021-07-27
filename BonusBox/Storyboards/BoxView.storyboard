@@ -35,9 +35,6 @@
                                                     <constraint firstAttribute="width" secondItem="McY-X9-SCg" secondAttribute="height" multiplier="1:1.5" id="nJy-sW-eri"/>
                                                 </constraints>
                                                 <state key="normal" image="歓喜"/>
-                                                <connections>
-                                                    <action selector="tappedBonusBoxButton:" destination="Fb3-0d-1Cx" eventType="touchUpInside" id="v0j-EY-s47"/>
-                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -57,9 +54,6 @@
                                                     <constraint firstAttribute="width" secondItem="GJA-N6-ZwI" secondAttribute="height" multiplier="1:1.5" id="z6K-Oz-6H2"/>
                                                 </constraints>
                                                 <state key="normal" image="オーマイゴット"/>
-                                                <connections>
-                                                    <action selector="tappedPenaltyBoxButton:" destination="Fb3-0d-1Cx" eventType="touchUpInside" id="JRo-E7-ZTn"/>
-                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
