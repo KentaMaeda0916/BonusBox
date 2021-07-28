@@ -15,10 +15,12 @@ class BoxViewController: UIViewController {
     let interactiveTransition = BubbleInteractiveTransition()
     let disposeBag = DisposeBag()
 
-    var tappedBonusBoxButtonToggle: Bool = true
-    var tappedpenaltyBoxButtonToggle: Bool = true
-    var userDefault = UserDefaults.standard
+//    var tappedBonusBoxButtonToggle: Bool = true
+//    var tappedpenaltyBoxButtonToggle: Bool = true
 
+    
+    
+    var userDefault = UserDefaults.standard
     var lotteyBox:[String] = []
     
     @IBOutlet weak var lotteryButton: UIButton!
@@ -28,66 +30,78 @@ class BoxViewController: UIViewController {
     @IBOutlet weak var penaltyBoxLable: UILabel!
     @IBOutlet weak var penaltyBoxSelectingButton: UIButton!
     
+    var bonusBoxSelected: Observable<Bool> { return bonusBoxSelect }
+    var penaltyBoxSelected: Observable<Bool> { return bonusBoxSelect }
+    
+    private let bonusBoxSelect = BehaviorSubject(value: true)
+    private let penaltyBoxSelect = BehaviorSubject(value: true)
+    
+    private lazy var lotteryViewModel = LotteryViewModel(
+        bonusBoxSelected: bonusBoxSelected,
+        penaltyBoxSelected: penaltyBoxSelected,
+        model: BoxSelect()
+    )
+    
     @IBAction func tappedLotteryButton(_ sender: Any) {
         
-        if tappedBonusBoxButtonToggle == false && tappedpenaltyBoxButtonToggle == false {
-//            alert(text: LotteryError.noSelected.rawValue)
-        } else {
-            let lotteryViewController = UIStoryboard(name: "LotteryView", bundle: nil).instantiateViewController(withIdentifier: "LotteryView") as! LotteryViewController
-            
-            let lotteryButtonConvertCGPoint = lotteryButton.convert(CGPoint.zero, to: view)
-            let lotteryButtonCGPointY = lotteryButtonConvertCGPoint.y
-            lotteryViewController.lotteryButtonY = lotteryButtonCGPointY
-            
-            lotteryAction(lotteryViewController: lotteryViewController)
-            transitionAnimation(lotteryViewController: lotteryViewController)
-            present(lotteryViewController, animated: true, completion: nil)
-        }
+//        if tappedBonusBoxButtonToggle == false && tappedpenaltyBoxButtonToggle == false {
+////            alert(text: LotteryError.noSelected.rawValue)
+//        } else {
+//            let lotteryViewController = UIStoryboard(name: "LotteryView", bundle: nil).instantiateViewController(withIdentifier: "LotteryView") as! LotteryViewController
+//            
+//            let lotteryButtonConvertCGPoint = lotteryButton.convert(CGPoint.zero, to: view)
+//            let lotteryButtonCGPointY = lotteryButtonConvertCGPoint.y
+//            lotteryViewController.lotteryButtonY = lotteryButtonCGPointY
+//            
+//            lotteryAction(lotteryViewController: lotteryViewController)
+//            transitionAnimation(lotteryViewController: lotteryViewController)
+//            present(lotteryViewController, animated: true, completion: nil)
+//        }
     }
     
-    func lotteryAction(lotteryViewController: LotteryViewController) {
-        lotteyBox.removeAll()
-
-        if tappedBonusBoxButtonToggle && tappedpenaltyBoxButtonToggle {
-            addBonusContentToLotteyBox(type: BoxType.bonus)
-            addPenaltyContentToLotteyBox(type: BoxType.penalty)
-            randomValue(lotteryViewController: lotteryViewController)
-            
-        } else if tappedBonusBoxButtonToggle == true && tappedpenaltyBoxButtonToggle == false {
-            addBonusContentToLotteyBox(type: BoxType.bonus)
-            randomValue(lotteryViewController: lotteryViewController)
-                        
-        } else if tappedBonusBoxButtonToggle == false && tappedpenaltyBoxButtonToggle == true{
-            addPenaltyContentToLotteyBox(type: BoxType.penalty)
-            randomValue(lotteryViewController: lotteryViewController)
-            
-        } else {
-            
-        }
-
-    }
-    
-    func addBonusContentToLotteyBox(type: BoxType) {
-        if userDefault.stringArray(forKey: type.rawValue)?.count != 0 {
-            guard let bonusContents = userDefault.stringArray(forKey: type.rawValue) else { return }
-            lotteyBox.append(contentsOf: bonusContents)
-        } else {
-//            alert(text: LotteryErrorMassage.noContentsInBonusBox.rawValue)
-        }
-    }
-    func addPenaltyContentToLotteyBox(type: BoxType) {
-        if userDefault.stringArray(forKey: type.rawValue)?.count != 0 {
-            guard let penaltyContents = userDefault.stringArray(forKey: type.rawValue) else { return }
-            lotteyBox.append(contentsOf: penaltyContents)
-        } else {
-//            alert(text: LotteryErrorMassage.noContentsInPenaltyBox.rawValue)
-        }
-    }
-    
-    func randomValue(lotteryViewController: LotteryViewController) {
-        guard let lotteyResult = lotteyBox.randomElement() else { return }
-        lotteryViewController.resultText = lotteyResult
-    }
+//    func lotteryAction(lotteryViewController: LotteryViewController) {
+//        lotteyBox.removeAll()
+//
+//        if tappedBonusBoxButtonToggle && tappedpenaltyBoxButtonToggle {
+//            addBonusContentToLotteyBox(type: BoxType.bonus)
+//            addPenaltyContentToLotteyBox(type: BoxType.penalty)
+//            randomValue(lotteryViewController: lotteryViewController)
+//            
+//        } else if tappedBonusBoxButtonToggle == true && tappedpenaltyBoxButtonToggle == false {
+//            addBonusContentToLotteyBox(type: BoxType.bonus)
+//            randomValue(lotteryViewController: lotteryViewController)
+//                        
+//        } else if tappedBonusBoxButtonToggle == false && tappedpenaltyBoxButtonToggle == true{
+//            addPenaltyContentToLotteyBox(type: BoxType.penalty)
+//            randomValue(lotteryViewController: lotteryViewController)
+//            
+//        } else {
+//            
+//        }
+//
+//    }
+//    
+//    func addBonusContentToLotteyBox(type: BoxType) {
+//        if userDefault.stringArray(forKey: type.rawValue)?.count != 0 {
+//            guard let bonusContents = userDefault.stringArray(forKey: type.rawValue) else { return }
+//            lotteyBox.append(contentsOf: bonusContents)
+//        } else {
+////            alert(text: LotteryErrorMassage.noContentsInBonusBox.rawValue)
+//        }
+//    }
+//    func addPenaltyContentToLotteyBox(type: BoxType) {
+//        if userDefault.stringArray(forKey: type.rawValue)?.count != 0 {
+//            guard let penaltyContents = userDefault.stringArray(forKey: type.rawValue) else { return }
+//            lotteyBox.append(contentsOf: penaltyContents)
+//        } else {
+////            alert(text: LotteryErrorMassage.noContentsInPenaltyBox.rawValue)
+//        }
+//    }
+//    
+//    func randomValue(lotteryViewController: LotteryViewController) {
+//        guard let lotteyResult = lotteyBox.randomElement() else { return }
+//        lotteryViewController.resultText = lotteyResult
+//    }
     func transitionAnimation(lotteryViewController: LotteryViewController) {
         lotteryViewController.transitioningDelegate = self
         lotteryViewController.modalPresentationStyle = .custom
@@ -104,15 +118,27 @@ class BoxViewController: UIViewController {
         
         bonusBoxSelectingButton.rx.tap.asObservable()
             .scan(false) { flag, _ in !flag }
-            .bind(to: bonusBoxSelectingButton.rx.valid)
+            .subscribe(onNext: { (flag) in
+                self.buttonAlpha(button: self.bonusBoxSelectingButton, selected: flag)
+                self.bonusBoxSelect.onNext(flag)
+            })
             .disposed(by: disposeBag)
         
         penaltyBoxSelectingButton.rx.tap.asObservable()
             .scan(false) { flag, _ in !flag }
-            .bind(to: penaltyBoxSelectingButton.rx.valid)
+            .subscribe(onNext: { (flag) in
+                self.buttonAlpha(button: self.penaltyBoxSelectingButton, selected: flag)
+                self.penaltyBoxSelect.onNext(flag)
+            })
             .disposed(by: disposeBag)
-        
+
+        lotteryViewModel.operationGuidanceText
+            .bind(to: operationGuidanceLable.rx.text)
+            .disposed(by: disposeBag)
             
+        lotteryViewModel.operationGuidanceColor
+            .bind(to: LabelColor)
+            .disposed(by: disposeBag)
     }
     
     func setupLotteyButton() {
@@ -125,15 +151,16 @@ class BoxViewController: UIViewController {
         lotteryButton.contentHorizontalAlignment = .fill
         lotteryButton.contentVerticalAlignment = .fill
     }
-}
-extension Reactive where Base : UIButton {
-    public var valid : Binder<Bool> {
-        return Binder(self.base) { button, valid in
-            if valid {
-                button.alpha = 0.4
-            } else {
-                button.alpha = 1
-            }
+    private var LabelColor: Binder<UIColor> {
+        return Binder(self) { me, color in
+            me.operationGuidanceLable.textColor = color
+        }
+    }
+    func buttonAlpha(button: UIButton, selected: Bool) {
+        if selected {
+            button.alpha = 0.4
+        } else {
+            button.alpha = 1
         }
     }
 }
