@@ -15,11 +15,6 @@ class BoxViewController: UIViewController {
     let interactiveTransition = BubbleInteractiveTransition()
     let disposeBag = DisposeBag()
 
-//    var tappedBonusBoxButtonToggle: Bool = true
-//    var tappedpenaltyBoxButtonToggle: Bool = true
-
-    
-    
     var userDefault = UserDefaults.standard
     var lotteyBox:[String] = []
     
