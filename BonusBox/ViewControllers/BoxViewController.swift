@@ -163,32 +163,3 @@ class BoxViewController: UIViewController {
         }
     }
 }
-
-extension BoxViewController: UIViewControllerTransitioningDelegate {
-    
-    func setCenterPoint() -> CGPoint{
-        let lotteryButtonConvertCGPoint = lotteryButton.convert(CGPoint.zero, to: view)
-        let centerX = lotteryButtonConvertCGPoint.x + lotteryButton.frame.width/2
-        let centerY = lotteryButtonConvertCGPoint.y + lotteryButton.frame.height/2
-        let centerPoint: CGPoint = CGPoint(x: centerX, y: centerY)
-        return centerPoint
-    }
-    
-    func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        transition.transitionMode = .present
-        transition.startingPoint = setCenterPoint()
-        transition.bubbleColor = lotteryButton.backgroundColor!
-        return transition
-    }
-    
-    func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        transition.transitionMode = .dismiss
-        transition.startingPoint = setCenterPoint()
-        transition.bubbleColor = lotteryButton.backgroundColor!
-        return transition
-    }
-    
-    func interactionControllerForDismissal(using animator: UIViewControllerAnimatedTransitioning) -> UIViewControllerInteractiveTransitioning? {
-        return interactiveTransition
-    }
-}
