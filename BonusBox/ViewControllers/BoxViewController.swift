@@ -31,7 +31,7 @@ class BoxViewController: UIViewController {
     @IBOutlet weak var penaltyBoxSelectingButton: UIButton!
     
     var bonusBoxSelected: Observable<Bool> { return bonusBoxSelect }
-    var penaltyBoxSelected: Observable<Bool> { return bonusBoxSelect }
+    var penaltyBoxSelected: Observable<Bool> { return penaltyBoxSelect }
     
     private let bonusBoxSelect = BehaviorSubject(value: true)
     private let penaltyBoxSelect = BehaviorSubject(value: true)
