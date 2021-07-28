@@ -117,7 +117,7 @@ class BoxViewController: UIViewController {
         setUpButton(button: penaltyBoxSelectingButton)
         
         bonusBoxSelectingButton.rx.tap.asObservable()
-            .scan(false) { flag, _ in !flag }
+            .scan(true) { flag, _ in !flag }
             .subscribe(onNext: { (flag) in
                 self.buttonAlpha(button: self.bonusBoxSelectingButton, selected: flag)
                 self.bonusBoxSelect.onNext(flag)
@@ -125,7 +125,7 @@ class BoxViewController: UIViewController {
             .disposed(by: disposeBag)
         
         penaltyBoxSelectingButton.rx.tap.asObservable()
-            .scan(false) { flag, _ in !flag }
+            .scan(true) { flag, _ in !flag }
             .subscribe(onNext: { (flag) in
                 self.buttonAlpha(button: self.penaltyBoxSelectingButton, selected: flag)
                 self.penaltyBoxSelect.onNext(flag)
@@ -157,7 +157,7 @@ class BoxViewController: UIViewController {
         }
     }
     func buttonAlpha(button: UIButton, selected: Bool) {
-        if selected {
+        if !selected {
             button.alpha = 0.4
         } else {
             button.alpha = 1

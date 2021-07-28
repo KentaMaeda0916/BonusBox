@@ -28,7 +28,7 @@ protocol BoxSelected {
 class BoxSelect: BoxSelected {
     func selectedState(bonusBox: Bool, penaltyBox: Bool) -> Observable<Void> {
         switch (bonusBox, penaltyBox) {
-        case (true, true): return Observable.error(LotteryError.noSelected)
+        case (false, false): return Observable.error(LotteryError.noSelected)
         default: return Observable.just(())
         }
     }
