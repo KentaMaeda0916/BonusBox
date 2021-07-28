@@ -15,6 +15,7 @@ class LotteryViewModel {
     let operationGuidanceText: Observable<String>
     let operationGuidanceColor: Observable<UIColor>
     let lotteryButtonIsEnable: Observable<Bool>
+    let buttonAlpha: Observable<CGFloat>
     
     init(bonusBoxSelected: Observable<Bool>,
          penaltyBoxSelected: Observable<Bool>,
@@ -52,6 +53,14 @@ class LotteryViewModel {
                 case .next: return .just(true)
                 case .error: return .just(false)
                 case .completed: return .empty()
+                }
+            }
+        self.buttonAlpha = event
+            .flatMap{ event -> Observable<CGFloat> in
+                switch event {
+                case .next: return .just(1)
+                case let .error(error as LotteryError): return .just(error.ButtonAlpha)
+                case .error, .completed: return .empty()
                 }
             }
     }
@@ -110,5 +119,13 @@ extension LotteryError {
         case .noContentsInPenaltyBox: return "「バツゲーム」箱の中身がありません"
         }
     }
+    var ButtonAlpha: CGFloat{
+        switch self {
+        case .noSelected: return 0.4
+        case .noContentsInBonusBox: return 1
+        case .noContentsInPenaltyBox: return 1
+        }
+    }
+    
 }
 
