@@ -14,6 +14,7 @@ class LotteryViewModel {
     
     let operationGuidanceText: Observable<String>
     let operationGuidanceColor: Observable<UIColor>
+    let lotteryButtonIsEnable: Observable<Bool>
     
     init(bonusBoxSelected: Observable<Bool>,
          penaltyBoxSelected: Observable<Bool>,
@@ -41,6 +42,15 @@ class LotteryViewModel {
                 switch event {
                 case .next: return .just(.black)
                 case .error: return .just(.red)
+                case .completed: return .empty()
+                }
+            }
+        
+        self.lotteryButtonIsEnable = event
+            .flatMap{ event -> Observable<Bool> in
+                switch event {
+                case .next: return .just(true)
+                case .error: return .just(false)
                 case .completed: return .empty()
                 }
             }

@@ -139,6 +139,10 @@ class BoxViewController: UIViewController {
         lotteryViewModel.operationGuidanceColor
             .bind(to: LabelColor)
             .disposed(by: disposeBag)
+        
+        lotteryViewModel.lotteryButtonIsEnable
+            .bind(to: lotteryButton.rx.isEnabled)
+            .disposed(by: disposeBag)
     }
     
     func setupLotteyButton() {
