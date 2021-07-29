@@ -17,6 +17,9 @@ class LotteryViewModel {
     let lotteryButtonIsEnable: Observable<Bool>
     let buttonAlpha: Observable<CGFloat>
     
+    var userDefault = UserDefaults.standard
+    var lotteyBox:[String] = []
+    
     init(bonusBoxSelected: Observable<Bool>,
          penaltyBoxSelected: Observable<Bool>,
          model: BoxSelected)
@@ -105,10 +108,10 @@ class LotteryViewModel {
 //        }
 //    }
 //
-//    func randomValue(lotteryViewController: LotteryViewController) {
-//        guard let lotteyResult = lotteyBox.randomElement() else { return }
-//        lotteryViewController.resultText = lotteyResult
-//    }
+    func randomValue(lotteryViewController: LotteryViewController) {
+        guard let lotteyResult = lotteyBox.randomElement() else { return }
+        lotteryViewController.resultText = lotteyResult
+    }
 }
 
 extension LotteryError {

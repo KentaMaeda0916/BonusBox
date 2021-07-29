@@ -15,8 +15,8 @@ class BoxViewController: UIViewController {
     let interactiveTransition = BubbleInteractiveTransition()
     let disposeBag = DisposeBag()
 
-    var userDefault = UserDefaults.standard
-    var lotteyBox:[String] = []
+//    var userDefault = UserDefaults.standard
+//    var lotteyBox:[String] = []
     
     @IBOutlet weak var lotteryButton: UIButton!
     @IBOutlet weak var operationGuidanceLable: UILabel!

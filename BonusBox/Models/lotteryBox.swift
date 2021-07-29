@@ -23,6 +23,7 @@ enum LotteryError: Error {
 
 protocol BoxSelected {
     func selectedState(bonusBox: Bool, penaltyBox: Bool) -> Observable<Void>
+    func lotteryAction(bonusContentsEntity: Bool, penaltyContentsEntity: Bool) -> Observable<Void>
 }
 
 class BoxSelect: BoxSelected {
@@ -30,6 +31,14 @@ class BoxSelect: BoxSelected {
         switch (bonusBox, penaltyBox) {
         case (false, false): return Observable.error(LotteryError.noSelected)
         default: return Observable.just(())
+        }
+    }
+    func lotteryAction(bonusContentsEntity: Bool, penaltyContentsEntity: Bool) -> Observable<Void> {
+        switch  (bonusContentsEntity, penaltyContentsEntity) {
+        case (true, true): return Observable.just(())
+        case (false, true): return Observable.error(LotteryError.noContentsInBonusBox)
+        case (true, false): return Observable.error(LotteryError.noContentsInPenaltyBox)
+        case (false, false): return Observable.just(())
         }
     }
     
