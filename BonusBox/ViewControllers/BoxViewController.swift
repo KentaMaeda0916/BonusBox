@@ -43,17 +43,24 @@ class BoxViewController: UIViewController {
 ////            alert(text: LotteryError.noSelected.rawValue)
 //        } else {
 //            let lotteryViewController = UIStoryboard(name: "LotteryView", bundle: nil).instantiateViewController(withIdentifier: "LotteryView") as! LotteryViewController
-//            
+//
 //            let lotteryButtonConvertCGPoint = lotteryButton.convert(CGPoint.zero, to: view)
 //            let lotteryButtonCGPointY = lotteryButtonConvertCGPoint.y
 //            lotteryViewController.lotteryButtonY = lotteryButtonCGPointY
-//            
+//
 //            lotteryAction(lotteryViewController: lotteryViewController)
 //            transitionAnimation(lotteryViewController: lotteryViewController)
 //            present(lotteryViewController, animated: true, completion: nil)
 //        }
     }
-    
+    func tappedLotteryButton() {
+        let lotteryViewController = UIStoryboard(name: "LotteryView", bundle: nil).instantiateViewController(withIdentifier: "LotteryView") as! LotteryViewController
+        let lotteryButtonConvertCGPoint = lotteryButton.convert(CGPoint.zero, to: view)
+        let lotteryButtonCGPointY = lotteryButtonConvertCGPoint.y
+        lotteryViewController.lotteryButtonY = lotteryButtonCGPointY
+        transitionAnimation(lotteryViewController: lotteryViewController)
+        present(lotteryViewController, animated: true, completion: nil)
+    }
 //    func lotteryAction(lotteryViewController: LotteryViewController) {
 //        lotteyBox.removeAll()
 //
@@ -126,7 +133,12 @@ class BoxViewController: UIViewController {
                 self.penaltyBoxSelect.onNext(flag)
             })
             .disposed(by: disposeBag)
-
+        
+        lotteryButton.rx.tap.asObservable()
+            .subscribe(onNext: { [weak self] in
+                self?.tappedLotteryButton()
+            }).disposed(by: disposeBag)
+        
         lotteryViewModel.operationGuidanceText
             .bind(to: operationGuidanceLable.rx.text)
             .disposed(by: disposeBag)
