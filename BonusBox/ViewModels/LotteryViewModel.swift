@@ -19,6 +19,7 @@ class LotteryViewModel {
     
     var userDefault = UserDefaults.standard
     var lotteyBox:[String] = []
+    var lotteyResultText: String?
     
     init(bonusBoxSelected: Observable<Bool>,
          penaltyBoxSelected: Observable<Bool>,
@@ -68,49 +69,49 @@ class LotteryViewModel {
             }
     }
     
-    
-    //    func lotteryAction(lotteryViewController: LotteryViewController) {
-    //        lotteyBox.removeAll()
-//
-//        if tappedBonusBoxButtonToggle && tappedpenaltyBoxButtonToggle {
-//            addBonusContentToLotteyBox(type: BoxType.bonus)
-//            addPenaltyContentToLotteyBox(type: BoxType.penalty)
-//            randomValue(lotteryViewController: lotteryViewController)
-//
-//        } else if tappedBonusBoxButtonToggle == true && tappedpenaltyBoxButtonToggle == false {
-//            addBonusContentToLotteyBox(type: BoxType.bonus)
-//            randomValue(lotteryViewController: lotteryViewController)
-//
-//        } else if tappedBonusBoxButtonToggle == false && tappedpenaltyBoxButtonToggle == true{
-//            addPenaltyContentToLotteyBox(type: BoxType.penalty)
-//            randomValue(lotteryViewController: lotteryViewController)
-//
-//        } else {
-//
-//        }
-//
-//    }
-//
-//    func addBonusContentToLotteyBox(type: BoxType) {
-//        if userDefault.stringArray(forKey: type.rawValue)?.count != 0 {
-//            guard let bonusContents = userDefault.stringArray(forKey: type.rawValue) else { return }
-//            lotteyBox.append(contentsOf: bonusContents)
-//        } else {
-////            alert(text: LotteryErrorMassage.noContentsInBonusBox.rawValue)
-//        }
-//    }
-//    func addPenaltyContentToLotteyBox(type: BoxType) {
-//        if userDefault.stringArray(forKey: type.rawValue)?.count != 0 {
-//            guard let penaltyContents = userDefault.stringArray(forKey: type.rawValue) else { return }
-//            lotteyBox.append(contentsOf: penaltyContents)
-//        } else {
-////            alert(text: LotteryErrorMassage.noContentsInPenaltyBox.rawValue)
-//        }
-//    }
-//
-    func randomValue(lotteryViewController: LotteryViewController) {
-        guard let lotteyResult = lotteyBox.randomElement() else { return }
-        lotteryViewController.resultText = lotteyResult
+
+    func lotteryAction(bonusBoxSelected: Bool,
+                       penaltyBoxSelected: Bool)
+    {
+        lotteyBox.removeAll()
+     
+        switch (bonusBoxSelected, penaltyBoxSelected) {
+        case (true, true):
+            addBonusContentToLotteyBox(type: BoxType.bonus)
+            addPenaltyContentToLotteyBox(type: BoxType.penalty)
+            
+        case (false, true):
+            addPenaltyContentToLotteyBox(type: BoxType.penalty)
+            
+        case (true, false):
+            addBonusContentToLotteyBox(type: BoxType.bonus)
+        case (false, false):
+            return
+        }
+        
+        lotteyResultText = randomValue()
+    }
+
+    func addBonusContentToLotteyBox(type: BoxType) {
+        if userDefault.stringArray(forKey: type.rawValue)?.count != 0 {
+            guard let bonusContents = userDefault.stringArray(forKey: type.rawValue) else { return }
+            lotteyBox.append(contentsOf: bonusContents)
+        } else {
+//            alert(text: LotteryErrorMassage.noContentsInBonusBox.rawValue)
+        }
+    }
+    func addPenaltyContentToLotteyBox(type: BoxType) {
+        if userDefault.stringArray(forKey: type.rawValue)?.count != 0 {
+            guard let penaltyContents = userDefault.stringArray(forKey: type.rawValue) else { return }
+            lotteyBox.append(contentsOf: penaltyContents)
+        } else {
+//            alert(text: LotteryErrorMassage.noContentsInPenaltyBox.rawValue)
+        }
+    }
+
+    func randomValue() -> String{
+        guard let lotteyResult = lotteyBox.randomElement() else { return ("")}
+        return lotteyResult
     }
 }
 

@@ -92,9 +92,6 @@
                                                 </constraints>
                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                 <state key="normal" image="shippingbox" catalog="system"/>
-                                                <connections>
-                                                    <action selector="tappedLotteryButton:" destination="Fb3-0d-1Cx" eventType="touchUpInside" id="2s6-2o-tgZ"/>
-                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
