@@ -25,15 +25,7 @@ class BoxViewController: UIViewController {
     @IBOutlet weak var penaltyBoxLable: UILabel!
     @IBOutlet weak var penaltyBoxSelectingButton: UIButton!
     
-    var bonusBoxSelected: Observable<Bool> { return bonusBoxSelect }
-    var penaltyBoxSelected: Observable<Bool> { return penaltyBoxSelect }
-    
-    private let bonusBoxSelect = BehaviorSubject(value: true)
-    private let penaltyBoxSelect = BehaviorSubject(value: true)
-    
     private lazy var lotteryViewModel = LotteryViewModel(
-        bonusBoxSelected: bonusBoxSelected,
-        penaltyBoxSelected: penaltyBoxSelected,
         model: BoxSelect()
     )
     
@@ -43,6 +35,8 @@ class BoxViewController: UIViewController {
         let lotteryButtonCGPointY = lotteryButtonConvertCGPoint.y
         lotteryViewController.lotteryButtonY = lotteryButtonCGPointY
         transitionAnimation(lotteryViewController: lotteryViewController)
+        guard let resultText =  lotteryViewModel.lotteyResultText else { return }
+        lotteryViewController.resultText = resultText
         present(lotteryViewController, animated: true, completion: nil)
     }
 
@@ -64,7 +58,7 @@ class BoxViewController: UIViewController {
             .scan(true) { flag, _ in !flag }
             .subscribe(onNext: { (flag) in
                 self.buttonAlpha(button: self.bonusBoxSelectingButton, selected: flag)
-                self.bonusBoxSelect.onNext(flag)
+                self.lotteryViewModel.bonusBoxSelect.onNext(flag)
             })
             .disposed(by: disposeBag)
         
@@ -72,12 +66,13 @@ class BoxViewController: UIViewController {
             .scan(true) { flag, _ in !flag }
             .subscribe(onNext: { (flag) in
                 self.buttonAlpha(button: self.penaltyBoxSelectingButton, selected: flag)
-                self.penaltyBoxSelect.onNext(flag)
+                self.lotteryViewModel.penaltyBoxSelect.onNext(flag)
             })
             .disposed(by: disposeBag)
         
         lotteryButton.rx.tap.asObservable()
             .subscribe(onNext: { [weak self] in
+                self?.lotteryViewModel.lotteryAction()
                 self?.tappedLotteryButton()
             }).disposed(by: disposeBag)
         

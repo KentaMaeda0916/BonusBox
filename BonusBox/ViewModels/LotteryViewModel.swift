@@ -17,16 +17,21 @@ class LotteryViewModel {
     let lotteryButtonIsEnable: Observable<Bool>
     let buttonAlpha: Observable<CGFloat>
     
+    let disposeBag = DisposeBag()
+    
     var userDefault = UserDefaults.standard
     var lotteyBox:[String] = []
     var lotteyResultText: String?
     
-    init(bonusBoxSelected: Observable<Bool>,
-         penaltyBoxSelected: Observable<Bool>,
-         model: BoxSelected)
-    {
+    var bonusBoxSelect = BehaviorSubject(value: true)
+    var penaltyBoxSelect = BehaviorSubject(value: true)
+    
+    var bonusBoxSelected: Observable<Bool> { return bonusBoxSelect }
+    var penaltyBoxSelected: Observable<Bool> { return penaltyBoxSelect }
+    
+    init(model: BoxSelected) {
         let event = Observable
-            .combineLatest(bonusBoxSelected, penaltyBoxSelected)
+            .combineLatest(bonusBoxSelect, penaltyBoxSelect)
             .flatMap { bonusBox,penaltyBox -> Observable<Event<Void>> in
                 return model
                     .selectedState(bonusBox: bonusBox, penaltyBox: penaltyBox)
@@ -69,13 +74,23 @@ class LotteryViewModel {
             }
     }
     
-
-    func lotteryAction(bonusBoxSelected: Bool,
-                       penaltyBoxSelected: Bool)
-    {
+    
+    func lotteryAction() {
+        
+        var bonus: Bool = true
+        var penalty: Bool = true
+        
         lotteyBox.removeAll()
-     
-        switch (bonusBoxSelected, penaltyBoxSelected) {
+        
+        bonusBoxSelected.subscribe(onNext: { bonusBool in
+            bonus = bonusBool
+        }).disposed(by: disposeBag)
+        
+        penaltyBoxSelected.subscribe(onNext: { penaltyBool in
+            penalty = penaltyBool
+        }).disposed(by: disposeBag)
+        
+        switch (bonus, penalty) {
         case (true, true):
             addBonusContentToLotteyBox(type: BoxType.bonus)
             addPenaltyContentToLotteyBox(type: BoxType.penalty)
@@ -88,7 +103,7 @@ class LotteryViewModel {
         case (false, false):
             return
         }
-        
+
         lotteyResultText = randomValue()
     }
 

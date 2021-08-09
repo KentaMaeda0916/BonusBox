@@ -28,12 +28,12 @@ class LotteryViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         dismissButtonY.constant = lotteryButtonY
+        resultLable.text = resultText
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemYellow
-        resultLable.text = resultText
         setupDismissButtonButton()
     }
     
