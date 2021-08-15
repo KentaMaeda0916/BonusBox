@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4334EA0F26C8B65F00F78148 /* XCoordinatorRx in Frameworks */ = {isa = PBXBuildFile; productRef = 4334EA0E26C8B65F00F78148 /* XCoordinatorRx */; };
+		4334EA1126C8B65F00F78148 /* XCoordinator in Frameworks */ = {isa = PBXBuildFile; productRef = 4334EA1026C8B65F00F78148 /* XCoordinator */; };
 		4347FA2D2692C97500C95EFC /* BonusContentsView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4347FA2C2692C97500C95EFC /* BonusContentsView.storyboard */; };
 		4347FA322692C98D00C95EFC /* PenaltyContentsView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4347FA312692C98D00C95EFC /* PenaltyContentsView.storyboard */; };
 		4347FA372692C9A600C95EFC /* BonusContentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4347FA362692C9A600C95EFC /* BonusContentsViewController.swift */; };
@@ -90,8 +92,10 @@
 			files = (
 				438E1ECC26A653D500A8ACDD /* RxRelay in Frameworks */,
 				438E1EC826A653D500A8ACDD /* RxSwift in Frameworks */,
+				4334EA0F26C8B65F00F78148 /* XCoordinatorRx in Frameworks */,
 				A47AE5E492E25F8875748055 /* Pods_BonusBox.framework in Frameworks */,
 				438E1ECA26A653D500A8ACDD /* RxCocoa in Frameworks */,
+				4334EA1126C8B65F00F78148 /* XCoordinator in Frameworks */,
 				43CAE638269574480037A2C5 /* BubbleTransition in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -225,6 +229,8 @@
 				438E1EC726A653D500A8ACDD /* RxSwift */,
 				438E1EC926A653D500A8ACDD /* RxCocoa */,
 				438E1ECB26A653D500A8ACDD /* RxRelay */,
+				4334EA0E26C8B65F00F78148 /* XCoordinatorRx */,
+				4334EA1026C8B65F00F78148 /* XCoordinator */,
 			);
 			productName = BonusBox;
 			productReference = 43E1CCE0268C0490007E0EDB /* BonusBox.app */;
@@ -256,6 +262,7 @@
 			packageReferences = (
 				43CAE636269574480037A2C5 /* XCRemoteSwiftPackageReference "BubbleTransition" */,
 				438E1EC626A653D500A8ACDD /* XCRemoteSwiftPackageReference "RxSwift" */,
+				4334EA0D26C8B65F00F78148 /* XCRemoteSwiftPackageReference "XCoordinator" */,
 			);
 			productRefGroup = 43E1CCE1268C0490007E0EDB /* Products */;
 			projectDirPath = "";
@@ -481,6 +488,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = 27AABG3WWT;
 				INFOPLIST_FILE = BonusBox/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
@@ -488,6 +496,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.maeken.BonusBox;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
@@ -503,6 +512,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = 27AABG3WWT;
 				INFOPLIST_FILE = BonusBox/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
@@ -510,6 +520,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.maeken.BonusBox;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
@@ -543,12 +554,20 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		4334EA0D26C8B65F00F78148 /* XCRemoteSwiftPackageReference "XCoordinator" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "git@github.com:quickbirdstudios/XCoordinator.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
 		438E1EC626A653D500A8ACDD /* XCRemoteSwiftPackageReference "RxSwift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/ReactiveX/RxSwift";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 6.2.0;
+				minimumVersion = 5.0.1;
 			};
 		};
 		43CAE636269574480037A2C5 /* XCRemoteSwiftPackageReference "BubbleTransition" */ = {
@@ -562,6 +581,16 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		4334EA0E26C8B65F00F78148 /* XCoordinatorRx */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4334EA0D26C8B65F00F78148 /* XCRemoteSwiftPackageReference "XCoordinator" */;
+			productName = XCoordinatorRx;
+		};
+		4334EA1026C8B65F00F78148 /* XCoordinator */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4334EA0D26C8B65F00F78148 /* XCRemoteSwiftPackageReference "XCoordinator" */;
+			productName = XCoordinator;
+		};
 		438E1EC726A653D500A8ACDD /* RxSwift */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 438E1EC626A653D500A8ACDD /* XCRemoteSwiftPackageReference "RxSwift" */;
